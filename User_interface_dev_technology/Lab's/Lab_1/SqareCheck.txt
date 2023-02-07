@@ -1,0 +1,179 @@
+function SquareChecking(matrix:number[][], k: number) : boolean
+{
+    let set = new Set<number>();
+
+    if(k == 0 || k == 1 || k == 2) //row: 0-2
+    {
+        for (let i = 0; i <= 2; i++) {
+            if(k == 0)
+            {
+                for(let j = 0; j<3; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+
+            if(k == 1)
+            {
+                for(let j = 3; j<=5; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+
+            if(k == 2)
+            {
+                for(let j = 6; j<=8; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+        }
+
+        return true;
+    }
+
+    if(k == 3 || k == 4 || k == 5) //row: 3-5
+    {
+        for (let i = 3; i <= 5; i++) {
+            if(k == 3)
+            {
+                for(let j = 0; j<3; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+
+            if(k == 4)
+            {
+                for(let j = 3; j<=5; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+
+            if(k == 5)
+            {
+                for(let j = 6; j<=8; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+        }
+        
+        return true;
+    }
+
+    if(k == 6 || k == 7 || k == 8) //row 6-8
+    {
+        for (let i = 6; i <= 8; i++) {
+            if(k == 6)
+            {
+                for(let j = 0; j<3; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+
+            if(k == 7)
+            {
+                for(let j = 3; j<=5; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+
+            if(k == 8)
+            {
+                for(let j = 6; j<=8; j++)
+                {
+                    if(set.has(matrix[i][j]))
+                    {
+                        return false;
+                    }
+
+                    if(matrix[i][j] == null)
+                    {
+                        continue;
+                    }
+                    set.add(matrix[i][j]);
+                }
+            }
+        }
+        
+        return true;
+    }
+    return true;
+}
