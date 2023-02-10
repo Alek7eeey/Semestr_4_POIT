@@ -20,12 +20,13 @@ namespace Lab_1
             if(inputArea.Text == "")
             {
                 throw new Exception("Ничего не введено!");
-                
             }
+
             if (currentSum == 0)
             {
                 currentSum += Convert.ToInt32(inputArea.Text);
             }
+
             else
             {
                 if (plus)
