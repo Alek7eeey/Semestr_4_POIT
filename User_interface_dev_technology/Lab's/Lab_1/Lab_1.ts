@@ -12,7 +12,7 @@ function createrNumber(numberArr: number[]) : string
 
 let num_arr: number[] = [4,4,8,9,4,6,3,1,6,7];
 
-console.log("phone number: "+createrNumber(num_arr));
+console.log("phone number: " + createrNumber(num_arr));
 
 //ex2
 class Challenge

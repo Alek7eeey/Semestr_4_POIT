@@ -10,14 +10,12 @@ function createrNumber(numberArr) {
 var num_arr = [4, 4, 8, 9, 4, 6, 3, 1, 6, 7];
 console.log("phone number: " + createrNumber(num_arr));
 //ex2
-var Challenge = /** @class */ (function () {
-    function Challenge() {
-    }
-    Challenge.solution = function (number) {
+var Challenge = /** @class */ (function() {
+    function Challenge() {}
+    Challenge.solution = function(number) {
         if (number < 0) {
             return 0;
-        }
-        else {
+        } else {
             var sum = 0;
             for (var i = 1; i < number; i++) {
                 if (i % 3 == 0 || i % 5 == 0) {
@@ -65,8 +63,7 @@ function GetMedian(arrnum1, arrnum2) {
     concatTwoArr.sort();
     if (concatTwoArr.length % 2 == 0) {
         return (concatTwoArr[(concatTwoArr.length / 2) - 1] + concatTwoArr[concatTwoArr.length / 2]) / 2;
-    }
-    else {
+    } else {
         return concatTwoArr[Math.floor(concatTwoArr.length / 2)];
     }
 }
@@ -87,6 +84,7 @@ function sudoku(matrix) {
     }
     return "Correct board!";
 }
+
 function RowChecking(matrix, k) {
     var set = new Set();
     for (var i = 0; i < 9; i++) {
@@ -100,6 +98,7 @@ function RowChecking(matrix, k) {
     }
     return true;
 }
+
 function ColChecking(matrix, k) {
     var set = new Set();
     for (var i = 0; i < 9; i++) {
@@ -114,7 +113,7 @@ function ColChecking(matrix, k) {
     return true;
 }
 var sud = [
-    [5, 6, 4, 1, 3, 2, 7, 9, 8],
+    [1, 6, 4, 1, 3, 2, 7, 9, 8],
     [1, 9, 7, 8, 6, 4, 5, 3, 2],
     [2, 3, 8, 5, 7, 9, 4, 6, 1],
     [8, 2, 1, 9, 4, 7, 3, 5, 6],
