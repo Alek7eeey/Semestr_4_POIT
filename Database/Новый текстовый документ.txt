@@ -1,0 +1,2 @@
+ssms
+sql server
