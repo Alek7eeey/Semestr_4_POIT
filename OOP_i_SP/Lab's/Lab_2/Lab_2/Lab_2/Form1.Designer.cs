@@ -1,16 +1,16 @@
 ﻿namespace Lab_2
 {
-    partial class Form1
+    partial class Airport
     {
         /// <summary>
-        /// Обязательная переменная конструктора.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        ///  Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,175 +20,293 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.textAirport = new System.Windows.Forms.Label();
-            this.inputID = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
-            this.TypeOfPlane = new System.Windows.Forms.MenuStrip();
-            this.типСамолётаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пассажирскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.грузовойToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.военныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.TypeOfPlane.SuspendLayout();
+            this.Model = new System.Windows.Forms.Label();
+            this.crew = new System.Windows.Forms.Label();
+            this.CountOfSeating = new System.Windows.Forms.Label();
+            this.yearOfIssue = new System.Windows.Forms.Label();
+            this.labelCarrying = new System.Windows.Forms.Label();
+            this.DateOfService = new System.Windows.Forms.Label();
+            this.barFilling = new System.Windows.Forms.ProgressBar();
+            this.listBoxType = new System.Windows.Forms.ListBox();
+            this.textBoxCarrying = new System.Windows.Forms.TextBox();
+            this.dateOfServiceChoose = new System.Windows.Forms.DateTimePicker();
+            this.ConfirmTheCorrect = new System.Windows.Forms.CheckBox();
+            this.dateOfIssueChoose = new System.Windows.Forms.DateTimePicker();
+            this.textBoxCountOfSeat = new System.Windows.Forms.TextBox();
+            this.TypeOfPlane = new System.Windows.Forms.Label();
+            this.chooseButton = new System.Windows.Forms.Button();
+            this.FillWithInf = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.filling = new System.Windows.Forms.Label();
+            this.serialize = new System.Windows.Forms.Button();
+            this.deserialize = new System.Windows.Forms.Button();
+            this.comboBoxModel = new System.Windows.Forms.ComboBox();
+            this.airportText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textAirport
+            // textBoxID
             // 
-            this.textAirport.AutoSize = true;
-            this.textAirport.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textAirport.Location = new System.Drawing.Point(12, 21);
-            this.textAirport.Name = "textAirport";
-            this.textAirport.Size = new System.Drawing.Size(97, 27);
-            this.textAirport.TabIndex = 0;
-            this.textAirport.Text = "Airport";
-            // 
-            // inputID
-            // 
-            this.inputID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.inputID.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputID.Location = new System.Drawing.Point(12, 93);
-            this.inputID.Multiline = true;
-            this.inputID.Name = "inputID";
-            this.inputID.Size = new System.Drawing.Size(221, 30);
-            this.inputID.TabIndex = 1;
+            this.textBoxID.Location = new System.Drawing.Point(107, 50);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(150, 31);
+            this.textBoxID.TabIndex = 0;
             // 
             // ID
             // 
-            this.ID.AutoSize = true;
-            this.ID.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(9, 72);
+            this.ID.Location = new System.Drawing.Point(13, 53);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(27, 18);
-            this.ID.TabIndex = 2;
-            this.ID.Text = "ID";
+            this.ID.Size = new System.Drawing.Size(88, 28);
+            this.ID.TabIndex = 1;
+            this.ID.Text = "ID:";
+            // 
+            // Model
+            // 
+            this.Model.Location = new System.Drawing.Point(13, 96);
+            this.Model.Name = "Model";
+            this.Model.Size = new System.Drawing.Size(88, 28);
+            this.Model.TabIndex = 2;
+            this.Model.Text = "Модель:";
+            // 
+            // crew
+            // 
+            this.crew.Location = new System.Drawing.Point(13, 136);
+            this.crew.Name = "crew";
+            this.crew.Size = new System.Drawing.Size(88, 28);
+            this.crew.TabIndex = 3;
+            this.crew.Text = "Экипаж:";
+            // 
+            // CountOfSeating
+            // 
+            this.CountOfSeating.Location = new System.Drawing.Point(13, 180);
+            this.CountOfSeating.Name = "CountOfSeating";
+            this.CountOfSeating.Size = new System.Drawing.Size(262, 28);
+            this.CountOfSeating.TabIndex = 4;
+            this.CountOfSeating.Text = "Количество посадочных мест:";
+            // 
+            // yearOfIssue
+            // 
+            this.yearOfIssue.Location = new System.Drawing.Point(13, 223);
+            this.yearOfIssue.Name = "yearOfIssue";
+            this.yearOfIssue.Size = new System.Drawing.Size(262, 28);
+            this.yearOfIssue.TabIndex = 5;
+            this.yearOfIssue.Text = "Год выпуска:";
+            // 
+            // labelCarrying
+            // 
+            this.labelCarrying.Location = new System.Drawing.Point(13, 265);
+            this.labelCarrying.Name = "labelCarrying";
+            this.labelCarrying.Size = new System.Drawing.Size(174, 28);
+            this.labelCarrying.TabIndex = 6;
+            this.labelCarrying.Text = "Грузоподъёмность:";
+            // 
+            // DateOfService
+            // 
+            this.DateOfService.Location = new System.Drawing.Point(13, 307);
+            this.DateOfService.Name = "DateOfService";
+            this.DateOfService.Size = new System.Drawing.Size(262, 28);
+            this.DateOfService.TabIndex = 7;
+            this.DateOfService.Text = "Дата тех. обслуживания:";
+            // 
+            // barFilling
+            // 
+            this.barFilling.Location = new System.Drawing.Point(620, 13);
+            this.barFilling.Name = "barFilling";
+            this.barFilling.Size = new System.Drawing.Size(475, 31);
+            this.barFilling.TabIndex = 8;
+            // 
+            // listBoxType
+            // 
+            this.listBoxType.FormattingEnabled = true;
+            this.listBoxType.ItemHeight = 25;
+            this.listBoxType.Items.AddRange(new object[] {
+            "Пассажирский",
+            "Грузовой",
+            "Военный"});
+            this.listBoxType.Location = new System.Drawing.Point(154, 352);
+            this.listBoxType.Name = "listBoxType";
+            this.listBoxType.Size = new System.Drawing.Size(180, 29);
+            this.listBoxType.TabIndex = 9;
+            // 
+            // textBoxCarrying
+            // 
+            this.textBoxCarrying.Location = new System.Drawing.Point(193, 262);
+            this.textBoxCarrying.Name = "textBoxCarrying";
+            this.textBoxCarrying.Size = new System.Drawing.Size(99, 31);
+            this.textBoxCarrying.TabIndex = 11;
+            // 
+            // dateOfServiceChoose
+            // 
+            this.dateOfServiceChoose.Location = new System.Drawing.Point(227, 304);
+            this.dateOfServiceChoose.Name = "dateOfServiceChoose";
+            this.dateOfServiceChoose.Size = new System.Drawing.Size(195, 31);
+            this.dateOfServiceChoose.TabIndex = 13;
+            // 
+            // ConfirmTheCorrect
+            // 
+            this.ConfirmTheCorrect.AutoSize = true;
+            this.ConfirmTheCorrect.Location = new System.Drawing.Point(13, 400);
+            this.ConfirmTheCorrect.Name = "ConfirmTheCorrect";
+            this.ConfirmTheCorrect.Size = new System.Drawing.Size(433, 29);
+            this.ConfirmTheCorrect.TabIndex = 14;
+            this.ConfirmTheCorrect.Text = "Подтверждаю правильность введённых данных";
+            this.ConfirmTheCorrect.UseVisualStyleBackColor = true;
+            // 
+            // dateOfIssueChoose
+            // 
+            this.dateOfIssueChoose.Location = new System.Drawing.Point(136, 220);
+            this.dateOfIssueChoose.Name = "dateOfIssueChoose";
+            this.dateOfIssueChoose.Size = new System.Drawing.Size(189, 31);
+            this.dateOfIssueChoose.TabIndex = 16;
+            // 
+            // textBoxCountOfSeat
+            // 
+            this.textBoxCountOfSeat.Location = new System.Drawing.Point(272, 177);
+            this.textBoxCountOfSeat.Name = "textBoxCountOfSeat";
+            this.textBoxCountOfSeat.Size = new System.Drawing.Size(96, 31);
+            this.textBoxCountOfSeat.TabIndex = 17;
             // 
             // TypeOfPlane
             // 
-            this.TypeOfPlane.BackColor = System.Drawing.Color.White;
-            this.TypeOfPlane.Dock = System.Windows.Forms.DockStyle.None;
-            this.TypeOfPlane.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.TypeOfPlane.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.типСамолётаToolStripMenuItem});
-            this.TypeOfPlane.Location = new System.Drawing.Point(93, 314);
+            this.TypeOfPlane.Location = new System.Drawing.Point(13, 352);
             this.TypeOfPlane.Name = "TypeOfPlane";
-            this.TypeOfPlane.Size = new System.Drawing.Size(222, 26);
-            this.TypeOfPlane.TabIndex = 4;
-            this.TypeOfPlane.Text = "Type";
+            this.TypeOfPlane.Size = new System.Drawing.Size(135, 28);
+            this.TypeOfPlane.TabIndex = 18;
+            this.TypeOfPlane.Text = "Тип самолёта:";
             // 
-            // типСамолётаToolStripMenuItem
+            // chooseButton
             // 
-            this.типСамолётаToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.типСамолётаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.пассажирскийToolStripMenuItem,
-            this.грузовойToolStripMenuItem,
-            this.военныйToolStripMenuItem});
-            this.типСамолётаToolStripMenuItem.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.типСамолётаToolStripMenuItem.Name = "типСамолётаToolStripMenuItem";
-            this.типСамолётаToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.типСамолётаToolStripMenuItem.Text = "                                      ";
+            this.chooseButton.Location = new System.Drawing.Point(107, 131);
+            this.chooseButton.Name = "chooseButton";
+            this.chooseButton.Size = new System.Drawing.Size(185, 34);
+            this.chooseButton.TabIndex = 19;
+            this.chooseButton.Text = "Выбор экипажа";
+            this.chooseButton.UseVisualStyleBackColor = true;
             // 
-            // пассажирскийToolStripMenuItem
+            // FillWithInf
             // 
-            this.пассажирскийToolStripMenuItem.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.пассажирскийToolStripMenuItem.Name = "пассажирскийToolStripMenuItem";
-            this.пассажирскийToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.пассажирскийToolStripMenuItem.Text = "пассажирский";
+            this.FillWithInf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FillWithInf.Cursor = System.Windows.Forms.Cursors.No;
+            this.FillWithInf.Location = new System.Drawing.Point(499, 50);
+            this.FillWithInf.Multiline = true;
+            this.FillWithInf.Name = "FillWithInf";
+            this.FillWithInf.ReadOnly = true;
+            this.FillWithInf.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.FillWithInf.Size = new System.Drawing.Size(596, 379);
+            this.FillWithInf.TabIndex = 20;
             // 
-            // грузовойToolStripMenuItem
+            // buttonSave
             // 
-            this.грузовойToolStripMenuItem.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.грузовойToolStripMenuItem.Name = "грузовойToolStripMenuItem";
-            this.грузовойToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.грузовойToolStripMenuItem.Text = "грузовой";
+            this.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSave.Location = new System.Drawing.Point(13, 450);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(135, 34);
+            this.buttonSave.TabIndex = 21;
+            this.buttonSave.Text = "Сохранить данные";
+            this.buttonSave.UseVisualStyleBackColor = true;
             // 
-            // военныйToolStripMenuItem
+            // buttonClear
             // 
-            this.военныйToolStripMenuItem.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.военныйToolStripMenuItem.Name = "военныйToolStripMenuItem";
-            this.военныйToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.военныйToolStripMenuItem.Text = "военный";
+            this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClear.Location = new System.Drawing.Point(166, 450);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(135, 34);
+            this.buttonClear.TabIndex = 22;
+            this.buttonClear.Text = "Отчистить";
+            this.buttonClear.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // filling
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 304);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 18);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Type";
+            this.filling.Location = new System.Drawing.Point(499, 15);
+            this.filling.Name = "filling";
+            this.filling.Size = new System.Drawing.Size(115, 28);
+            this.filling.TabIndex = 23;
+            this.filling.Text = "Заполнение:";
             // 
-            // label2
+            // serialize
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Model";
+            this.serialize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.serialize.Location = new System.Drawing.Point(620, 435);
+            this.serialize.Name = "serialize";
+            this.serialize.Size = new System.Drawing.Size(166, 34);
+            this.serialize.TabIndex = 24;
+            this.serialize.Text = "Сериализация";
+            this.serialize.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // deserialize
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(12, 163);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 30);
-            this.textBox1.TabIndex = 7;
+            this.deserialize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deserialize.Location = new System.Drawing.Point(805, 435);
+            this.deserialize.Name = "deserialize";
+            this.deserialize.Size = new System.Drawing.Size(166, 34);
+            this.deserialize.TabIndex = 25;
+            this.deserialize.Text = "Десериализация";
+            this.deserialize.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // comboBoxModel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Count of passanger";
+            this.comboBoxModel.FormattingEnabled = true;
+            this.comboBoxModel.Items.AddRange(new object[] {
+            "Boeing ",
+            "Airbus",
+            "Embraer",
+            "CRJ"});
+            this.comboBoxModel.Location = new System.Drawing.Point(107, 92);
+            this.comboBoxModel.Name = "comboBoxModel";
+            this.comboBoxModel.Size = new System.Drawing.Size(168, 33);
+            this.comboBoxModel.TabIndex = 26;
             // 
-            // textBox2
+            // airportText
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(12, 232);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 30);
-            this.textBox2.TabIndex = 9;
+            this.airportText.Font = new System.Drawing.Font("Magneto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.airportText.Location = new System.Drawing.Point(12, 9);
+            this.airportText.Name = "airportText";
+            this.airportText.Size = new System.Drawing.Size(119, 28);
+            this.airportText.TabIndex = 27;
+            this.airportText.Text = "Аэропорт";
             // 
-            // Form1
+            // Airport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 587);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ID);
-            this.Controls.Add(this.inputID);
-            this.Controls.Add(this.textAirport);
+            this.ClientSize = new System.Drawing.Size(1150, 516);
+            this.Controls.Add(this.airportText);
+            this.Controls.Add(this.comboBoxModel);
+            this.Controls.Add(this.deserialize);
+            this.Controls.Add(this.serialize);
+            this.Controls.Add(this.filling);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.FillWithInf);
+            this.Controls.Add(this.chooseButton);
             this.Controls.Add(this.TypeOfPlane);
-            this.MainMenuStrip = this.TypeOfPlane;
-            this.Name = "Form1";
-            this.Text = "Airport";
-            this.TypeOfPlane.ResumeLayout(false);
-            this.TypeOfPlane.PerformLayout();
+            this.Controls.Add(this.textBoxCountOfSeat);
+            this.Controls.Add(this.dateOfIssueChoose);
+            this.Controls.Add(this.ConfirmTheCorrect);
+            this.Controls.Add(this.dateOfServiceChoose);
+            this.Controls.Add(this.textBoxCarrying);
+            this.Controls.Add(this.listBoxType);
+            this.Controls.Add(this.barFilling);
+            this.Controls.Add(this.DateOfService);
+            this.Controls.Add(this.labelCarrying);
+            this.Controls.Add(this.yearOfIssue);
+            this.Controls.Add(this.CountOfSeating);
+            this.Controls.Add(this.crew);
+            this.Controls.Add(this.Model);
+            this.Controls.Add(this.ID);
+            this.Controls.Add(this.textBoxID);
+            this.Name = "Airport";
+            this.Text = "Аэропорт";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,19 +314,30 @@
 
         #endregion
 
-        private System.Windows.Forms.Label textAirport;
-        private System.Windows.Forms.TextBox inputID;
-        private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.MenuStrip TypeOfPlane;
-        private System.Windows.Forms.ToolStripMenuItem типСамолётаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem пассажирскийToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem грузовойToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem военныйToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private TextBox textBoxID;
+        private Label ID;
+        private Label Model;
+        private Label crew;
+        private Label CountOfSeating;
+        private Label yearOfIssue;
+        private Label labelCarrying;
+        private Label DateOfService;
+        private ProgressBar barFilling;
+        private ListBox listBoxType;
+        private TextBox textBoxCarrying;
+        private DateTimePicker dateOfServiceChoose;
+        private CheckBox ConfirmTheCorrect;
+        private DateTimePicker dateOfIssueChoose;
+        private TextBox textBoxCountOfSeat;
+        private Label TypeOfPlane;
+        private Button chooseButton;
+        private TextBox FillWithInf;
+        private Button buttonSave;
+        private Button buttonClear;
+        private Label filling;
+        private Button serialize;
+        private Button deserialize;
+        private ComboBox comboBoxModel;
+        private Label airportText;
     }
 }
-

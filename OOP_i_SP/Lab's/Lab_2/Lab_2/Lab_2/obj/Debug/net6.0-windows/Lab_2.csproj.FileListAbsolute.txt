@@ -1,0 +1,17 @@
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\bin\Debug\net6.0-windows\Lab_2.exe
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\bin\Debug\net6.0-windows\Lab_2.deps.json
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\bin\Debug\net6.0-windows\Lab_2.runtimeconfig.json
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\bin\Debug\net6.0-windows\Lab_2.dll
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\bin\Debug\net6.0-windows\Lab_2.pdb
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.csproj.AssemblyReference.cache
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.Airport.resources
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.csproj.GenerateResource.cache
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.GeneratedMSBuildEditorConfig.editorconfig
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.AssemblyInfoInputs.cache
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.AssemblyInfo.cs
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.csproj.CoreCompileInputs.cache
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.dll
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\refint\Lab_2.dll
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.pdb
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\Lab_2.genruntimeconfig.cache
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_2\Lab_2\Lab_2\obj\Debug\net6.0-windows\ref\Lab_2.dll
