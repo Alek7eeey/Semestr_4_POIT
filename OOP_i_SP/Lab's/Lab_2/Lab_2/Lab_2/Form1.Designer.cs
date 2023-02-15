@@ -61,6 +61,8 @@
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(150, 31);
             this.textBoxID.TabIndex = 0;
+            this.textBoxID.TextChanged += new System.EventHandler(this.textBoxID_TextChanged);
+            this.textBoxID.Leave += new System.EventHandler(this.textBoxID_Leave);
             // 
             // ID
             // 
@@ -137,6 +139,7 @@
             this.listBoxType.Name = "listBoxType";
             this.listBoxType.Size = new System.Drawing.Size(180, 29);
             this.listBoxType.TabIndex = 9;
+            this.listBoxType.SelectedIndexChanged += new System.EventHandler(this.listBoxType_SelectedIndexChanged);
             // 
             // textBoxCarrying
             // 
@@ -144,6 +147,8 @@
             this.textBoxCarrying.Name = "textBoxCarrying";
             this.textBoxCarrying.Size = new System.Drawing.Size(99, 31);
             this.textBoxCarrying.TabIndex = 11;
+            this.textBoxCarrying.TextChanged += new System.EventHandler(this.textBoxCarrying_TextChanged);
+            this.textBoxCarrying.Leave += new System.EventHandler(this.textBoxCarrying_Leave);
             // 
             // dateOfServiceChoose
             // 
@@ -151,6 +156,7 @@
             this.dateOfServiceChoose.Name = "dateOfServiceChoose";
             this.dateOfServiceChoose.Size = new System.Drawing.Size(195, 31);
             this.dateOfServiceChoose.TabIndex = 13;
+            this.dateOfServiceChoose.Leave += new System.EventHandler(this.dateOfServiceChoose_Leave);
             // 
             // ConfirmTheCorrect
             // 
@@ -168,6 +174,7 @@
             this.dateOfIssueChoose.Name = "dateOfIssueChoose";
             this.dateOfIssueChoose.Size = new System.Drawing.Size(189, 31);
             this.dateOfIssueChoose.TabIndex = 16;
+            this.dateOfIssueChoose.Leave += new System.EventHandler(this.dateOfIssueChoose_Leave);
             // 
             // textBoxCountOfSeat
             // 
@@ -175,6 +182,8 @@
             this.textBoxCountOfSeat.Name = "textBoxCountOfSeat";
             this.textBoxCountOfSeat.Size = new System.Drawing.Size(96, 31);
             this.textBoxCountOfSeat.TabIndex = 17;
+            this.textBoxCountOfSeat.TextChanged += new System.EventHandler(this.textBoxCountOfSeat_TextChanged);
+            this.textBoxCountOfSeat.Leave += new System.EventHandler(this.textBoxCountOfSeat_Leave);
             // 
             // TypeOfPlane
             // 
@@ -204,6 +213,7 @@
             this.FillWithInf.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.FillWithInf.Size = new System.Drawing.Size(596, 379);
             this.FillWithInf.TabIndex = 20;
+            this.FillWithInf.Enter += new System.EventHandler(this.FillWithInf_Enter);
             // 
             // buttonSave
             // 
@@ -214,6 +224,7 @@
             this.buttonSave.TabIndex = 21;
             this.buttonSave.Text = "Сохранить данные";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonClear
             // 
@@ -265,6 +276,7 @@
             this.comboBoxModel.Name = "comboBoxModel";
             this.comboBoxModel.Size = new System.Drawing.Size(168, 33);
             this.comboBoxModel.TabIndex = 26;
+            this.comboBoxModel.Leave += new System.EventHandler(this.comboBoxModel_Leave);
             // 
             // airportText
             // 
