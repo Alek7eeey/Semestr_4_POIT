@@ -22,6 +22,7 @@ namespace Lab_2
         public int carrying = 0;
         public string DateOfService = "";
         public typeOfPlane typePlane = typeOfPlane.none;
+        public List<CrewMember> crewMe = new List<CrewMember>();
         public enum typeOfPlane
         {
             Пассажирский,
@@ -29,11 +30,8 @@ namespace Lab_2
             Военный,
             none
         }
-        CrewMember cm;
 
-        public static List<Flights> flights = new List<Flights>();
-
-        public Flights(int id, model modEL, int countSeat, string yearOfIss, int carry, string dateServ, typeOfPlane top, string name, int age, int yearEx, string po) { 
+        public Flights(int id, model modEL, int countSeat, string yearOfIss, int carry, string dateServ, typeOfPlane top) { 
         
             ID = id;
             model_= modEL;
@@ -42,10 +40,21 @@ namespace Lab_2
             carrying = carry;
             DateOfService = dateServ;
             typePlane = top;
-            cm = new (name, age, yearEx, po);
         }
         public Flights()
         { }
+
+        public void returnToTheDefaultValue()
+        {
+            ID = 0;
+            model_ = model.none;
+            countOfSeat = 0;
+            yearOfIssue = "";
+            carrying = 0;
+            DateOfService = "";
+            typePlane = typeOfPlane.none;
+
+        }
         public override string ToString()
         {
             string text = "Информация про рейс: "+ Environment.NewLine +
@@ -54,7 +63,13 @@ namespace Lab_2
                 $"Год выпуска: {yearOfIssue}" + Environment.NewLine +
                 $"Грузоподъёмность: {carrying}" + Environment.NewLine +
                 $"Дата тех.обслуживания: {DateOfService}" + Environment.NewLine +
-                $"Тип самолёта: {typePlane}";
+                $"Тип самолёта: {typePlane}" + Environment.NewLine + Environment.NewLine + "Информация про членов экипажа: ";
+            foreach(var a in crewMe)
+            {
+                text+= a.ToString();
+            }
+            
+
 
             return text;
         }

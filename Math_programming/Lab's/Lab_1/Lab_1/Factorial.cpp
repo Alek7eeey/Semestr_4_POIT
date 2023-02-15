@@ -4,12 +4,6 @@ using namespace std;
 
 long double factorial(int num)
 {
-	int sum = 0;
-	while (num!= 0)
-	{
-		sum += num;
-		num--;
-	}
-
-	return sum;
+	if (num == 1) return 1;
+	return num * factorial(num - 1);
 }

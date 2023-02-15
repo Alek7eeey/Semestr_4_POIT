@@ -156,6 +156,7 @@
             this.dateOfServiceChoose.Name = "dateOfServiceChoose";
             this.dateOfServiceChoose.Size = new System.Drawing.Size(195, 31);
             this.dateOfServiceChoose.TabIndex = 13;
+            this.dateOfServiceChoose.ValueChanged += new System.EventHandler(this.dateOfServiceChoose_ValueChanged);
             this.dateOfServiceChoose.Leave += new System.EventHandler(this.dateOfServiceChoose_Leave);
             // 
             // ConfirmTheCorrect
@@ -167,6 +168,7 @@
             this.ConfirmTheCorrect.TabIndex = 14;
             this.ConfirmTheCorrect.Text = "Подтверждаю правильность введённых данных";
             this.ConfirmTheCorrect.UseVisualStyleBackColor = true;
+            this.ConfirmTheCorrect.CheckedChanged += new System.EventHandler(this.ConfirmTheCorrect_CheckedChanged);
             // 
             // dateOfIssueChoose
             // 
@@ -174,6 +176,7 @@
             this.dateOfIssueChoose.Name = "dateOfIssueChoose";
             this.dateOfIssueChoose.Size = new System.Drawing.Size(189, 31);
             this.dateOfIssueChoose.TabIndex = 16;
+            this.dateOfIssueChoose.ValueChanged += new System.EventHandler(this.dateOfIssueChoose_ValueChanged);
             this.dateOfIssueChoose.Leave += new System.EventHandler(this.dateOfIssueChoose_Leave);
             // 
             // textBoxCountOfSeat
@@ -201,6 +204,7 @@
             this.chooseButton.TabIndex = 19;
             this.chooseButton.Text = "Выбор экипажа";
             this.chooseButton.UseVisualStyleBackColor = true;
+            this.chooseButton.Click += new System.EventHandler(this.chooseButton_Click);
             // 
             // FillWithInf
             // 
@@ -235,6 +239,7 @@
             this.buttonClear.TabIndex = 22;
             this.buttonClear.Text = "Отчистить";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // filling
             // 
@@ -253,6 +258,7 @@
             this.serialize.TabIndex = 24;
             this.serialize.Text = "Сериализация";
             this.serialize.UseVisualStyleBackColor = true;
+            this.serialize.Click += new System.EventHandler(this.serialize_Click);
             // 
             // deserialize
             // 
@@ -263,6 +269,7 @@
             this.deserialize.TabIndex = 25;
             this.deserialize.Text = "Десериализация";
             this.deserialize.UseVisualStyleBackColor = true;
+            this.deserialize.Click += new System.EventHandler(this.deserialize_Click);
             // 
             // comboBoxModel
             // 
@@ -276,6 +283,7 @@
             this.comboBoxModel.Name = "comboBoxModel";
             this.comboBoxModel.Size = new System.Drawing.Size(168, 33);
             this.comboBoxModel.TabIndex = 26;
+            this.comboBoxModel.SelectedIndexChanged += new System.EventHandler(this.comboBoxModel_SelectedIndexChanged);
             this.comboBoxModel.Leave += new System.EventHandler(this.comboBoxModel_Leave);
             // 
             // airportText

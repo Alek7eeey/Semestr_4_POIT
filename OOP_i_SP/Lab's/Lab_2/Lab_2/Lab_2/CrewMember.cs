@@ -23,9 +23,18 @@ namespace Lab_2
         }
         public CrewMember() { }
 
+        public void returnDefaultValue()
+        {
+            name = "";
+            age = 0;
+            yearExp = 0;
+            position = "";
+        }
+
+
         public override string ToString()
         {
-            return Environment.NewLine + Environment.NewLine + "Экипаж: " + Environment.NewLine+"Должность: "+position + Environment.NewLine + "имя: " + name + Environment.NewLine + "Возраст: " + age + Environment.NewLine + "Стаж: " + yearExp;
+            return Environment.NewLine+ Environment.NewLine + "Должность: "+position + Environment.NewLine + "имя: " + name + Environment.NewLine + "Возраст: " + age + Environment.NewLine + "Стаж: " + yearExp;
         }
     }
 }
