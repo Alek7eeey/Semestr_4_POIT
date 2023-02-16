@@ -1,0 +1,8 @@
+﻿D:\Новая папка (2)\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (Lab1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  stdafx.cpp
+  CApp.cpp
+  CMatrix.cpp
+d:\study\kgig\lab1\lab1\cmatrix.cpp(27): warning C4066: знаки после первого в константе из двухбайтовых знаков пропускаются
+  CMainWin.cpp
+  Создание кода...
+  Lab1.vcxproj -> D:\STUDY\KGIG\Lab1\Debug\LAB.exe
