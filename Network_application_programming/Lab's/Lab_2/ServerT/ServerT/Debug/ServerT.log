@@ -1,0 +1,4 @@
+﻿  ServerT.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_2\ServerT\ServerT\ServerT.cpp(78,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_2\ServerT\ServerT\ServerT.cpp(111,7): warning C4101: t: неиспользованная локальная переменная
+  ServerT.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_2\ServerT\Debug\ServerT.exe

@@ -234,7 +234,7 @@ class MyResponse
  /////////////////////////////
  type AlertType = 'sucxess' | 'danger'| 'warning';
 
- function setAlertType(type:AlertType)
+ function setAlertType(type: AlertType)
  {
     //...something...
  }
