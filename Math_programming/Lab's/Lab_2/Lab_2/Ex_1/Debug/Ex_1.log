@@ -1,0 +1,5 @@
+﻿  Combi.cpp
+D:\studing\4_semestr\Math_programming\Lab's\Lab_2\Lab_2\Ex_1\Combi.cpp(41,48): warning C4334: <<: результат 32-разрядного смещения неявно преобразуется в 64-разрядное значение (предполагалось 64-разрядное смещение?)
+  main_ex1.cpp
+  Создание кода...
+  Ex_1.vcxproj -> D:\studing\4_semestr\Math_programming\Lab's\Lab_2\Lab_2\Debug\Ex_1.exe
