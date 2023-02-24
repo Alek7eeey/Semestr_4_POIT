@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Flights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ID>21</ID>
-  <model_>Embraer</model_>
-  <countOfSeat>43</countOfSeat>
-  <yearOfIssue>16.2.3333</yearOfIssue>
-  <carrying>54</carrying>
-  <DateOfService>22.2.2023</DateOfService>
-  <typePlane>Пассажирский</typePlane>
+  <ID>2</ID>
+  <model_>none</model_>
+  <countOfSeat>0</countOfSeat>
+  <yearOfIssue />
+  <carrying>0</carrying>
+  <DateOfService />
+  <typePlane>none</typePlane>
   <crewMe>
     <CrewMember>
-      <name>43fgg</name>
-      <age>65</age>
-      <yearExp>54</yearExp>
-      <position>Стюардеса </position>
+      <name>ыьвыв</name>
+      <age>13</age>
+      <yearExp>232</yearExp>
+      <position>Механик</position>
+    </CrewMember>
+    <CrewMember>
+      <name>ыьвыв</name>
+      <age>13</age>
+      <yearExp>232</yearExp>
+      <position>Механик</position>
     </CrewMember>
   </crewMe>
 </Flights>

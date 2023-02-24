@@ -39,9 +39,9 @@
             this.buttonSort.BackColor = System.Drawing.Color.PapayaWhip;
             this.buttonSort.Location = new System.Drawing.Point(12, 417);
             this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(274, 34);
+            this.buttonSort.Size = new System.Drawing.Size(447, 34);
             this.buttonSort.TabIndex = 0;
-            this.buttonSort.Text = "Сортировка по году выпуска";
+            this.buttonSort.Text = "Сортировка по дате последнего тех обслуживания";
             this.buttonSort.UseVisualStyleBackColor = false;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
@@ -50,9 +50,9 @@
             this.button1.BackColor = System.Drawing.Color.PapayaWhip;
             this.button1.Location = new System.Drawing.Point(12, 457);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(465, 34);
+            this.button1.Size = new System.Drawing.Size(275, 34);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Сортировка по дате последнего тех обслуживания";
+            this.button1.Text = "Сортировка по году выпуска\r\n";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

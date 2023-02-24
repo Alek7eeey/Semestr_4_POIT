@@ -21,7 +21,7 @@ namespace Lab_2
 
         private void buttonSort_Click(object sender, EventArgs e)
         {
-            var newArr = DataStorage.Instance.GetObjects().OrderBy(p => p.yearOfIssue);
+            var newArr = DataStorage.Instance.GetObjects().OrderBy(p => p.DateOfService);
             fill_2.Text = "";
 
             foreach (var item in newArr)
@@ -32,7 +32,7 @@ namespace Lab_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var newArr = DataStorage.Instance.GetObjects().OrderBy(p => p.DateOfService);
+            var newArr = DataStorage.Instance.GetObjects().OrderBy(p => p.yearOfIssue);
             fill_2.Text = "";
 
             foreach (var item in newArr)
