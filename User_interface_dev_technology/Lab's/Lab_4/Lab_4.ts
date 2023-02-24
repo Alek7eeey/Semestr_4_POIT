@@ -51,6 +51,25 @@ type MarkType = {
     mark: MarkFilterType, // может принимать значения от 1 до 10
     done: DoneType,
 }
+
+let mark1: MarkType = {
+    subject: "math",
+    mark: 5,
+    done: true
+} 
+
+let mark2: MarkType = {
+    subject: "OOP",
+    mark: 10,
+    done: true
+} 
+
+let mark3: MarkType = {
+    subject: "Design",
+    mark: 8,
+    done: true
+} 
+
 type StudentType = {
     id: number,
     name: string,
@@ -58,19 +77,38 @@ type StudentType = {
     marks: Array<MarkType>,
 }
 
+let student1: StudentType = {
+    id: 1,
+    name: "Aleksandr",
+    group: 4,
+    marks: [mark1, mark2, mark3]
+}
+
+let student2: StudentType = {
+    id: 2,
+    name: "Daria",
+    group: 5,
+    marks: [mark1, mark2]
+}
+
+let student3: StudentType = {
+    id: 3,
+    name: "Igor",
+    group: 6,
+    marks: [mark2, mark3]
+}
+
 
 type GroupType = {
     students: Array<StudentType>, // массив студентов типа StudentType
     studentsFilter: (group: GroupFilterType) => Array<StudentType>, // фильтр по группе
     marksFilter: (mark: MarkFilterType) => Array<StudentType>, // фильтр по  оценке
-    deleteStudent: (id: number) => void, // удалить студента по id из  исходного массива
-    mark: MarkFilterType,
-    group: GroupFilterType,
+    deleteStudent: (id: number) => void // удалить студента по id из  исходного массива
 }
 
 const group: GroupType = {
 
-    students: [],
+    students: [student1, student2, student3],
 
     studentsFilter(group: GroupFilterType): Array<StudentType> 
     {
@@ -80,7 +118,7 @@ const group: GroupType = {
         {
             if (student.group == group) 
             {
-             filteredStudents.push(student);
+                filteredStudents.push(student);
             }
         }
         return filteredStudents;
@@ -92,10 +130,14 @@ const group: GroupType = {
 
         for (let student of this.students) 
         {
-            if (student.mark == mark) 
+            for(let mark_ of student.marks) {
+                
+            if (mark_.mark == mark) 
             {
-             filteredStudents.push(student);
+                filteredStudents.push(student);
             }
+        }
+
         }
         return filteredStudents;
     },
@@ -103,8 +145,15 @@ const group: GroupType = {
     deleteStudent(id: number): void 
     {
       this.students = this.students.filter((student) => student.id !== id);
-    },
+    }
 
-    mark: 10,
-    group: 5,
   };
+
+  console.log(group.studentsFilter(5));
+  console.log(group.marksFilter(10));
+  group.deleteStudent(2);
+
+  for(let a of group.students)
+  {
+    console.log(a);
+  }

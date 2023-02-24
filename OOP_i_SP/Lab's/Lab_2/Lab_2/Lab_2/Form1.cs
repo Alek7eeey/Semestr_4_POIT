@@ -45,7 +45,7 @@ namespace Lab_2
                 chekBar();
             }
             
-            if(textBoxID.Text.Length == 0)
+            if(textBoxID.Text.Length == 0 && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 id = true;
@@ -92,7 +92,7 @@ namespace Lab_2
             if (comboBoxModel.Text == "")
             {
                 FillWithInf.Text = newFlight.ToString();
-                barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
+               if(barFilling.Value != 0) barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 model = true;
                 chekBar();
             }
@@ -143,7 +143,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (textBoxCountOfSeat.Text.Length == 0)
+            if (textBoxCountOfSeat.Text.Length == 0 && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 count = true;
@@ -192,7 +192,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (textBoxCarrying.Text == "")
+            if (textBoxCarrying.Text == "" && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 weight = true;
@@ -231,7 +231,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (listBoxType.Text == "")
+            if (listBoxType.Text == "" && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 type = true;
@@ -268,7 +268,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (ConfirmTheCorrect.Text == "")
+            if (ConfirmTheCorrect.Text == "" && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 click = true;
@@ -333,7 +333,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (dateOfServiceChoose.Text == "")
+            if (dateOfServiceChoose.Text == "" && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 yearControl = true;
@@ -349,7 +349,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (dateOfIssueChoose.Text == "")
+            if (dateOfIssueChoose.Text == "" && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 yearIssue = true;
@@ -400,7 +400,7 @@ namespace Lab_2
                 chekBar();
             }
 
-            if (comboBoxModel.Text == "")
+            if (comboBoxModel.Text == "" && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 model = true;

@@ -18,8 +18,41 @@ car2.model = 'model';
 const arrayCars = [{
         cars: [car1, car2]
     }];
+let mark1 = {
+    subject: "math",
+    mark: 5,
+    done: true
+};
+let mark2 = {
+    subject: "OOP",
+    mark: 10,
+    done: true
+};
+let mark3 = {
+    subject: "Design",
+    mark: 8,
+    done: true
+};
+let student1 = {
+    id: 1,
+    name: "Aleksandr",
+    group: 4,
+    marks: [mark1, mark2, mark3]
+};
+let student2 = {
+    id: 2,
+    name: "Daria",
+    group: 5,
+    marks: [mark1, mark2]
+};
+let student3 = {
+    id: 3,
+    name: "Igor",
+    group: 6,
+    marks: [mark2, mark3]
+};
 const group = {
-    students: [],
+    students: [student1, student2, student3],
     studentsFilter(group) {
         const filteredStudents = [];
         for (let student of this.students) {
@@ -32,15 +65,21 @@ const group = {
     marksFilter(mark) {
         const filteredStudents = [];
         for (let student of this.students) {
-            if (student.mark == mark) {
-                filteredStudents.push(student);
+            for (let mark_ of student.marks) {
+                if (mark_.mark == mark) {
+                    filteredStudents.push(student);
+                }
             }
         }
         return filteredStudents;
     },
     deleteStudent(id) {
         this.students = this.students.filter((student) => student.id !== id);
-    },
-    mark: 10,
-    group: 5,
+    }
 };
+console.log(group.studentsFilter(5));
+console.log(group.marksFilter(10));
+group.deleteStudent(2);
+for (let a of group.students) {
+    console.log(a);
+}
