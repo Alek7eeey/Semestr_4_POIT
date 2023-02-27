@@ -102,7 +102,6 @@ void main()
 		if ((connect(cC, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR)
 			throw  SetErrorMsgText("connect:", WSAGetLastError());
 
-
 		char ibuf[24],
 			obuf[24] = "Hello from Client";
 		int count;
@@ -136,7 +135,5 @@ void main()
 	{
 		cout << endl << errorMsgText;
 	}
-
-
 }
 

@@ -5,7 +5,6 @@
 #include <string.h>
 using namespace std;
 
-
 string  GetErrorMsgText (int code)    // cформировать текст ошибки 
 {
 	string msgText;
@@ -72,7 +71,6 @@ string  SetErrorMsgText (string msgText, int code)
 {
 	return  msgText + GetErrorMsgText(code);
 };
-
 
 void main()
 {
