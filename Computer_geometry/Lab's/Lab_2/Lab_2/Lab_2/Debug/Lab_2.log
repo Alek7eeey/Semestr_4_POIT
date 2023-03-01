@@ -1,0 +1,6 @@
+﻿  ChildView.cpp
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_2\Lab_2\Lab_2\ChildView.cpp(78,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_2\Lab_2\Lab_2\ChildView.cpp(101,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_2\Lab_2\Lab_2\ChildView.cpp(127,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_2\Lab_2\Lab_2\ChildView.cpp(146,16): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Lab_2.vcxproj -> D:\studing\4_semestr\Computer_geometry\Lab's\Lab_2\Lab_2\Debug\Lab_2.exe
