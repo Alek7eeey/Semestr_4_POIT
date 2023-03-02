@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<employees xsi:schemaLocation="http://msiter.ru xmlFile.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://msiter.ru">
+  <employee>
+    <name>John Doe</name>
+    <higherEducation>true</higherEducation>
+    <position>senior</position>
+    <salary>100000</salary>
+  </employee>
+  <employee>
+    <name>Jane Smith</name>
+    <higherEducation>false</higherEducation>
+    <position>junior</position>
+    <salary>50000</salary>
+  </employee>
+  <employee>
+    <name>Bob Johnson</name>
+    <higherEducation>true</higherEducation>
+    <position>middle</position>
+    <salary>75000</salary>
+  </employee>
+</employees>

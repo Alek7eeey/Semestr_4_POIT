@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.docx4j:docx4j-core:11.4.8">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/docx4j/docx4j-core/11.4.8/docx4j-core-11.4.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/docx4j/docx4j-core/11.4.8/docx4j-core-11.4.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/docx4j/docx4j-core/11.4.8/docx4j-core-11.4.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
