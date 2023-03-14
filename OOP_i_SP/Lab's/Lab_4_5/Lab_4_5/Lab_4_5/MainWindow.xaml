@@ -1,0 +1,93 @@
+﻿<Window x:Class="Lab_4_5.MainWindow" 
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_4_5"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:svg="clr-namespace:Svg;assembly=Svg" xmlns:sys="clr-namespace:System.Globalization;assembly=mscorlib"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+    Title="Sale of souvenirs" MinWidth="705" MinHeight="680" Height="690" Width="1000" WindowStyle="ThreeDBorderWindow" FontSize="22" Icon="/logo.jpg">
+
+    <Grid x:Name="MainRoot" Background="white" Margin="0,0,0,-59">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.45*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Элементы управления -->
+        <Rectangle x:Name="HeaderRect"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="12" Grid.RowSpan="1" Fill="#F6623E" />
+        <WrapPanel Grid.Column="10" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 15 0" Cursor="D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur">
+            <Image x:Name="FlagUSA" Width="30px"  Source="image/FlagUSA.png" Margin="0 0 10 0" MouseDown="ChangeLanguage_MouseDown"/>
+            <Image x:Name="FlagBelarus" Width="30px" Source="image/FlagBelarus.png"  Margin="0 0 10 0" MouseLeftButtonDown="ChangeLanguage"/>
+            <Image x:Name="FlagUkraine" Width="30px" Source="image/FlagUkraine.png" MouseLeftButtonDown="ChangeLanguageUkr" />
+        </WrapPanel>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" 
+                 Text="BelSouvenirs" VerticalAlignment="Center" Width="164"  FontFamily="Jost" FontSize="20px"
+                 Margin="15 0 0 0" Foreground="#FFF6623E" FontWeight="Bold" ForceCursor="True" 
+                 />
+        <WrapPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur">
+            <TextBlock x:Name="seeProduct" Text="{DynamicResource SeeProductText}" Margin="0 0 20 0" FontFamily="Jost ExtraLight" FontSize="12" Foreground="#FFF6623E" MouseDown="GoToMainPage"/>
+            <TextBlock x:Name="addProduct" Text="{DynamicResource addProduct}" Margin="0 0 20 0" FontSize="12" FontFamily="Jost ExtraLight" MouseLeftButtonDown="AddProdutc_KeyDown"/>
+            <TextBlock x:Name="Aboutus" Text="{DynamicResource Aboutus}" Margin="0 0 20 0" FontSize="12" FontFamily="Jost ExtraLight"/>
+        </WrapPanel>
+        <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="Image/HeaderPhoto2.png" VerticalAlignment="Top" Stretch="UniformToFill"  />
+        <WrapPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15 30 0 0" Grid.ColumnSpan="1">
+            <TextBlock x:Name="ChooseYourProduct" FontWeight="Bold" FontFamily="Jost Black" FontSize="32px" TextWrapping="Wrap" Text="{DynamicResource ChooseYourProduct}"/>
+            <TextBlock x:Name="range" Text="{DynamicResource range}" FontWeight="Light" FontSize="16px" Margin="0 16 0 0" Foreground="Black" FontFamily="Jost Light" TextWrapping="Wrap"/>
+        </WrapPanel>
+        <TextBlock x:Name="ListSouv" Text="{DynamicResource ListSouv}"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontFamily="Jost Thin" Margin="0 8 0 0" FontSize="19" TextWrapping="Wrap"/>
+        <Rectangle Grid.Column="1" Grid.Row="3" Width="100" Height="3" Fill="#F6623E" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 35 0 0"/>
+
+        <TextBlock x:Name="search" Text="{DynamicResource search}" Grid.Column="0" Grid.Row="3" Margin="7 7 0 0 " FontFamily="Jost Thin" FontSize="17" TextWrapping="Wrap" FontWeight="Bold"/>
+        <TextBlock x:Name="searchForNameF" Text="{DynamicResource searchForNameF}" Grid.Column="0" Grid.Row="3" Margin="7 32 0 0" FontFamily="Jost Thin" FontSize="12" TextWrapping="Wrap"/>
+        <TextBox x:Name="searchInput" TextChanged="SearchForName" Margin="7 47 0 0" Width="200" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Background="#F0F0F0" FontFamily="Jost Thin" FontSize="14" BorderBrush="{x:Null}"/>
+        <TextBlock x:Name="searchCountry" Text="{DynamicResource searchCountry}" Grid.Column="0" Grid.Row="3" Margin="7 70 0 0" FontFamily="Jost Thin" FontSize="12" TextWrapping="Wrap"/>
+        <TextBox x:Name="InputCountry" Margin="7 85 0 0" Width="200" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Background="#F0F0F0" FontFamily="Jost Thin" FontSize="14" BorderBrush="{x:Null}" TextChanged="TextChanged_CountryInput"/>
+        <TextBlock x:Name="searchPrice" Text="{DynamicResource searchPrice}" Grid.Column="0" Grid.Row="3" Margin="7 108 0 0" FontFamily="Jost Thin" FontSize="12" TextWrapping="Wrap"/>
+
+        <StackPanel Margin="7 125 0 0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" Width="200" >
+            <xctk:RangeSlider Name="priceRangeSlider" Minimum="5" Maximum="1000" LowerValue="0" HigherValue="0" LowerValueChanged="SliderCorrect" HigherValueChanged="SliderCorrect"/>
+        </StackPanel>
+
+        <TextBlock x:Name="minFilter"  Margin="23,150,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" Width="47" Text="5" FontFamily="Jost Light" FontSize="12" />
+        <TextBlock x:Name="maxFilter" Margin="75,150,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" Width="56" Text="5" FontSize="12" FontFamily="Jost Light" />
+
+        <TextBlock x:Name="searchCategory" Text="{DynamicResource searchCategory}"  Grid.Column="0" Grid.Row="3" Margin="7 170 0 0" FontFamily="Jost Thin" FontSize="12" TextWrapping="Wrap"/>
+        <ComboBox x:Name="SelectCategoryComboBox" HorizontalAlignment="Left" Margin="7,190,0,0" Grid.Row="3" VerticalAlignment="Top" Width="198" Height="20" FontFamily="Jost Light" FontSize="12" SelectionChanged="SelectCategory" >
+            <ComboBoxItem x:Name="itemCup" Content ="{DynamicResource itemCup}"/>
+            <ComboBoxItem x:Name="itemShirt" Content ="{DynamicResource itemShirt}"/>
+            <ComboBoxItem x:Name="itemCharm" Content ="{DynamicResource itemCharm}"/>
+            <ComboBoxItem x:Name="itemOther" Content ="{DynamicResource itemOther}"/>
+            <ComboBoxItem x:Name="itemWithoutCategory" Content ="{DynamicResource itemWithoutCategory}"/>
+        </ComboBox>
+        <TextBlock x:Name="FilterByPrice" Text="{DynamicResource FilterByPrice}" Grid.Column="0" Grid.Row="3" Margin="7 220 0 0"  FontFamily="Jost Thin" FontSize="14" TextWrapping="Wrap" FontWeight="Bold"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Margin="7,240,0,0" HorizontalAlignment="Left"  FontFamily="Jost Thin" FontSize="12" TextWrapping="Wrap" Width="150">
+            <RadioButton x:Name="GrowPrice" Content="{DynamicResource GrowPrice}" GroupName="Group1" Checked="RadioButtonMarkGrow_Checked"/>
+            <RadioButton x:Name="wanePrice" Content="{DynamicResource wanePrice}" GroupName="Group1" Checked="RadioButtonMarkWane_Checked"/>
+            <RadioButton x:Name="BezFiltra_2" Content="{DynamicResource BezFiltra_2}" GroupName="Group1" Checked="RadioButtonMarkNone_Checked"/>
+        </TextBlock>
+
+        <TextBlock x:Name="FilterByRate" Text="{DynamicResource FilterByRate}" Grid.Column="0" Grid.Row="3" Margin="7 285 0 0" HorizontalAlignment="Left"  FontFamily="Jost Thin" FontSize="14" TextWrapping="Wrap" FontWeight="Bold"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" Margin="7,305,0,0" HorizontalAlignment="Left"  FontFamily="Jost Thin" FontSize="12" TextWrapping="Wrap" Width="150">
+            <RadioButton x:Name="GrowRate" Content="{DynamicResource GrowPrice}" GroupName="Group2" Checked="RadioButtonRateGrow_Checked"/>
+            <RadioButton x:Name="waneRate" Content="{DynamicResource wanePrice}" GroupName="Group2"  Checked="RadioButtonRateWane_Checked"/>
+            <RadioButton x:Name="BezFiltra_1" Content="{DynamicResource BezFiltra_2}" GroupName="Group2" Checked="RadioButtonMarkNone_Checked"/>
+        </TextBlock>
+        <ScrollViewer  Grid.Column="1" Grid.Row="3" Margin="0 50 10 50">
+            <WrapPanel x:Name="Products" HorizontalAlignment="Center"/>
+        </ScrollViewer>
+    </Grid>
+
+</Window>

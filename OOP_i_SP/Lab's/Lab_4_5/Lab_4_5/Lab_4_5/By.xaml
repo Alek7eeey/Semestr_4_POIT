@@ -1,0 +1,53 @@
+﻿
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  xmlns:v="clr-namespace:System;assembly=mscorlib">
+     <!--manePage-->
+    <v:String x:Key="SeeProductText">Прагляд</v:String>
+    <v:String x:Key="addProduct">Дадаць тавар</v:String>
+    <v:String x:Key="Aboutus">Пра нас</v:String>
+    <v:String x:Key="ChooseYourProduct">Выберы свой сувенiр</v:String>
+    <v:String x:Key="range">У нас прадстаўлены шырокі асартымент прадукцыі</v:String>
+    <v:String x:Key="ListSouv">Спіс сувеніраў</v:String>
+    <v:String x:Key="search">Пошук</v:String>
+    <v:String x:Key="searchForNameF">Пошук па назве</v:String>
+    <v:String x:Key="searchCountry">Пошук па краіне вытворчасці</v:String>
+    <v:String x:Key="searchPrice">Пошук па кошту</v:String>
+    <v:String x:Key="searchCategory">Пошук па катэгорыі</v:String>
+        
+    <v:String x:Key="itemCup">Гурток</v:String>
+    <v:String x:Key="itemShirt">Майка</v:String>
+    <v:String x:Key="itemCharm">Бірулька</v:String>
+    <v:String x:Key="itemOther">Іншы варыянт</v:String>
+        
+    <v:String x:Key="itemWithoutCategory">Без катэгорыі</v:String>
+    <v:String x:Key="FilterByPrice">Фільтр па цане</v:String>
+    <v:String x:Key="GrowPrice">Па ўзрастанні</v:String>
+    <v:String x:Key="wanePrice">Па змяншэнні</v:String>
+    <v:String x:Key="BezFiltra_2">Без фільтра</v:String>
+    <v:String x:Key="FilterByRate">Фільтр па рэйтынгу</v:String>
+    <v:String x:Key="GrowRate">Па ўзрастанні</v:String>
+    <v:String x:Key="waneRate">Па змяншэнні</v:String>
+    <v:String x:Key="BezFiltra_1">Без фільтра</v:String>
+
+    <!--infoAboutProduct-->
+    <v:String x:Key="infPr">Апісанне: </v:String>
+    <v:String x:Key="name">Назва: </v:String>
+    <v:String x:Key="costForm">Кошт: </v:String>
+    <v:String x:Key="countryForm">Краіна вытворчасці: </v:String>
+    <v:String x:Key="categoryForm">Катэгорыя: </v:String>
+    <v:String x:Key="rate">Рэйтынг: </v:String>
+    <v:String x:Key="Correct">Рэдагаваць</v:String>
+
+    <!--correctData-->
+    <v:String x:Key="Opisanie">Апісанне: </v:String>
+    <v:String x:Key="CorrectButton">Захаваць змены</v:String>
+        
+    <!--addProducts-->
+    <v:String x:Key="opis">Апісанне: </v:String>
+    <v:String x:Key="CorrectButton2">Дадаць</v:String>
+
+    <v:String x:Key="inputImage">Выбар фатаграфіі</v:String>
+    <v:String x:Key="choose">Выбраць</v:String>
+</ResourceDictionary>
+    
+    

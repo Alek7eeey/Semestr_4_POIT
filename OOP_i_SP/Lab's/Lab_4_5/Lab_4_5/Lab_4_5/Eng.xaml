@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!--manePage-->
+    <v:String x:Key="SeeProductText">Viewing</v:String>
+    <v:String x:Key="addProduct">Add a product</v:String>
+    <v:String x:Key="Aboutus">About us</v:String>
+    <v:String x:Key="ChooseYourProduct">Choose your souvenir</v:String>
+    <v:String x:Key="range">We have a wide range of products</v:String>
+    <v:String x:Key="ListSouv">List of souvenirs</v:String>
+    <v:String x:Key="search">Search</v:String>
+    <v:String x:Key="searchForNameF">Search by name</v:String>
+    <v:String x:Key="searchCountry">Search by country of production</v:String>
+    <v:String x:Key="searchPrice">Cost Search</v:String>
+    <v:String x:Key="searchCategory">Search by category</v:String>
+
+    <v:String x:Key="itemCup">Circle</v:String>
+    <v:String x:Key="itemShirt">T - shirt</v:String>
+    <v:String x:Key="itemCharm">Pendant</v:String>
+    <v:String x:Key="itemOther">Another option</v:String>
+
+    <v:String x:Key="itemWithoutCategory">Without category</v:String>
+    <v:String x:Key="FilterByPrice">Filter by price</v:String>
+    <v:String x:Key="GrowPrice">Ascending</v:String>
+    <v:String x:Key="wanePrice">Descending order</v:String>
+    <v:String x:Key="BezFiltra_2">Without filter</v:String>
+    <v:String x:Key="FilterByRate">Filter by rating</v:String>
+    <v:String x:Key="GrowRate">Ascending</v:String>
+    <v:String x:Key="waneRate">Descending order</v:String>
+    <v:String x:Key="BezFiltra_1">Without filter</v:String>
+
+    <!--infoAboutProduct-->
+    <v:String x:Key="infPr">Description: </v:String>
+    <v:String x:Key="name">Title: </v:String>
+    <v:String x:Key="costForm">Cost: </v:String>
+    <v:String x:Key="countryForm">Country of manufacture: </v:String>
+    <v:String x:Key="categoryForm">Category: </v:String>
+    <v:String x:Key="rate">Rating: </v:String>
+    <v:String x:Key="Correct">Edit</v:String>
+
+    <!--correctData-->
+    <v:String x:Key="Opisanie">Description: </v:String>
+    <v:String x:Key="CorrectButton">Save</v:String>
+
+    <!--addProducts-->
+    <v:String x:Key="opis">Description: </v:String>
+    <v:String x:Key="CorrectButton2">Add</v:String>
+
+    <v:String x:Key="inputImage">Choose image</v:String>
+    <v:String x:Key="choose">Choose</v:String>
+
+</ResourceDictionary>

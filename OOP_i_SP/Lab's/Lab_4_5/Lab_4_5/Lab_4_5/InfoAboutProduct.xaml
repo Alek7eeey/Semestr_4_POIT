@@ -1,0 +1,31 @@
+﻿<Window x:Class="Lab_4_5.InfoAboutProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_4_5"
+        mc:Ignorable="d"
+        Title="InfoAboutProduct" MinHeight="400" MinWidth="450" MaxHeight="400" MaxWidth="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image x:Name="ImageBlock" Grid.Column="0" Grid.Row="0" MaxWidth="180" Margin="0 10 0 10"></Image>
+
+        <TextBlock x:Name="infPr" Text="{DynamicResource infPr}" Grid.Row="1" Margin="7 0 0 0" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="idForm" Grid.Row="1" FontSize="15" Margin="7 30 0 0" FontFamily="Jost Light">ID: </TextBlock>
+        <TextBlock x:Name="name" Text="{DynamicResource name}" Grid.Row="1" FontSize="15" Margin="7 50 0 0" FontFamily="Jost Light"/>
+        <TextBlock x:Name="costForm" Text="{DynamicResource costForm}" Grid.Row="1" FontSize="15" Margin="7 70 0 0" FontFamily="Jost Light"/>
+        <TextBlock x:Name="countryForm" Text="{DynamicResource countryForm}" Grid.Row="1" FontSize="15" Margin="7 90 0 0" FontFamily="Jost Light"/>
+        <TextBlock x:Name="categoryForm" Text="{DynamicResource categoryForm}" Grid.Row="1" FontSize="15" Margin="7 110 0 0" FontFamily="Jost Light"/>
+        <TextBlock x:Name="rate" Text="{DynamicResource rate}" Grid.Row="1" FontSize="15" Margin="7 130 0 0" FontFamily="Jost Light"/>
+        <WrapPanel x:Name="wrapRate" Grid.Row="1" Width="100" Height="15" Margin="67 130 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+        </WrapPanel>
+        <Button x:Name="Correct" Content="{DynamicResource Correct}" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="7 6 0 6" Click="Correct_Button"/>
+    </Grid>
+</Window>

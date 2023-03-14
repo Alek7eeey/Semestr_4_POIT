@@ -1,0 +1,47 @@
+﻿<Window x:Class="Lab_4_5.Correct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_4_5"
+        mc:Ignorable="d"
+                Title="InfoAboutProduct" MinHeight="400" MinWidth="450" MaxHeight="400" MaxWidth="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image x:Name="ImageBlock" Grid.Column="0" Grid.Row="0" MaxWidth="180" Margin="0 10 0 10"></Image>
+
+        <TextBlock x:Name="Opisanie" Text="{DynamicResource Opisanie}" Grid.Row="1" Margin="7 0 0 0" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="idForm" Grid.Row="1" FontSize="15" Margin="7 30 0 0" FontFamily="Jost Light">ID:</TextBlock>
+        <TextBox x:Name="inputID" Grid.Row="1" FontFamily="Jost Light" Height="18" Width="150" HorizontalAlignment="Left" Margin="35 30 0 0" VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="name" Text="{DynamicResource name}" Grid.Row="1" FontSize="15" Margin="7 50 0 0" FontFamily="Jost Light"/>
+        <TextBox x:Name="inputName" Grid.Row="1" FontFamily="Jost Light" Height="18" Width="150" HorizontalAlignment="Left" Margin="86 50 0 0" VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="costForm" Text="{DynamicResource costForm}"  Grid.Row="1" FontSize="15" Margin="7 70 0 0" FontFamily="Jost Light"/>
+        <TextBox x:Name="inputCost" Grid.Row="1"  FontFamily="Jost Light" Height="18" Width="150" HorizontalAlignment="Left" Margin="92 70 0 0" VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="countryForm" Text="{DynamicResource countryForm}" Grid.Row="1" FontSize="15" Margin="7 90 0 0" FontFamily="Jost Light"/>
+        <TextBox x:Name="inputCountry" Grid.Row="1" FontFamily="Jost Light" Height="18" Width="150" HorizontalAlignment="Left" Margin="165 90 0 0" VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="categoryForm" Text="{DynamicResource categoryForm}" Grid.Row="1" FontSize="15" Margin="7 110 0 0" FontFamily="Jost Light"/>
+        <ComboBox x:Name="CategoryBox" Grid.Row="1" FontFamily="Jost Light" Height="18" Width="150" FontSize="12" HorizontalAlignment="Left" Margin="90 67 0 0">
+            <ComboBoxItem x:Name="itemCup" Content ="{DynamicResource itemCup}"/>
+            <ComboBoxItem x:Name="itemShirt" Content ="{DynamicResource itemShirt}"/>
+            <ComboBoxItem x:Name="itemCharm" Content ="{DynamicResource itemCharm}"/>
+            <ComboBoxItem x:Name="itemOther" Content ="{DynamicResource itemOther}"/>
+            <ComboBoxItem x:Name="itemWithoutCategory" Content ="{DynamicResource itemWithoutCategory}"/>
+        </ComboBox>
+
+        <TextBlock x:Name="rate" Text="{DynamicResource rate}" Grid.Row="1" FontSize="15" Margin="7 130 0 0" FontFamily="Jost Light"/>
+        <TextBox x:Name="inputRate" Grid.Row="1" FontFamily="Jost Light" Height="18" Width="150" HorizontalAlignment="Left" Margin="75 130 0 0" VerticalAlignment="Top"/>
+
+        <Button x:Name="CorrectButton" Content="{DynamicResource CorrectButton}" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="7 6 0 6" Click="CorrectButton_Click"/>
+    </Grid>
+</Window>

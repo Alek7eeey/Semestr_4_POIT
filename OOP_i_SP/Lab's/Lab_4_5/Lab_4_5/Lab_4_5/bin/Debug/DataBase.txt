@@ -1,0 +1,28 @@
+ID: 1, 
+Name: Майка, 
+Price: 85, 
+Category: Майки, 
+Country of origin: Беларусь, 
+Rate: 3 
+---------------------------------
+ID: 2, 
+Name: Кружка с надписью "Беларусь", 
+Price: 24, 
+Category: Кружки, 
+Country of origin: Румыния, 
+Rate: 4 
+---------------------------------
+ID: 3, 
+Name: Белорусская кукла, 
+Price: 54, 
+Category: Другое, 
+Country of origin: Беларусь, 
+Rate: 5 
+---------------------------------
+ID: 4, 
+Name: Тарелка с зубром, 
+Price: 44, 
+Category: Другое, 
+Country of origin: Польша, 
+Rate: 2 
+---------------------------------
