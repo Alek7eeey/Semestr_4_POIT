@@ -19,6 +19,8 @@ namespace Lab_4_5
         static Cursor C1 = new Cursor("D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\normal_select.cur");
         public static Cursor C2 = new Cursor("D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur");
 
+        
+
         public MainWindow()
         {
             InitializeComponent();
