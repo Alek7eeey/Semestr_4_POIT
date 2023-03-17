@@ -1,0 +1,22 @@
+[
+    {
+        "percent": "100%",
+        "progress_count": "100%",
+        "context": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui."
+    },
+    {
+        "percent": "75%",
+        "progress_count": "75%",
+        "context": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui."
+    },
+    {
+        "percent": "50%",
+        "progress_count": "50%",
+        "context": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui."
+    },
+    {
+        "percent": "Итог",
+        "progress_count": "25%",
+        "context": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui."
+    }
+]

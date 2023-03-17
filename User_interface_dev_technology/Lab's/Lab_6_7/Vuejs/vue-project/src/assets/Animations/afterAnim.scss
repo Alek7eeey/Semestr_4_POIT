@@ -1,0 +1,10 @@
+@mixin afterAnim {
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 15px;
+        height: 1;
+        width: 100%;
+        border-top: 1px solid white;
+    }
+}

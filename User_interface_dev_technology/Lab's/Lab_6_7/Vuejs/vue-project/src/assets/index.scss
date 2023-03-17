@@ -1,0 +1,166 @@
+@mixin flexer($gap: 0, $jc: center, $ai: center, $fd: row) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+    flex-direction: $fd;
+}
+
+@mixin afterAnim {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 35px;
+        height: 10px;
+        width: 100%;
+        border-top: 1px solid white;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
+        transform: rotateY(90deg);
+    }
+    &:hover {
+        &::after {
+            visibility: visible;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('Fonts/Poppins/Poppins-Regular.ttf');
+}
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    border: none;
+    @media (max-width: 380px) {
+        word-break: break-all;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-repeat: repeat;
+    background-color: black;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 200px;
+}
+
+.padding {
+    padding: 38px 80px;
+    @media (max-width: 600px) {
+        padding: 12px 15px;
+    }
+}
+
+.back-for-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.start-title {
+    display: block;
+    max-width: 920px;
+    width: 100%;
+    min-height: 180px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 59px;
+    line-height: 140%;
+    color: #FFFFFF;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.center-block {
+    @include flexer(50px,
+    center,
+    flex-start,
+    column);
+}
+
+.info-block {
+    @include flexer(81px,
+    flex-start);
+    background-color: #121212;
+    flex-wrap: wrap;
+    .info-about-courses {
+        @include flexer(10px,
+        center,
+        flex-start,
+        column);
+        max-width: 251px;
+        width: 100%;
+        ;
+    }
+    .block-progress {
+        @include flexer(8px,
+        center,
+        flex-start,
+        column);
+        max-width: 712px;
+        width: 100%;
+        .progress {
+            width: 100%;
+            @include flexer(0);
+            $per: 40%;
+            .line-fill {
+                background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+            }
+            .line-none {
+                background-color: white;
+            }
+            .line-fill,
+            .line-none {
+                height: 6px;
+                border: none;
+            }
+        }
+    }
+}
+
+.diap-progress {
+    width: 100%;
+    @include flexer(0,
+    space-between);
+    span {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: right;
+        color: #FFFFFF;
+        opacity: 0.4;
+    }
+}
