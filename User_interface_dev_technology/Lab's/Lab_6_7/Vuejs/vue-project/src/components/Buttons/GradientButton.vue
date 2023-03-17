@@ -1,11 +1,26 @@
 <template>
     <button class="doOrder"
-            @click="$event => click()">{{ text }}</button>
+            @click="$event => click()" v-bind:style="{ boxShadow: boxShadow }" v-on:mouseover="addShadow" v-on:mouseleave="removeShadow">{{ text }}</button>
 </template>
 
 <script>
     export default {
-        props: ["text", "click"]
+        props: ["text", "click"],
+        methods: {
+
+        addShadow() {
+        this.boxShadow = "2px 2px 10px rgba(222, 123, 0, 0.5)";
+        },
+
+        removeShadow() {
+        this.boxShadow = "none";
+        }
+  },
+        data() {
+            return {
+            boxShadow: "none"
+            };
+        }
     }
 </script>
 

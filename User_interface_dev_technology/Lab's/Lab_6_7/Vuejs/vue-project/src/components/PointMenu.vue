@@ -1,7 +1,8 @@
 
 <template>
     <a class="point-menu" 
-       :href="point.href" >
+       @click="$event => linkTo(point.href)">
+       
         <li>
             {{ point.text }}
         </li>
@@ -13,6 +14,19 @@
     export default {
         name: "PointMenu",
         props: ["point"],
+
+        methods: {
+            
+            linkTo(path)
+            {
+                document.getElementById(path).scrollIntoView(
+                    {
+                        behavior: "smooth", 
+                        block: "start"
+                    }
+                    );
+            }
+        }
     }
 
 </script>

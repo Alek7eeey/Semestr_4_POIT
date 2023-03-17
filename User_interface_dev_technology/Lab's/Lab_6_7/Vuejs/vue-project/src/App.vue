@@ -3,27 +3,32 @@
   <TopSite :Times="Times" 
            :infoAboutEarning="infoAboutEarning" 
            :points="points"
-           :infoAboutCourses="infoAboutCourses"/>
+           :infoAboutCourses="infoAboutCourses" id="mainCl"/>
 
   <WhatWeDo :title="dataForWhatWeDo.title"
             :context="dataForWhatWeDo.context"
             :img="dataForWhatWeDo.img"/>
 
   <Start :infoBlocks="infoBlocks"
-         :count="infoBlocks.length"/>
+         :count="infoBlocks.length" id="startBl"/>
 
   <Advantages :informationAdv = "informationAdv"/>
 
   <Partners :imageUrl="imageUrl"/>
 
-  <Program :items="ProgramItems"/>
+  <Program :items="ProgramItems" id="tableLesson"/>
 
-  <Teachers :informationTeacher="informationTeacher"/>
+  <Teachers :informationTeacher="informationTeacher" id="teacher"/>
 
   <Footer :image1="IconVK" 
           :image2="IconYouTube" 
           :image3="IconFacebook" 
-          :image4="IconInst" />
+          :image4="IconInst"
+          :href1="href1"
+          :href2="href2"
+          :href3="href3"
+          :href4="href4"
+          id="footer"/>
   
 </template>
 
@@ -42,9 +47,9 @@
     mounted(){
       this.initDate();
 
-      getDatas("http://localhost:5173/infoBlocks.json").then(data => this.infoBlocks = data.data);
-      getDatas("http://localhost:5173/points.json").then(data => this.points = data.data);
-      getDatas("http://localhost:5173/date.json").then(data => {
+      getDatas("infoBlocks.json").then(data => this.infoBlocks = data.data);
+      getDatas("points.json").then(data => this.points = data.data);
+      getDatas("date.json").then(data => {
         const date = new Date(data.data.date);
         const dateNow = Date.now();
 
@@ -218,10 +223,14 @@
         ],
 
         //footer
-        IconVK: "http://localhost:5173/image/facebook.svg",
+        IconVK: "http://localhost:5173/image/vk.svg",
+        href1:"https://www.vk.com",
         IconYouTube: "http://localhost:5173/image/youtube.svg",
+        href2:"https://www.youtube.com",
         IconFacebook: "http://localhost:5173/image/facebook.svg",
-        IconInst: "http://localhost:5173/image/instagram.svg"
+        href3:"https://www.facebook.com",
+        IconInst: "http://localhost:5173/image/instagram.svg",
+        href4:"https://www.instagram.com"
       }
     },
 

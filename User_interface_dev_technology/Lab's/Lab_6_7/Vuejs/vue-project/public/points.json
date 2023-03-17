@@ -1,26 +1,25 @@
-[
-    {
+[{
         "text": "Главная",
-        "href": "#footer"
+        "href": "mainCl"
     },
     {
         "text": "Курсы",
-        "href": "#"
+        "href": "startBl"
     },
     {
-      "text": "Расписание", 
-      "href": "#"
+        "text": "Расписание",
+        "href": "tableLesson"
     },
     {
-      "text": "Преподаватели",
-      "href": "#"
+        "text": "Преподаватели",
+        "href": "teacher"
     },
     {
-      "text": "Рассылка",
-       "href": "#"
+        "text": "Рассылка",
+        "href": "footer"
     },
     {
-      "text": "Контакты", 
-      "href": "#"
+        "text": "Контакты",
+        "href": "footer"
     }
 ]

@@ -1,40 +1,68 @@
 <template>
-<div class="wrapper" id="footer">
+<div class="wrapperFooter">
     <div class="head">Статьи каждую неделю</div>
     <div class="inf">Больше 90% учеников прошли полный курс и смогли<br> собрать свой первый компьютер</div>
     <div class="ConnectWithUs">
         <div class="email">
-            <input type="email" placeholder="E-mail">
-            <GradientButton :text="textButton"/>
+            <input type="email" placeholder="E-mail" v-model="login2" @input="validateEmail"/>
+            <span class="messageError" v-if="emailError" style="color: red">{{ emailError }}</span>
+            <Button class="btn" :text="textButton" @click="boxWithInf">Отправить</Button>
         </div>
         <div class="icons">
-            <div><img :src="image1" alt=""></div>
-            <div><img :src="image2" alt=""></div>
-            <div><img :src="image3" alt=""></div>
-            <div><img :src="image4" alt=""></div>
+           <a :href="href1"><div><img :src="image1" alt=""></div></a> 
+            <a :href="href2"><div><img :src="image2" alt=""></div></a>
+            <a :href="href3"><div><img :src="image3" alt=""></div></a>
+            <a :href="href4"><div><img :src="image4" alt=""></div></a>
         </div>
     </div>
 </div>
 </template>
 
 <script>
-import GradientButton from '../Buttons/GradientButton.vue';
 
 export default
 {
-    props: ["image1", "image2", "image3", "image4"],
-    components: { GradientButton },
+    props: ["image1", "image2", "image3", "image4", "href1", "href2", "href3", "href4"],
+
     data() {
         return {
-            textButton: "Подписаться"
+            textButton: "Подписаться",
+            login2: " ",
+            emailError: "",
+            isTrue: false
         }
+    },
+
+    methods: {
+
+        boxWithInf() {
+            if(this.login2 === " ") alert("Вы ничего не ввели!");
+            else if(this.isTrue){
+        alert("E-mail: " + this.login2);
+        this.login2 = "";
+            }
+    },
+
+    validateEmail() {
+      const regex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]/;
+      if (!regex.test(this.login2) && this.login2 != "") 
+      {
+        this.emailError = "Введите корректный адрес электронной почты";
+        this.isTrue = false;
+      }
+    else 
+       {
+        this.emailError = "";
+        this.isTrue = true;
+      }
+    }
     }
 }
 </script>
 
 <style lang="scss" scoped>
 @import './../../assets/index.scss';
-.wrapper{
+.wrapperFooter{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -44,6 +72,12 @@ export default
     padding: 0 80px 30px;
     gap: 35px;
 
+    .messageError
+    {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
     .head
     {
         font-weight: 700;
@@ -78,6 +112,7 @@ export default
             border-radius: 50px 50px 50px 50px;
             width: 433px;
             flex: 1;
+            color: white;
             height: 42px;
             padding: 10px 30px;
             border: none;
