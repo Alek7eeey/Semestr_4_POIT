@@ -4,6 +4,7 @@
     <v:String x:Key="SeeProductText">Viewing</v:String>
     <v:String x:Key="addProduct">Add a product</v:String>
     <v:String x:Key="Aboutus">About us</v:String>
+    <v:String x:Key="Theme">Change theme</v:String>
     <v:String x:Key="ChooseYourProduct">Choose your souvenir</v:String>
     <v:String x:Key="range">We have a wide range of products</v:String>
     <v:String x:Key="ListSouv">List of souvenirs</v:String>
@@ -48,4 +49,5 @@
     <v:String x:Key="inputImage">Choose image</v:String>
     <v:String x:Key="choose">Choose</v:String>
 
+    <v:String x:Key="CorrectButton3">Delete</v:String>
 </ResourceDictionary>

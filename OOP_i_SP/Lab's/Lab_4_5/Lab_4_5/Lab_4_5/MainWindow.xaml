@@ -1,4 +1,4 @@
-﻿<Window x:Class="Lab_4_5.MainWindow" 
+﻿<Window x:Class="Lab_4_5.MainWindow"  
         
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,12 +7,14 @@
         xmlns:local="clr-namespace:Lab_4_5"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+           xmlns:control = "clr-namespace:Lab_4_5" 
         xmlns:svg="clr-namespace:Svg;assembly=Svg" xmlns:sys="clr-namespace:System.Globalization;assembly=mscorlib"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-    Title="Sale of souvenirs" MinWidth="705" MinHeight="680" Height="690" Width="1000" WindowStyle="ThreeDBorderWindow" FontSize="22" Icon="/logo.jpg">
+    Title="Sale of souvenirs" MinWidth="705" MinHeight="680" Height="690" Width="1000" 
+        WindowStyle="ThreeDBorderWindow" FontSize="22" Icon="/logo.jpg" x:Name="main">
 
-    <Grid x:Name="MainRoot" Background="white" Margin="0,0,0,-59">
+    <Grid x:Name="MainRoot" Style="{DynamicResource WindowStyle}" Margin="0,0,0,-59">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
@@ -26,27 +28,40 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!-- Элементы управления -->
+
         <Rectangle x:Name="HeaderRect"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="12" Grid.RowSpan="1" Fill="#F6623E" />
+        <control:MyUserElement Grid.Column="0" Grid.Row="0" Margin="20 0 0 0 " VerticalAlignment="Center" HorizontalAlignment="Left" 
+                               url1="D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Image\instagram.png"
+                               url2="D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Image\youtube.png" 
+                               url3="D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Image\twitter.png"/>
         <WrapPanel Grid.Column="10" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 15 0" Cursor="D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur">
-            <Image x:Name="FlagUSA" Width="30px"  Source="image/FlagUSA.png" Margin="0 0 10 0" MouseDown="ChangeLanguage_MouseDown"/>
-            <Image x:Name="FlagBelarus" Width="30px" Source="image/FlagBelarus.png"  Margin="0 0 10 0" MouseLeftButtonDown="ChangeLanguage"/>
-            <Image x:Name="FlagUkraine" Width="30px" Source="image/FlagUkraine.png" MouseLeftButtonDown="ChangeLanguageUkr" />
+            <Image x:Name="FlagUSA" Style="{StaticResource styleFlagUSA}" MouseDown="ChangeLanguage_MouseDown"/>
+            <Image x:Name="FlagBelarus" Style="{StaticResource styleFlagBelarus}" MouseLeftButtonDown="ChangeLanguage"/>
+            <Image x:Name="FlagUkraine" Style="{StaticResource FlagImageStyle}" MouseLeftButtonDown="ChangeLanguageUkr" />
         </WrapPanel>
-        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" 
-                 Text="BelSouvenirs" VerticalAlignment="Center" Width="164"  FontFamily="Jost" FontSize="20px"
-                 Margin="15 0 0 0" Foreground="#FFF6623E" FontWeight="Bold" ForceCursor="True" 
-                 />
+        <TextBlock Style="{DynamicResource BelSouvnirStyle}" Grid.Row="1"/>
         <WrapPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur">
             <TextBlock x:Name="seeProduct" Text="{DynamicResource SeeProductText}" Margin="0 0 20 0" FontFamily="Jost ExtraLight" FontSize="12" Foreground="#FFF6623E" MouseDown="GoToMainPage"/>
-            <TextBlock x:Name="addProduct" Text="{DynamicResource addProduct}" Margin="0 0 20 0" FontSize="12" FontFamily="Jost ExtraLight" MouseLeftButtonDown="AddProdutc_KeyDown"/>
+            <TextBlock x:Name="addProduct" MouseLeftButtonDown="AddProdutc_KeyDown" Style="{DynamicResource StyleAddProduct}"/>
             <TextBlock x:Name="Aboutus" Text="{DynamicResource Aboutus}" Margin="0 0 20 0" FontSize="12" FontFamily="Jost ExtraLight"/>
+            <TextBlock x:Name="Theme" Text="{DynamicResource Theme}" Margin="0 0 40 0" FontSize="12" FontFamily="Jost ExtraLight" MouseDown="Click"/>
         </WrapPanel>
-        <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="Image/HeaderPhoto2.png" VerticalAlignment="Top" Stretch="UniformToFill"  />
+
+        <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
+            <Button Background="{x:Null}" BorderBrush="{x:Null}" MaxWidth="30" Click="undoClick">
+                <Image Source="D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Image\undo.png"></Image>
+            </Button>
+            <Button Background="{x:Null}" BorderBrush="{x:Null}" MaxWidth="30" Click="redoClick">
+                <Image Source="D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Image\redo.png"></Image>
+            </Button>
+        </WrapPanel>
+
+        <Image Style="{StaticResource HeaderImageStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
         <WrapPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15 30 0 0" Grid.ColumnSpan="1">
             <TextBlock x:Name="ChooseYourProduct" FontWeight="Bold" FontFamily="Jost Black" FontSize="32px" TextWrapping="Wrap" Text="{DynamicResource ChooseYourProduct}"/>
             <TextBlock x:Name="range" Text="{DynamicResource range}" FontWeight="Light" FontSize="16px" Margin="0 16 0 0" Foreground="Black" FontFamily="Jost Light" TextWrapping="Wrap"/>
         </WrapPanel>
-        <TextBlock x:Name="ListSouv" Text="{DynamicResource ListSouv}"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontFamily="Jost Thin" Margin="0 8 0 0" FontSize="19" TextWrapping="Wrap"/>
+        <TextBlock x:Name="ListSouv" Style="{StaticResource styleNameListSouvenir}" Grid.Column="1" Grid.Row="3"/>
         <Rectangle Grid.Column="1" Grid.Row="3" Width="100" Height="3" Fill="#F6623E" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 35 0 0"/>
 
         <TextBlock x:Name="search" Text="{DynamicResource search}" Grid.Column="0" Grid.Row="3" Margin="7 7 0 0 " FontFamily="Jost Thin" FontSize="17" TextWrapping="Wrap" FontWeight="Bold"/>

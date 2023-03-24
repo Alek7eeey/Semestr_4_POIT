@@ -27,13 +27,12 @@ namespace Lab_4_5
         string name2;
         BitmapImage im;
         static Cursor C1 = new Cursor("D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\normal_select.cur");
-        public Correct(int id, string name_, int price, BitmapImage img, Souvenirs.category categor, string country, int rate)
+        public Correct(string name_, int price, BitmapImage img, Souvenirs.category categor, string country, int rate)
         {
             InitializeComponent();
             this.name2 = name_;
             im = img;
 
-            inputID.Text = Convert.ToString(id);
             inputName.Text = name_;
             inputCost.Text = Convert.ToString(price);
             ImageBlock.Source = img;
@@ -60,7 +59,6 @@ namespace Lab_4_5
                     a.CountryOfOrigin = inputCountry.Text;
                     a.rate = Convert.ToInt32(inputRate.Text);
                     a.Image = im;
-                    a.ID = Convert.ToInt32(inputID.Text);
 
                     category categor = category.NULL;
                     if (CategoryBox.Text == "Кружки" || CategoryBox.Text == "Гурток" || CategoryBox.Text == "Circle") categor = category.Кружки;

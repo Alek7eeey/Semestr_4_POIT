@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_4_5"
         mc:Ignorable="d"
-        Title="InfoAboutProduct" MinHeight="400" MinWidth="450" MaxHeight="400" MaxWidth="450">
+        Title="InfoAboutProduct" MinHeight="400" MinWidth="450" MaxHeight="400" MaxWidth="450" Closing="CloseWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -26,6 +26,7 @@
         <TextBlock x:Name="rate" Text="{DynamicResource rate}" Grid.Row="1" FontSize="15" Margin="7 130 0 0" FontFamily="Jost Light"/>
         <WrapPanel x:Name="wrapRate" Grid.Row="1" Width="100" Height="15" Margin="67 130 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
         </WrapPanel>
-        <Button x:Name="Correct" Content="{DynamicResource Correct}" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="7 6 0 6" Click="Correct_Button"/>
+        <Button x:Name="Correct" Template="{DynamicResource btnTemplate2}" Cursor="D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="7 6 0 6" Click="Correct_Button"/>
+        <Button x:Name="Correct2" Template="{DynamicResource btnTemplate4}" Cursor="D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="100 6 0 6" Click="delete_click" />
     </Grid>
 </Window>

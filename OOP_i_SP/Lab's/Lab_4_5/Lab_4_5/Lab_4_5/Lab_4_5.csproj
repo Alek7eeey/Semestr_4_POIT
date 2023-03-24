@@ -97,6 +97,7 @@
     <Compile Include="AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllCommands\CommandDelete.cs" />
     <Compile Include="AllCommands\CommandSearchCost.cs" />
     <Compile Include="AllCommands\CommandSearchCountry.cs" />
     <Compile Include="AllCommands\CommandSearchName.cs" />
@@ -113,9 +114,17 @@
     <Compile Include="InfoAboutProduct.xaml.cs">
       <DependentUpon>InfoAboutProduct.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Memento.cs" />
+    <Compile Include="MyUserElement.xaml.cs">
+      <DependentUpon>MyUserElement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PullOfMethods.cs" />
     <Compile Include="Souvenirs.cs" />
     <Page Include="AddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlackTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Correct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DictionaryOne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,11 +160,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MyUserElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style\style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ukr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WhiteTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

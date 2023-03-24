@@ -47,14 +47,15 @@ namespace Lab_4_5
             if (CategoryBox.Text == "Брелки" || CategoryBox.Text == "Бірулька" || CategoryBox.Text == "Pendant") categor = category.Брелки;
             if (CategoryBox.Text == "Другое" || CategoryBox.Text == "Іншы варыянт" || CategoryBox.Text == "Another option") categor = category.Другое;
 
-            if (inputID.Text == "" || inputName.Text == "" || inputCost.Text == "" || bitmap == null || categor == category.NULL || inputCountry.Text == "" || inputRate.Text == "")
+            if (inputName.Text == "" || inputCost.Text == "" || bitmap == null || categor == category.NULL || inputCountry.Text == "" || inputRate.Text == "")
             {
                 MessageBox.Show("Заполните все поля!", "Ошибка");
             }
             else
             {
-                Souvenirs newSouvenir = new Souvenirs(Convert.ToInt32(inputID.Text), inputName.Text, Convert.ToInt32(inputCost.Text), bitmap, categor, inputCountry.Text, Convert.ToInt32(inputRate.Text));
+                Souvenirs newSouvenir = new Souvenirs(++Souvenirs.COUNT, inputName.Text, Convert.ToInt32(inputCost.Text), bitmap, categor, inputCountry.Text, Convert.ToInt32(inputRate.Text));
                 DataBase.AddToDataBase(newSouvenir);
+                Memento.BeforeStepStack.Push(newSouvenir);
                 PullOfMethods pull = new PullOfMethods();
                 pull.AddDefaultProducts();
                 this.Close();

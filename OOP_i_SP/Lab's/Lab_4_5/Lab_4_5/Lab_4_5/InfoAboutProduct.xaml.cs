@@ -1,4 +1,5 @@
 ﻿using ExCSS;
+using Lab_4_5.AllCommands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace Lab_4_5
     /// </summary>
     public partial class InfoAboutProduct : Window
     {
+        private PullOfMethods newPull = new PullOfMethods();
+        Command command;
+
         static Cursor C1 = new Cursor("D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\normal_select.cur");
         public int ID { get; set; }
         public string nameOfSouvenir { get; set; }
@@ -55,6 +59,9 @@ namespace Lab_4_5
         {
           InitializeComponent();
 
+            command = new CommandMakeDefaultProducts(newPull);
+            command.Execute();
+
             idForm.Text += ' ' + Convert.ToString(id);
             this.ID=id;
 
@@ -84,9 +91,21 @@ namespace Lab_4_5
 
         private void Correct_Button(object sender, RoutedEventArgs e)
         {
-            Correct correc = new Correct(ID, nameOfSouvenir, price, Image, Category, CountryOfOrigin, rate2);
+            Correct correc = new Correct(nameOfSouvenir, price, Image, Category, CountryOfOrigin, rate2);
             this.Close();
             correc.ShowDialog();
+        }
+
+        private void delete_click(object sender, RoutedEventArgs e)
+        {
+            command = new CommandDelete(newPull);
+            command.Execute();
+            this.Close();
+        }
+
+        private void CloseWindow(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            PullOfMethods.actualID = 0;
         }
     }
 }

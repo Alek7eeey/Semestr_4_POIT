@@ -1,11 +1,14 @@
-﻿using Lab_4_5.AllCommands;
+﻿using ExCSS;
+using Lab_4_5.AllCommands;
 using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using static System.Net.Mime.MediaTypeNames;
 using Application = System.Windows.Application;
+using Colors = System.Windows.Media.Colors;
 
 namespace Lab_4_5
 {
@@ -18,8 +21,8 @@ namespace Lab_4_5
         Command command;
         static Cursor C1 = new Cursor("D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\normal_select.cur");
         public static Cursor C2 = new Cursor("D:\\studing\\4_semestr\\OOP_i_SP\\Lab's\\Lab_4_5\\Cursor\\Red Neon\\link_select.cur");
-
-        
+        private static string theme = "white";
+        private Memento memento;
 
         public MainWindow()
         {
@@ -34,6 +37,7 @@ namespace Lab_4_5
             command.Execute();
             removeAllFilters("");
             Cursor = C1;
+            memento = new Memento();
         }
 
         public void removeAllFilters(string str)
@@ -90,6 +94,15 @@ namespace Lab_4_5
             PullOfMethods.searchInput = searchInput;
             command = new CommandSearchName(newPull);
             command.Execute();
+
+            if(searchInput.Text.Contains("admin"))
+            {
+                searchInput.Foreground = new SolidColorBrush(Colors.Blue);
+            }
+            else
+            {
+                searchInput.Foreground = new SolidColorBrush(Colors.Black);
+            }
         }
 
         private void TextChanged_CountryInput(object sender, TextChangedEventArgs e)
@@ -189,6 +202,39 @@ namespace Lab_4_5
             Application.Current.Resources.Clear();
             Application.Current.Resources.MergedDictionaries.Add(res);
             this.UpdateLayout(); // явное обновление макета формы
+        }
+
+        private void Click(object sender, MouseButtonEventArgs e)
+        {
+            if(theme == "white")
+            {
+                var uri = new Uri(@"BlackTheme.xaml", UriKind.Relative);
+                ResourceDictionary res = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(res);
+                this.UpdateLayout(); // явное обновление макета формы
+                theme = "black";
+            }
+
+            else
+            {
+                var uri = new Uri(@"WhiteTheme.xaml", UriKind.Relative);
+                ResourceDictionary res = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(res);
+                this.UpdateLayout(); // явное обновление макета формы
+                theme = "white";
+            }
+        }
+
+        private void undoClick(object sender, RoutedEventArgs e)
+        {
+            memento.undo();
+        }
+
+        private void redoClick(object sender, RoutedEventArgs e)
+        {
+            memento.redo();
         }
     }
 }

@@ -21,15 +21,15 @@ Rate: 5
 ---------------------------------
 ID: 4, 
 Name: Тарелка с зубром, 
-Price: 20, 
+Price: 44, 
 Category: Другое, 
 Country of origin: Польша, 
 Rate: 2 
 ---------------------------------
 ID: 3, 
-Name: кпк, 
-Price: 12, 
-Category: Брелки, 
-Country of origin: беларусь, 
-Rate: 4 
+Name: Белорусская кукла, 
+Price: 54, 
+Category: Другое, 
+Country of origin: Беларусь, 
+Rate: 5 
 ---------------------------------

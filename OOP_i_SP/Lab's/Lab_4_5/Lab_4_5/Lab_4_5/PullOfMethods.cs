@@ -28,6 +28,7 @@ namespace Lab_4_5
         public static RadioButton BezFiltra_1 { get; set; }
         public static RadioButton BezFiltra_2 { get; set; }
         public static Frame frameWithInf { get; set; }
+        public static int actualID {  get; set; }
         #endregion
         public void productWrap_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)//метод обработки нажатия на блок
         {
@@ -39,6 +40,7 @@ namespace Lab_4_5
                 if(a.nameOfSouvenir == name.Text)
                 {
                     InfoAboutProduct info = new InfoAboutProduct(a.ID,a.nameOfSouvenir, a.price, a.Image, a.Category, a.CountryOfOrigin, a.rate);
+                    actualID = a.ID;
                     info.ShowDialog();
                     break;
                 }
@@ -287,6 +289,28 @@ namespace Lab_4_5
             }
 
 
+        }
+
+        public void DeleteProduct()
+        {
+            if (actualID != 0 && DataBase.souvenirsList.Count != 0)
+            {
+                var tempSouvenirsList = new List<Souvenirs>(DataBase.souvenirsList.Count);
+                foreach (var a in DataBase.souvenirsList)
+                {
+                    if (a.ID != actualID)
+                    {
+                        tempSouvenirsList.Add(a);
+                    }
+                    else
+                    {
+                        Memento.BeforeStepStack.Push(a);
+                    }
+                }
+                DataBase.souvenirsList = tempSouvenirsList;
+            }
+            AddDefaultProducts();
+            actualID = 0;
         }
     }
 }

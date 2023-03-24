@@ -57,3 +57,9 @@ D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\App.baml
 D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\Eng.baml
 D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\Style\style.baml
 D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\ukr.baml
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\DictionaryOne.baml
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\BlackTheme.baml
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\WhiteTheme.baml
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\MyUserElement.g.cs
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\MyUserElement.baml
+D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_4_5\Lab_4_5\Lab_4_5\obj\Debug\GeneratedInternalTypeHelper.g.cs

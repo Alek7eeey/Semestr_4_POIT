@@ -4,6 +4,7 @@
     <v:String x:Key="SeeProductText">Перегляд</v:String>
     <v:String x:Key="addProduct">Додати товар</v:String>
     <v:String x:Key="Aboutus">Про нас</v:String>
+    <v:String x:Key="Theme">Змена теми</v:String>
     <v:String x:Key="ChooseYourProduct">Оберіть свій сувенір</v:String>
     <v:String x:Key="range">У нас представлений широкий асортимент продукції</v:String>
     <v:String x:Key="ListSouv">Список сувенірів</v:String>
@@ -47,5 +48,7 @@
 
     <v:String x:Key="inputImage">Вибір зображення</v:String>
     <v:String x:Key="choose">Вибрати</v:String>
+
+    <v:String x:Key="CorrectButton3">Видалити</v:String>
 
 </ResourceDictionary>
