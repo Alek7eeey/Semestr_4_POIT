@@ -1,0 +1,53 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Lab04.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  stdafx.cpp
+  ChildView.cpp
+  CMatrix.cpp
+  Lab03.cpp
+  LibBlade.cpp
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(120,33): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(120,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(120,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(120,20): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(125,37): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(125,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(125,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(125,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(214,75): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(214,58): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(214,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(214,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(219,75): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(219,58): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(219,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(219,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(224,75): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(224,58): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(224,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(224,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(229,75): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(229,58): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(229,41): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(229,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(235,33): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(235,20): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(248,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(249,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(257,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(259,30): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(267,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(269,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(280,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(282,30): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(290,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(292,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(302,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(304,30): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(312,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(314,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(324,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(326,30): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(334,15): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\Lab01\LibBlade.cpp(336,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  MainFrm.cpp
+  Создание кода...
+  Lab01.vcxproj -> D:\studing\4_semestr\Computer_geometry\Lab's\Lab_3\laba3\x64\Debug\Lab03.exe
