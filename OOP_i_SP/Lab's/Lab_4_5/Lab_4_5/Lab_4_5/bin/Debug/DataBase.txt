@@ -26,10 +26,17 @@ Category: Другое,
 Country of origin: Польша, 
 Rate: 2 
 ---------------------------------
-ID: 3, 
-Name: Белорусская кукла, 
-Price: 54, 
-Category: Другое, 
+ID: 1, 
+Name: Майка, 
+Price: 85, 
+Category: Майки, 
 Country of origin: Беларусь, 
-Rate: 5 
+Rate: 3 
+---------------------------------
+ID: 4, 
+Name: Тарелка с зубром, 
+Price: 44, 
+Category: Другое, 
+Country of origin: Польша, 
+Rate: 2 
 ---------------------------------
