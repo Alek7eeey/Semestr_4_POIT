@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e034fd7-21dd-4222-ac63-4464602faf50" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_4/Labs_otchet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_4/Labs_otchet.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~$bs_otchet.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~$б5_Транспортная_задача.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~$веты_на_вопросы_lab_5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~WRL2631.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_8/Lab_8/src/Server2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_8/Lab_8/src/Server2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/studing/4_semestr/internet_programming_technology/Lab's/Lab_8/Lab_8_2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -34,6 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679414861181</updated>
       <workItem from="1679414862735" duration="19000" />
+      <workItem from="1680122071606" duration="10000" />
     </task>
     <servers />
   </component>

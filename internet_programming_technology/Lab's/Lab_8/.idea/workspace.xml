@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b101aa2e-ca53-4a55-8379-518329d9078c" name="Changes" comment="" />
+    <list default="true" id="b101aa2e-ca53-4a55-8379-518329d9078c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~$bs_otchet.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~$б5_Транспортная_задача.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~$веты_на_вопросы_lab_5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Math_programming/Lab's/Lab_5/~WRL2631.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_8/src/Server2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_8/src/Server2.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,15 +22,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/studing/4_semestr/internet_programming_technology/Lab's/Lab_8",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/studing/4_semestr/internet_programming_technology/Lab's/Lab_8&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -33,6 +40,9 @@
       <option name="presentableId" value="Default" />
       <updated>1679937350744</updated>
       <workItem from="1679937351992" duration="39000" />
+      <workItem from="1680114910754" duration="284000" />
+      <workItem from="1680119453213" duration="57000" />
+      <workItem from="1680121238075" duration="39000" />
     </task>
     <servers />
   </component>
