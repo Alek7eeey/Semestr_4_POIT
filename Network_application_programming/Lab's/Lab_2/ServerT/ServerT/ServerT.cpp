@@ -87,7 +87,7 @@ void main()
 
 		if ((sS = socket(AF_INET, SOCK_STREAM, NULL)) == INVALID_SOCKET)
 			throw  SetErrorMsgText("socket:", WSAGetLastError());
-		//--------------------------------------------------
+
 
 		SOCKADDR_IN serv;                     // параметры  сокета sS
 		serv.sin_family = AF_INET;           // используется IP-адресация  
@@ -160,7 +160,7 @@ void main()
 
 		if (WSACleanup() == SOCKET_ERROR)
 			throw SetErrorMsgText("Cleanup:", WSAGetLastError());
-		//--------------------------------------------------
+
 		if (closesocket(sS) == SOCKET_ERROR)
 			throw  SetErrorMsgText("closesocket:", WSAGetLastError());
 		if (WSACleanup() == SOCKET_ERROR)

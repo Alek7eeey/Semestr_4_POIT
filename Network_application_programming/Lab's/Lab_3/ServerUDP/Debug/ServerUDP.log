@@ -1,0 +1,3 @@
+﻿  ServerUDP.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\ServerUDP\ServerUDP.cpp(15,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  ServerUDP.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\lab3\Debug\ServerUDP.exe

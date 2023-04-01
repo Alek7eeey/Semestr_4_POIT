@@ -1,0 +1,4 @@
+﻿  serverTCP.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_2\ServerT\ServerTCP\serverTCP.cpp(76,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_2\ServerT\ServerTCP\serverTCP.cpp(109,7): warning C4101: t: неиспользованная локальная переменная
+  ServerTCP.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_2\ServerT\Debug\ServerTCP.exe

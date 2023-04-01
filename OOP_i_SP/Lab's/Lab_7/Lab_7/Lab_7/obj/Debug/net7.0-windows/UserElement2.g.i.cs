@@ -69,7 +69,7 @@ namespace Lab_7 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Lab_7;component/userelement2.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lab_7;V1.0.0.0;component/userelement2.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UserElement2.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

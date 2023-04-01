@@ -85,7 +85,7 @@ void main()
 			throw  SetErrorMsgText("Startup:", WSAGetLastError());
 		if ((sS = socket(AF_INET, SOCK_STREAM, NULL)) == INVALID_SOCKET)
 			throw  SetErrorMsgText("socket:", WSAGetLastError());
-		//--------------------------------------------------
+
 		SOCKET  cC;                          // серверный сокет
 
 		if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
@@ -123,7 +123,7 @@ void main()
 		}
 		cout << "\nProgram was running for " << time << " ticks or " << ((float)time) / CLOCKS_PER_SEC << " seconds.\n";
 
-		//--------------------------------------------------
+
 		if (closesocket(sS) == SOCKET_ERROR)
 			throw  SetErrorMsgText("closesocket:", WSAGetLastError());
 		if (WSACleanup() == SOCKET_ERROR)
