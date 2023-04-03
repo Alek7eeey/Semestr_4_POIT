@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Frames\PageAdd.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageDelete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageEdit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageStart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageTbCrewMembers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageTbImagePlane.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageTbPlanes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\PageView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\WindowCrewMember.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Frames\PageAdd.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageDelete.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageEdit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageStart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageTbCrewMembers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageTbImagePlane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageTbPlanes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Frames\PageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Style.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\WindowCrewMember.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

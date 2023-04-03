@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+   
+    <Style x:Key="WindowStyle" TargetType="Grid">
+        <Setter Property="Background" Value="BurlyWood" />
+    </Style>
+
+    <Style x:Key="WindowAddStyle" TargetType="Grid">
+        <Setter Property="Background" Value="SandyBrown"/>
+    </Style>
+
+    <Style x:Key="MenuStyle" TargetType="Menu">
+        <Setter Property="Background" Value="BurlyWood"/>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Foreground" Value="#F6623E" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>

@@ -7,9 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import org.apache.log4j.*;
-import org.apache.log4j.xml.DOMConfigurator;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 public class Main extends Config {

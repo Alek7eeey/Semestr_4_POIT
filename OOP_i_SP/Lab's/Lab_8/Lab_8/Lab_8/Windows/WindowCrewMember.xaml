@@ -1,0 +1,36 @@
+﻿<Window x:Class="Lab_8.Windows.WindowCrewMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_8.Windows"
+        mc:Ignorable="d"
+        Title="WindowCrewMember" Height="400" Width="700" MinHeight="400" MinWidth="700">
+    <Grid Style="{DynamicResource WindowAddStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="368*"/>
+            <ColumnDefinition Width="246*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock HorizontalAlignment="Left" Text="FIO" Margin="178,7,0,0"/>
+        <TextBox x:Name="InputName" VerticalAlignment="Top" HorizontalAlignment="Left" Height="22" Margin="112,27,0,0" Width="150" TextChanged="ChangeName"/>
+
+        <TextBlock Text="Position"  HorizontalAlignment="Left" Margin="166,57,0,0"/>
+        <ListBox x:Name="PositionInput" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="112,77,0,0" Width="160" SelectionChanged="ChangedPosition" >
+            <ListBoxItem>Командир</ListBoxItem>
+            <ListBoxItem>Помощник командира</ListBoxItem>
+            <ListBoxItem>Стюардесса</ListBoxItem>
+        </ListBox>
+
+        <TextBlock Text="Age" HorizontalAlignment="Left" Margin="176,107,0,0"/>
+        <TextBox x:Name="InputAge" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="22" Margin="112,127,0,0" Width="150" TextChanged="ChangeAge"/>
+
+        <TextBlock Text="Year of experience" HorizontalAlignment="Left" Margin="138,157,0,0"/>
+        <TextBox x:Name="inputExp" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="22" Margin="112,177,0,0" Width="150" TextChanged="ChangeExp"/>
+
+        <Button FontWeight="Bold" Background="SaddleBrown" Content="Add" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="22" Margin="112,217,0,0" Width="150" Click="Button_Click" Cursor="Hand"/>
+
+        <Image Grid.Column="1" VerticalAlignment="Top" Margin="10,10,10,10" Source="D:\studing\4_semestr\OOP_i_SP\Lab's\Lab_8\Photo\Ekipazh.jpg" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
