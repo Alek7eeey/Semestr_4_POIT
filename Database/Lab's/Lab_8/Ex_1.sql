@@ -1,7 +1,7 @@
 use UNIVER;
 
 /* ex_1 */
-go
+
 Create VIEW[Преподаватель]
 as select GENDER[Пол], PULPIT[Кафедра], TEACHER[Код], TEACHER_NAME[Имя]
 	from TEACHER;
@@ -10,7 +10,7 @@ drop view[Преподаватель];
 select * from Преподаватель;
 
 /* ex_2 */
-go
+
 Create VIEW[Количество_кафедр]
 as select FACULTY_NAME[Факультет], COUNT(PULPIT)[Количество кафедр]
 		from FACULTY inner join PULPIT
@@ -21,7 +21,7 @@ drop view[Количество_кафедр];
 select * from Количество_кафедр;
 
 /* ex_3 */
-go
+
 create VIEW[Аудитории]
 as select AUDITORIUM[Номер_аудитории], AUDITORIUM_TYPE[Название]
 from AUDITORIUM 
@@ -37,6 +37,8 @@ as select AUDITORIUM, AUDITORIUM_TYPE
 from AUDITORIUM 
 where AUDITORIUM.AUDITORIUM_TYPE like 'ЛК%' WITH CHECK OPTION
 
+insert Лекционные_аудитории values('934-1', 'ЛК');
+
 drop view[Лекционные_аудитории];
 select * from Лекционные_аудитории;
 
@@ -49,7 +51,7 @@ drop view[Дисциплины];
 select * from Дисциплины;
 
 /* ex_6 */
-go
+
 ALTER VIEW [Количество_кафедр] with SCHEMABINDING
 as select		fclt.FACULTY_NAME		[Факультет],
 				count(plpt.PULPIT)		[Количество_кафедр]
@@ -57,5 +59,6 @@ as select		fclt.FACULTY_NAME		[Факультет],
 				on fclt.FACULTY = plpt.FACULTY 
 				group by FACULTY_NAME;
 
-drop view[Количество_кафедр];
+
+drop view[Количество_кафедр];	
 select * from Количество_кафедр;
