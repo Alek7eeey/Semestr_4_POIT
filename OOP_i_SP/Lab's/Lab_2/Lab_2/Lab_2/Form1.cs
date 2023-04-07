@@ -167,7 +167,7 @@ namespace Lab_2
             {
                 if (Convert.ToInt64(textBoxCarrying.Text) > int.MaxValue)
                 {
-                    MessageBox.Show("Слишком большое значение для ID", "Ошибка");
+                    MessageBox.Show("Слишком большое значение для carry", "Ошибка");
                 }
                 else
                 {

@@ -38,7 +38,8 @@ namespace Lab_8.Frames
                     AddInfInClass(query, connection);
                 }
             }
-            GetFillTable(ref dataTable);
+           
+           GetFillTable(ref dataTable);
         }
 
         public void GetFillTable(ref DataTable dataTable)

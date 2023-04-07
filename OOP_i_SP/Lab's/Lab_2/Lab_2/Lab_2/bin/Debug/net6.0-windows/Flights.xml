@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Flights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ID>2</ID>
-  <model_>none</model_>
-  <countOfSeat>0</countOfSeat>
-  <yearOfIssue />
-  <carrying>0</carrying>
-  <DateOfService />
-  <typePlane>none</typePlane>
+  <ID>33</ID>
+  <model_>CRJ</model_>
+  <countOfSeat>43</countOfSeat>
+  <yearOfIssue>7.5.2023</yearOfIssue>
+  <carrying>234</carrying>
+  <DateOfService>7.1.2023</DateOfService>
+  <typePlane>Пассажирский</typePlane>
   <crewMe>
     <CrewMember>
-      <name>ыьвыв</name>
-      <age>13</age>
-      <yearExp>232</yearExp>
-      <position>Механик</position>
-    </CrewMember>
-    <CrewMember>
-      <name>ыьвыв</name>
-      <age>13</age>
-      <yearExp>232</yearExp>
-      <position>Механик</position>
+      <name>dfd</name>
+      <age>12</age>
+      <yearExp>32</yearExp>
+      <position>Стюардеса </position>
     </CrewMember>
   </crewMe>
 </Flights>

@@ -12,7 +12,7 @@ namespace Lab_2
 {
     public partial class Airport : Form
     {
-        static int  co = 0;
+        static int co = 0;
         double progressValue = 12.5;
         int progressBarMaxValue = 100;
         bool id = true, model = true, count = true, yearIssue = true, weight = true, yearControl = true, type = true, click = true;
@@ -26,7 +26,7 @@ namespace Lab_2
         {
             InitializeComponent();
             FillWithInf.Text = newFlight.ToString();
-            using (StreamWriter sw = new StreamWriter("DateBase.txt", false));
+            using (StreamWriter sw = new StreamWriter("DateBase.txt", false)) ;
         }
 
         private void textBoxID_TextChanged(object sender, EventArgs e)
@@ -36,15 +36,15 @@ namespace Lab_2
             string replacement = ""; // заменяем найденные символы на пустую строку
             string result = Regex.Replace(input, pattern, replacement);
             textBoxID.Text = result;
-            
-            if(textBoxID.Text.Length > 0 && id)
+
+            if (textBoxID.Text.Length > 0 && id)
             {
                 barFilling.Value += (int)(progressValue / (double)progressBarMaxValue * 100);
                 id = false;
                 chekBar();
             }
-            
-            if(textBoxID.Text.Length == 0 && barFilling.Value!=0 )
+
+            if (textBoxID.Text.Length == 0 && barFilling.Value != 0)
             {
                 barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 id = true;
@@ -91,7 +91,7 @@ namespace Lab_2
             if (comboBoxModel.Text == "")
             {
                 FillWithInf.Text = newFlight.ToString();
-                if(barFilling.Value != 0) barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
+                if (barFilling.Value != 0) barFilling.Value -= (int)(progressValue / (double)progressBarMaxValue * 100);
                 model = true;
                 chekBar();
             }
@@ -151,7 +151,7 @@ namespace Lab_2
 
         private void dateOfIssueChoose_Leave(object sender, EventArgs e)
         {
-            newFlight.yearOfIssue = Convert.ToString(dateOfIssueChoose.Value.Day +"."+ dateOfIssueChoose.Value.Month + "." + dateOfIssueChoose.Value.Year);
+            newFlight.yearOfIssue = Convert.ToString(dateOfIssueChoose.Value.Day + "." + dateOfIssueChoose.Value.Month + "." + dateOfIssueChoose.Value.Year);
             FillWithInf.Text = newFlight.ToString();
         }
 
@@ -208,7 +208,7 @@ namespace Lab_2
         {
             if (listBoxType.SelectedIndex != -1) // Проверка, что элемент выбран
             {
-                
+
                 string selectedItem = listBoxType.SelectedItem.ToString(); // Получение выбранного элемента
                                                                            // Действия, которые необходимо выполнить при выборе элемента
                 if (selectedItem == "Пассажирский") newFlight.typePlane = Flights.typeOfPlane.Пассажирский;
@@ -279,12 +279,12 @@ namespace Lab_2
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1.0.0" + Environment.NewLine + "Kravchenko ALEKSEY", "О программе");
+            MessageBox.Show("v 1.0.0" + Environment.NewLine + "Lab_3", "О программе");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            Search search= new Search();
+            Search search = new Search();
             search.Show();
         }
 
@@ -374,7 +374,7 @@ namespace Lab_2
                     MessageBox.Show("Вы не подтвердили правильность введенных данных!", "Ошибка");
                 }
             }
-       
+
         }
 
         private void dateOfServiceChoose_ValueChanged(object sender, EventArgs e)
@@ -440,7 +440,7 @@ namespace Lab_2
 
         private void chooseButton_Click(object sender, EventArgs e)
         {
-            crewMem crewMe= new crewMem();
+            crewMem crewMe = new crewMem();
             crewMe.Show();
         }
 
@@ -463,36 +463,36 @@ namespace Lab_2
 
     public class DataStorage
     {
-    private static DataStorage instance;
-    private List<Flights> flights;
+        private static DataStorage instance;
+        private List<Flights> flights;
 
-    private DataStorage()
-    {
-            flights = new List<Flights>();
-    }
-
-    public static DataStorage Instance
-    {
-        get
+        private DataStorage()
         {
-            if (instance == null)
+            flights = new List<Flights>();
+        }
+
+        public static DataStorage Instance
+        {
+            get
             {
-                instance = new DataStorage();
+                if (instance == null)
+                {
+                    instance = new DataStorage();
+                }
+                return instance;
             }
-            return instance;
+        }
+
+        public void AddObject(Flights obj)
+        {
+            flights.Add(obj);
+        }
+
+        public List<Flights> GetObjects()
+        {
+            return flights;
         }
     }
-
-    public void AddObject(Flights obj)
-    {
-            flights.Add(obj);
-    }
-
-    public List<Flights> GetObjects()
-    {
-        return flights;
-    }
-}
 }
 
 
