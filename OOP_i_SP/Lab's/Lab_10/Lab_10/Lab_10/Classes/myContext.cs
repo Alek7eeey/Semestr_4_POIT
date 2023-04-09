@@ -25,55 +25,25 @@ namespace Lab_10.Classes
             modelBuilder.Entity<Credit>().HasKey(e => e.ID);
             modelBuilder.Entity<People>().HasKey(e => e.ID);
         }
-    }
 
-    public class Context
-    {
-        private myContext context = new myContext();
-        private CreditRepository creditRepository;
-        private PeopleRepository peopleRepository;
-
-        public CreditRepository Credits
+        public void SaveAll()
         {
-            get
-            {
-                if(creditRepository == null) creditRepository = new CreditRepository();
-                return creditRepository;
-            }
+            SaveChanges();
         }
 
-        public PeopleRepository Peoples
+        public void AddEl <T>(T obj) where T : class
         {
-            get
-            {
-                if (peopleRepository == null) peopleRepository = new PeopleRepository();
-                return peopleRepository;
-            }
+            Set<T>().Add(obj);
+            SaveAll();
         }
 
-        public async void DisposeResource()
+        public void RemoveEl<T>(T obj) where T: class
         {
-            await Task.Run(() =>
-            {
-                Dispose();
-            });
-        }
-        private void Dispose()
-        {
-            context.Dispose();
-        }
+            Set<T>().Remove(obj);
+            SaveAll();
 
-        public async void SaveChanges()
-        {
-            await Task.Run(() =>
-            {
-                Save();
-            });
-        }
-
-        private void Save()
-        {
-            context.SaveChanges();
         }
     }
+
+
 }

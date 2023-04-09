@@ -27,8 +27,8 @@ namespace Lab_10.Classes
         {
             var context = new myContext();
             context.Database.EnsureCreated(); // Создаем базу данных, если ее нет
-            context.peoples.Add(a);
-            context.SaveChanges();
+            context.AddEl<People>(a);
+            context.SaveAll();
         }
 
         public async void RemovePeople(People a)
@@ -43,9 +43,24 @@ namespace Lab_10.Classes
         {
             var context = new myContext();
             context.Database.EnsureCreated();
-            context.peoples.Remove(a);
-            context.SaveChanges();
+            context.RemoveEl(a);
+            context.SaveAll();
 
+        }
+
+        private void update()
+        {
+            var context = new myContext();
+            context.SaveAll();
+        }
+
+        public async void UpdatePerson()
+        {
+            await Task.Run(() => {
+
+                update();
+
+            });
         }
     }
 }

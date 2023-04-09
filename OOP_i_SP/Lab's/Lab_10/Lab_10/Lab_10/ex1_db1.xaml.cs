@@ -36,7 +36,7 @@ namespace Lab_10
 
         private void updateButton_Click(object sender, RoutedEventArgs e)
         {
-            db.SaveChanges();
+            db.SaveAll();
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
@@ -48,11 +48,11 @@ namespace Lab_10
                     People per = peopleGrid.SelectedItems[i] as People;
                     if (per != null)
                     {
-                        db.peoples.Remove(per);
+                        db.RemoveEl<People>(per);
                     }
                 }
             }
-            db.SaveChanges();
+            db.SaveAll();
         }
     }
 }

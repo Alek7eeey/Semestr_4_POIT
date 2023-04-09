@@ -30,13 +30,13 @@ namespace Lab_10
             context.Database.EnsureCreated(); // Создаем базу данных, если ее нет
 
             db = new myContext();
-            db.peoples.Load();
+            db.credits.Load();
             peopleGrid.ItemsSource = db.credits.Local.ToBindingList(); // устанавливаем привязку к кэшу
         }
 
         private void updateButton_Click(object sender, RoutedEventArgs e)
         {
-            db.SaveChanges();
+            db.SaveAll();
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
@@ -45,14 +45,14 @@ namespace Lab_10
             {
                 for (int i = 0; i < peopleGrid.SelectedItems.Count; i++)
                 {
-                    People phone = peopleGrid.SelectedItems[i] as People;
-                    if (phone != null)
+                    Credit credit = peopleGrid.SelectedItems[i] as Credit;
+                    if (credit != null)
                     {
-                        db.peoples.Remove(phone);
+                        db.RemoveEl(credit);
                     }
                 }
             }
-            db.SaveChanges();
+            db.SaveAll();
         }
     }
 }

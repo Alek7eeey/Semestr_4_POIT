@@ -26,8 +26,8 @@ namespace Lab_10.Classes
         {
             var context = new myContext();
             context.Database.EnsureCreated(); // Создаем базу данных, если ее нет
-            context.credits.Add(a);
-            context.SaveChanges();
+            context.AddEl<Credit>(a);
+            context.SaveAll();
         }
 
         public async void RemoveCredit(Credit a)
@@ -42,9 +42,23 @@ namespace Lab_10.Classes
         {
             var context = new myContext();
             context.Database.EnsureCreated();
-            context.credits.Remove(a);
-            context.SaveChanges();
+            context.RemoveEl<Credit>(a);
+            context.SaveAll();
+        }
 
+        private void update()
+        {
+            var context = new myContext();
+            context.SaveAll();
+        }
+
+        public async void UpdateCredit()
+        {
+           await Task.Run(() => { 
+            
+                update();
+            
+            });
         }
     }
 }
