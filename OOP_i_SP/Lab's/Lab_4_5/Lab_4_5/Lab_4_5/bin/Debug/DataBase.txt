@@ -26,17 +26,3 @@ Category: Другое,
 Country of origin: Польша, 
 Rate: 2 
 ---------------------------------
-ID: 5, 
-Name: Шоппер, 
-Price: 213, 
-Category: Другое, 
-Country of origin: Беларусь, 
-Rate: 5 
----------------------------------
-ID: 5, 
-Name: Шоппер, 
-Price: 213, 
-Category: Другое, 
-Country of origin: Беларусь, 
-Rate: 5 
----------------------------------
