@@ -189,3 +189,8 @@
 06.04.2023 20:22:09 [http-listener-1(3)] INFO  com.example.lab_9.logFilter  - Log: /Servlet3_1GET20:22:09.8566736000:0:0:0:0:0:0:1
 06.04.2023 20:23:31 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /ex6-b.jspGET20:23:31.4070741000:0:0:0:0:0:0:1
 06.04.2023 20:23:36 [http-listener-1(5)] INFO  com.example.lab_9.logFilter  - Log: /Servlet4POST20:23:36.2025127000:0:0:0:0:0:0:1
+11.04.2023 18:27:15 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET18:27:15.328039300127.0.0.1
+11.04.2023 19:18:03 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET19:18:03.745057700127.0.0.1
+11.04.2023 19:18:07 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET19:18:07.5714218000:0:0:0:0:0:0:1
+11.04.2023 19:18:57 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET19:18:57.012853400127.0.0.1
+11.04.2023 19:19:00 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET19:19:00.8840510:0:0:0:0:0:0:1

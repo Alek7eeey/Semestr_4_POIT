@@ -1,0 +1,50 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+}
+
+
+input[type="text"]{
+    width: 200px;
+    height: 25px;
+    background-color: burlywood;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg, #ffffff, #deb887);
+    height: 26px;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover{
+    box-shadow: 1px 1px wheat;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th{
+    background-color: burlywood;
+}
+

@@ -1,0 +1,24 @@
+ul li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    margin: 15px;
+    font-family: fantasy;
+    color: coral;
+}
+
+a:hover{
+    box-shadow: 1px 1px burlywood;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap{
+    width: 100%;
+    margin-bottom: 15px;
+}

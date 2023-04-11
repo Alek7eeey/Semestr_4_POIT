@@ -1,0 +1,4 @@
+11.04.2023 23:58:17 [http-listener-1(4)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET23:58:17.520027127.0.0.1
+11.04.2023 23:58:17 [http-listener-1(5)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET23:58:17.7134439000:0:0:0:0:0:0:1
+11.04.2023 23:58:37 [http-listener-1(4)] INFO  com.example.lab10.FilterAdd  - Log: /ServletLoginGET23:58:37.4611753000:0:0:0:0:0:0:1
+11.04.2023 23:58:37 [http-listener-1(2)] INFO  com.example.lab10.FilterAdd  - Log: /wel.cssGET23:58:37.5121886000:0:0:0:0:0:0:1

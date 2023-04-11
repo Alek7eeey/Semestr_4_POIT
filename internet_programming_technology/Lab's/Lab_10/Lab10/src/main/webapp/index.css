@@ -1,0 +1,62 @@
+.name h2{
+    font-size: 25px;
+    color: darkslategray;
+    text-align: center;
+}
+
+.form input[type="text"]{
+    width: 200px;
+    height: 25px;
+    background-color: burlywood;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
+.form input[type="password"]{
+    width: 200px;
+    height: 25px;
+    background-color: burlywood;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #deb887;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn{
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg, #ffffff, #deb887);
+    height: 26px;
+    margin-top: 20px;
+}
+
+.btn:hover{
+    border: 2px groove cornflowerblue;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 15px;
+}
+
+p{
+    color: red;
+}

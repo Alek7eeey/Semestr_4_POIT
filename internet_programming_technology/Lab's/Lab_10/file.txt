@@ -1,0 +1,16 @@
+  <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Название клуба</th>
+                    <th>Количество игроков</th>
+                    <th>Город</th>
+                </tr>
+                <c:forEach items="${myDataList}" var="myData">
+                    <tr>
+                        <td>${myData.id}</td>
+                        <td>${myData.name}</td>
+                        <td>${myData.count}</td>
+                        <td>${myData.city}</td>
+                    </tr>
+                </c:forEach>
+  </table>
