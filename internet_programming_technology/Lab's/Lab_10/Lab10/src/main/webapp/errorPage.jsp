@@ -14,7 +14,7 @@
 <h2 style="text-align: center">Информация про ошибки:</h2>
 <div>
     <h1>Error</h1>
-    <p>Status code: Нет авторизации для выполнения данной команды</p>
+    <p>Status code: ${name}</p>
 </div>
 </body>
 </html>

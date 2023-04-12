@@ -51,6 +51,18 @@
             <input type="submit" name="btn2" value="Добавить">
         </form>
     </div>
+
+    <div class="addTeam">
+        <% if (request.getParameter("error4") != null && request.getParameter("error4").equals("true")) { %>
+        <p style="color: red; margin: 0">Ошибка удаления</p>
+        <% } %>
+        <form action="ServletRemove">
+            <input type="text" name="name" placeholder="Название команды" required>
+            <input type="submit" name="btn2" value="Удалить">
+        </form>
+    </div>
+
 </div>
+
 </body>
 </html>

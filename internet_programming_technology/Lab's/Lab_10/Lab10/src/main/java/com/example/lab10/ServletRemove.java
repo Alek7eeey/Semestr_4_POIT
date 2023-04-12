@@ -11,10 +11,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletAdd", value = "/ServletAdd")
-public class ServletAdd extends HttpServlet {
+@WebServlet(name = "ServletRemove", value = "/ServletRemove")
+public class ServletRemove extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String connectionString = "jdbc:mysql://localhost:3306/football_teams?autoReconnect=true&useSSL=false";
@@ -30,23 +31,18 @@ public class ServletAdd extends HttpServlet {
             response.setContentType("text/html; charset=UTF-8");
 
             String name = request.getParameter("name");
-            int count = Integer.parseInt(request.getParameter("count"));
-            String city = request.getParameter("city");
 
-            String sql2 = "INSERT INTO footballTeams (name, countOfPlayers, city, userID) VALUES" +
-                    "(?, ?, ?, ?);";
+
+            String sql2 = "delete from footballTeams where footballTeams.name = ?;";
 
             try (PreparedStatement statement = connection.prepareStatement(sql2)) {
                 statement.setString(1, name);
-                statement.setInt(2, count);
-                statement.setString(3, city);
-                statement.setInt(4, MyData.ThisID);
                 int rowsAffected = statement.executeUpdate();
 
 
                 if (rowsAffected > 0)
                 {
-                    //response.sendRedirect("index.jsp?error3=false");
+                    //response.sendRedirect("index.jsp?error4=false");
                     ServletContext servletContext = getServletContext();
                     RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/ServletLogin");
                     request.setAttribute("userLogin", MyData.ThisName);
@@ -55,7 +51,7 @@ public class ServletAdd extends HttpServlet {
 
                 else
                 {
-                    request.setAttribute("name", "Ошибка при добавлении");
+                    request.setAttribute("name", "Нет такой команды для удаления");
                     RequestDispatcher dispatcher = request.getRequestDispatcher("/errorPage.jsp");
                     dispatcher.forward(request, response);
                 }
@@ -72,7 +68,8 @@ public class ServletAdd extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
 
     }
 }

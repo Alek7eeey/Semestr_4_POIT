@@ -38,6 +38,7 @@ public class FilterAdd implements Filter {
         String url = httpRequest.getRequestURL().toString();
 
         if (url.equals("http://localhost:8080/Lab10-1.0-SNAPSHOT/welcome.jsp") && !MyData.isRegister) {
+            request.setAttribute("name", "Нет авторизации для выполнения данной команды");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/errorPage.jsp");
             dispatcher.forward(request, response);
         }
@@ -55,7 +56,6 @@ public class FilterAdd implements Filter {
             response.setContentType("text/html; charset=UTF-8");
 
             String userLogin = request.getParameter("userLogin");
-            MyData.ThisName = userLogin;
             String userPassword = request.getParameter("userPassword");
 
             String sql = "SELECT id FROM user WHERE login = ? AND password = SHA2(?, 256)";
@@ -71,6 +71,7 @@ public class FilterAdd implements Filter {
                         session.setAttribute("loggedIn", true);
                         MyData.ThisID = result.getInt("id");
                         MyData.isRegister = true;
+                        MyData.ThisName = userLogin;
                     } else {
                         HttpSession session = ((HttpServletRequest) request).getSession();
                         session.setAttribute("loggedIn", false);

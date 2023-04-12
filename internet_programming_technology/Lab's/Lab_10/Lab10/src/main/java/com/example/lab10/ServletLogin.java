@@ -39,7 +39,7 @@ public class ServletLogin extends HttpServlet {
                 response.setContentType("text/html; charset=UTF-8");
 
                 Statement stmt = connection.createStatement();
-                String sql2 = "select u.id, f.name, f.countOfPlayers, f.city from \n" +
+                String sql2 = "select f.id, f.name, f.countOfPlayers, f.city from \n" +
                         "user u inner join footballTeams f \n" +
                         "on u.id = f.userID\n" +
                         "where u.id = "+ Integer.toString(MyData.ThisID) + ";";
@@ -71,7 +71,7 @@ public class ServletLogin extends HttpServlet {
             }
 
             request.setAttribute("myDataList", myDataList);
-            request.setAttribute("name", userLogin);
+            request.setAttribute("name", MyData.ThisName);
             getServletContext().getRequestDispatcher("/welcome.jsp").forward(request, response);
 
         }

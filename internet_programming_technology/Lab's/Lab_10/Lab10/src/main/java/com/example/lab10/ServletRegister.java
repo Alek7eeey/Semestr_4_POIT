@@ -46,11 +46,11 @@ public class ServletRegister extends HttpServlet {
 
 
                     if (rowsAffected > 0) {
-                        response.sendRedirect("index.jsp?error2=true");
+                        response.sendRedirect("register.jsp?error2=true");
                     }
 
                     else if(rowsAffected == 0) {
-                        response.sendRedirect("index.jsp?error2=false");
+                        response.sendRedirect("register.jsp?error2=false");
                         ((HttpServletResponse) response).sendRedirect("index.jsp");
                     }
 
@@ -68,7 +68,7 @@ public class ServletRegister extends HttpServlet {
 
         else if(loggedIn != null && loggedIn)
         {
-            response.sendRedirect("index.jsp?error2=true");
+            response.sendRedirect("register.jsp?error2=true");
         }
     }
 
