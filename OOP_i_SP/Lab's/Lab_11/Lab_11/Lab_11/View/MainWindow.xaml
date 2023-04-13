@@ -1,0 +1,55 @@
+﻿<Window x:Class="Lab_11.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ListView ItemsSource="{Binding ConsultationsList}" IsSynchronizedWithCurrentItem="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel Margin="10">
+                        <TextBlock Foreground="{Binding TextColor}" Text="{Binding Name}" FontWeight="Bold"/>
+                        <TextBlock Foreground="{Binding TextColor}" Text="{Binding Subject}" />
+                        <TextBlock Foreground="{Binding TextColor}" Text="{Binding Time}" />
+                        <TextBlock Foreground="{Binding TextColor}" Text="{Binding Date}" />
+                        <TextBlock Foreground="{Binding TextColor}" Text="{Binding IsFree}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ContentControl Grid.Column="1" Content="{Binding ConsultationsList}">
+            <ContentControl.ContentTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10">
+                        <TextBlock Text=" Учитель:" />
+                    <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Предмет:"/>
+                    <TextBox Text="{Binding Subject, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Дата:"/>
+                    <TextBox Text="{Binding Time, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Время:"/>
+                    <TextBox Text="{Binding Date, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+                    <StackPanel Orientation="Horizontal">
+                            <Button Content="Запись" Command="{Binding Booking}" Margin="10,0" />
+                            <Button Content="Отмена" Command="{Binding UnBooking}" Margin="10,0" />
+                    </StackPanel>
+                  </StackPanel>
+                </DataTemplate>
+            </ContentControl.ContentTemplate>
+        </ContentControl>
+    </Grid>
+</Window>
