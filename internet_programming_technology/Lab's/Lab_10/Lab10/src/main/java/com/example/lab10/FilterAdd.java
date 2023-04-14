@@ -3,20 +3,15 @@ package com.example.lab10;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 import java.time.LocalTime;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
 @WebFilter(filterName = "FilterAdd")
 public class FilterAdd implements Filter {
 
@@ -26,6 +21,7 @@ public class FilterAdd implements Filter {
     private static final Logger LOG = Logger.getLogger(FilterAdd.class);
 
     public void init(FilterConfig config) throws ServletException {
+
     }
 
     public void destroy() {
