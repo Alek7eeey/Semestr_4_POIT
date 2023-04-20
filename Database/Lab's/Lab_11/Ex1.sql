@@ -1,7 +1,6 @@
 ﻿use UNIVER;
 
 /* ex_1 */
-
 DECLARE discpipline CURSOR for select SUBJECT.SUBJECT_NAME from SUBJECT where SUBJECT.PULPIT like 'ИСиТ';
 --deallocate  discpipline;
 
@@ -18,7 +17,8 @@ while @@FETCH_STATUS = 0
 CLOSE discpipline;
 
 /* ex_2 */
-DECLARE Puplit_cursor CURSOR LOCAL /*GLOBAL*/ for select PULPIT.FACULTY from PULPIT where PULPIT.PULPIT = 'ИСиТ';
+DECLARE Puplit_cursor CURSOR GLOBAL for select PULPIT.FACULTY from PULPIT where PULPIT.PULPIT = 'ИСиТ';
+--deallocate Puplit_cursor;
 DECLARE @pupl char(50), @pupls char(100) ='';
 OPEN Puplit_cursor;
 print 'Факультеты ИСиТ: ';
@@ -34,8 +34,6 @@ FETCH  Puplit_cursor into @pupl;
 	set @pupls ='2. ' + RTRIM(@pupl);	
 	print @pupls;
 CLOSE Puplit_cursor
-
---deallocate Puplit_cursor;
 
 /* ex_3 */
 INSERT Into AUDITORIUM values('301-1','ЛБ-К','15','301-1');
@@ -54,7 +52,7 @@ while @@FETCH_STATUS = 0
 	end;
 CLOSE Auditorium_local_static;
 
-
+go
 INSERT Into AUDITORIUM values('301-1','ЛБ-К','15','301-1');
 DECLARE Auditorium_local_dynamic CURSOR  DYNAMIC for select AUDITORIUM,AUDITORIUM_CAPACITY from AUDITORIUM where  AUDITORIUM_TYPE = 'ЛБ-К';
 DECLARE @q int = 0, @auditorium char(10), @iter int = 1;

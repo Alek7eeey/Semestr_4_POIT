@@ -44,16 +44,24 @@ void main()
 		char cbuff[SIZE];
 		int s;
 
-		for (int i = 1; i <= 10000; i++) {
-			buffer = msg + to_string(i);
+
+		for (int i = 1; i <= 2 ; i++) {
+			buffer = "Hello";
 
 			// cout << buffer << endl;
 
 			sendto(cS, buffer.c_str(), buffer.size() + 1, NULL, (SOCKADDR*)&serv, servSize);
 
-			/*s = recvfrom(cS, cbuff, SIZE, NULL, (SOCKADDR*)&serv, &servSize);
+			if (recvfrom(cS, cbuff, SIZE, NULL, (SOCKADDR*)&serv, &servSize))
+			{
+				cout << cbuff << endl;
+			}
 
-			cout << cbuff << endl;*/
+			else
+			{
+				cout << "Сообщение не дошло!" << endl;
+			}
+			
 		}
 
 

@@ -1,6 +1,5 @@
 ﻿  Main.cpp
 D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\lab3\ClientU\Main.cpp(16,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
 D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\lab3\ClientU\Main.cpp(23,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\lab3\ClientU\Main.cpp(44,8): warning C4101: cbuff: неиспользованная локальная переменная
 D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\lab3\ClientU\Main.cpp(45,7): warning C4101: s: неиспользованная локальная переменная
   ClientU.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_3\lab3\Debug\ClientU.exe

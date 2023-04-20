@@ -1,0 +1,10 @@
+﻿  ServerB_2.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\ServerB_2\ServerB_2.cpp(20,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\ServerB_2\ServerB_2.cpp(31,7): warning C4101: ibuf: неиспользованная локальная переменная
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\ServerB_2\ServerB_2.cpp(29,6): warning C4101: lobuf: неиспользованная локальная переменная
+  Создание кода
+  1 of 113 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ServerB_2.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\Release\ServerB_2.exe
