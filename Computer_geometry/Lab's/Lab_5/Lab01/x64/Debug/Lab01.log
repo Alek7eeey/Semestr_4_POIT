@@ -1,0 +1,14 @@
+﻿  stdafx.cpp
+  ChildView.cpp
+  CMatrix.cpp
+  Lab06.cpp
+  LibGraph.cpp
+  LibSurface.cpp
+D:\studing\Архив\KGIG_Labs_4sem\Лабы\lab6\Lab01\LibSurface.cpp(151,31): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\studing\Архив\KGIG_Labs_4sem\Лабы\lab6\Lab01\LibSurface.cpp(152,34): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\studing\Архив\KGIG_Labs_4sem\Лабы\lab6\Lab01\LibSurface.cpp(150,6): warning C4101: k: неиспользованная локальная переменная
+D:\studing\Архив\KGIG_Labs_4sem\Лабы\lab6\Lab01\LibSurface.cpp(150,9): warning C4101: d: неиспользованная локальная переменная
+  MainFrm.cpp
+  Создание кода...
+D:\studing\Архив\KGIG_Labs_4sem\Лабы\lab6\Lab01\LibSurface.cpp(18): warning C4715: Function3: значение возвращается не при всех путях выполнения
+  Lab01.vcxproj -> D:\studing\Архив\KGIG_Labs_4sem\Лабы\lab6\x64\Debug\Lab06.exe
