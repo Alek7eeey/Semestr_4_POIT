@@ -1,0 +1,7 @@
+﻿  Server.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_6\Lab_6\ServerNP\Server.cpp(10,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 111 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  ServerNP.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_6\Lab_6\Release\ServerNP.exe

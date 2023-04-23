@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Lab_11</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>my-repo</id>
+            <name>My Repository</name>
+            <url>http://myrepo.com/repository/</url>
+        </repository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+
+                <executions>
+                    <execution>
+                        <id>analyze-dependencies</id>
+                        <goals>
+                            <goal>analyze</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>analyze-duplicate-dependencies</id>
+                        <goals>
+                            <goal>analyze-duplicate</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>resolve-dependencies</id>
+                        <goals>
+                            <goal>resolve</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>resolve-plugins</id>
+                        <goals>
+                            <goal>resolve-plugins</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <module>Module1</module>
+        <module>Module2</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>prof1</id>
+            <modules>
+                <module>TestModule</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>prof2</id>
+            <modules>
+                <module>TestModule2</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>

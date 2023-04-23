@@ -1,0 +1,16 @@
+﻿  stdafx.cpp
+  ChildView.cpp
+  CMatrix.cpp
+  Lab06.cpp
+  LibGraph.cpp
+  LibSurface.cpp
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(99,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(102,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(127,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(130,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(150,6): warning C4101: k: неиспользованная локальная переменная
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(150,9): warning C4101: d: неиспользованная локальная переменная
+  MainFrm.cpp
+  Создание кода...
+D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Lab01\LibSurface.cpp(18): warning C4715: Function3: значение возвращается не при всех путях выполнения
+  Lab01.vcxproj -> D:\studing\4_semestr\Computer_geometry\Lab's\Lab_5\Debug\Lab06.exe

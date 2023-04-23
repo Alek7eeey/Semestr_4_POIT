@@ -1,0 +1,8 @@
+﻿  Client_NPctcpp.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_6\Lab_6\ClientNPсt\Client_NPctcpp.cpp(10,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_6\Lab_6\ClientNPсt\Client_NPctcpp.cpp(11,12): warning C4101: hPipe: неиспользованная локальная переменная
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 111 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  ClientNPсt.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_6\Lab_6\Release\ClientNPсt.exe
