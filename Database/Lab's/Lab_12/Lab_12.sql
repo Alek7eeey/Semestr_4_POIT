@@ -195,3 +195,5 @@ begin tran
 select
 		(select count(*) from SUBJECT where SUBJECT='СТПИ') 'Дисциплина',
 		(select count(*) from TEACHER inner join SUBJECT on TEACHER.PULPIT = SUBJECT.PULPIT) 'Преподаватели'
+
+		

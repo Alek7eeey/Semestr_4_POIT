@@ -1,0 +1,9 @@
+﻿  ClientMS.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_7\Lab_7\ClientMS\ClientMS.cpp(17,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_7\Lab_7\ClientMS\ClientMS.cpp(38,8): warning C4101: count: неиспользованная локальная переменная
+  Создание кода
+  1 of 132 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ClientMS.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_7\Lab_7\Release\ClientMS.exe

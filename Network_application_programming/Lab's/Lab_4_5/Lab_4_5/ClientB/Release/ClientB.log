@@ -2,8 +2,8 @@
 D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\ClientB\ClientB.cpp(48,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
 D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\ClientB\ClientB.cpp(60,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   Создание кода
-  2 of 114 functions ( 1.8%) were compiled, the rest were copied from previous compilation.
+  1 of 114 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   ClientB.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_4_5\Lab_4_5\Release\ClientB.exe

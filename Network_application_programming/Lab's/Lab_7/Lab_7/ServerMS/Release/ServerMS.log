@@ -1,0 +1,8 @@
+﻿  ServerMS.cpp
+D:\studing\4_semestr\Network_application_programming\Lab's\Lab_7\Lab_7\ServerMS\ServerMS.cpp(12,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Создание кода
+  0 of 116 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ServerMS.vcxproj -> D:\studing\4_semestr\Network_application_programming\Lab's\Lab_7\Lab_7\Release\ServerMS.exe
