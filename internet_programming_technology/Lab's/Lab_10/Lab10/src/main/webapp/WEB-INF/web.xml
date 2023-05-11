@@ -13,5 +13,4 @@
         <filter-name>FilterAdd</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
 </web-app>
