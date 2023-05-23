@@ -1,5 +1,19 @@
 use UNIVER;
 
+go
+alter PROCEDURE INCR
+as
+begin
+	update AUDITORIUM set AUDITORIUM_CAPACITY += 1 where AUDITORIUM_CAPACITY>50;
+	update AUDITORIUM set AUDITORIUM_CAPACITY -= 1 where AUDITORIUM_CAPACITY<=50 and AUDITORIUM_CAPACITY > 1;
+end;
+go
+
+begin tran
+exec INCR
+select * from AUDITORIUM
+rollback tran
+
 /* ex_1 */
 go
 create PROCEDURE PSUBJECT 
@@ -144,3 +158,4 @@ EXEC @paud = PAUDITORIUM_INSERTX @a='993-1',@n='993-1',@c=99,@t='À -¡', @tn ='ÀÂ
 DELETE AUDITORIUM where AUDITORIUM_NAME='993-1';
 
 DROP PROCEDURE PAUDITORIUM_INSERTX;
+

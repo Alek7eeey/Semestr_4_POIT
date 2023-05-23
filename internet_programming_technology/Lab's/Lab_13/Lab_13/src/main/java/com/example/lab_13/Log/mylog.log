@@ -1,2 +1,7 @@
 11.05.2023 01:07:44 [http-listener-1(2)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerGET01:07:44.4961573000:0:0:0:0:0:0:1
 11.05.2023 01:08:01 [http-listener-1(1)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerGET01:08:01.7833866000:0:0:0:0:0:0:1
+11.05.2023 19:55:14 [http-listener-1(4)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerGET19:55:14.1298584000:0:0:0:0:0:0:1Command:registration_page
+11.05.2023 19:55:18 [http-listener-1(2)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerGET19:55:18.5063370:0:0:0:0:0:0:1Command:login_page
+11.05.2023 19:55:27 [http-listener-1(5)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerPOST19:55:27.1096414000:0:0:0:0:0:0:1Command:login
+11.05.2023 19:55:38 [http-listener-1(1)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerPOST19:55:38.9609791000:0:0:0:0:0:0:1Command:add_new_person
+11.05.2023 19:55:41 [http-listener-1(4)] INFO  com.example.lab_13.Controller.Controller  - Log: /ControllerPOST19:55:41.5194730:0:0:0:0:0:0:1Command:remove
