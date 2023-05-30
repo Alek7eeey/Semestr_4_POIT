@@ -15,9 +15,7 @@
 <jsp:include page="header.jsp"/>
 
 <div class="wrapper" style="width: 300px; height: 250px">
-    <% if (request.getParameter("error2") != null && request.getParameter("error2").equals("true")) { %>
-    <p style="color: red; margin: 0">Ошибка регистрации</p>
-    <% } %>
+
     <div>
         <div class="name"><h2>Регистрация нового пользователя</h2></div>
     </div>

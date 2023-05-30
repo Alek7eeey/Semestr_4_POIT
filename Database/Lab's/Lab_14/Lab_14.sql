@@ -1,5 +1,17 @@
 ﻿﻿use UNIVER;
 
+/*--------------------------------*/
+go
+CREATE FUNCTION countTeacher(@p VARCHAR(20)) 
+RETURNS TABLE 
+AS
+ RETURN SELECT COUNT(TEACHER.TEACHER) AS teacher_count FROM TEACHER WHERE TEACHER.PULPIT = @p;
+GO
+
+
+select * from countTeacher('ИСиТ');
+
+/*-----------------------------*/
 
 go
 create function changePol() returns table

@@ -1,0 +1,11 @@
+10.05.2023 10:53:12 [http-listener-1(4)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET10:53:12.651822127.0.0.1
+10.05.2023 10:53:12 [http-listener-1(5)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET10:53:12.8483238000:0:0:0:0:0:0:1
+10.05.2023 10:53:12 [http-listener-1(4)] INFO  com.example.lab10.FilterAdd  - Log: /index.cssGET10:53:12.8933351000:0:0:0:0:0:0:1
+10.05.2023 10:53:12 [http-listener-1(2)] INFO  com.example.lab10.FilterAdd  - Log: /header.cssGET10:53:12.8983342000:0:0:0:0:0:0:1
+10.05.2023 10:54:50 [http-listener-1(3)] INFO  com.example.lab10.FilterAdd  - Log: /ServletLoginGET10:54:50.7518873000:0:0:0:0:0:0:1
+10.05.2023 10:54:50 [http-listener-1(1)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET10:54:50.7708876000:0:0:0:0:0:0:1
+10.05.2023 10:54:59 [http-listener-1(5)] INFO  com.example.lab10.FilterAdd  - Log: /ServletLoginGET10:54:59.7509324000:0:0:0:0:0:0:1
+10.05.2023 10:54:59 [http-listener-1(4)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET10:54:59.7689420:0:0:0:0:0:0:1
+10.05.2023 10:55:21 [http-listener-1(2)] INFO  com.example.lab10.FilterAdd  - Log: /ServletLoginGET10:55:21.2697843000:0:0:0:0:0:0:1
+10.05.2023 10:55:21 [http-listener-1(3)] INFO  com.example.lab10.FilterAdd  - Log: /wel.cssGET10:55:21.3421713000:0:0:0:0:0:0:1
+10.05.2023 10:55:30 [http-listener-1(1)] INFO  com.example.lab10.FilterAdd  - Log: /index.jspGET10:55:30.7394415000:0:0:0:0:0:0:1

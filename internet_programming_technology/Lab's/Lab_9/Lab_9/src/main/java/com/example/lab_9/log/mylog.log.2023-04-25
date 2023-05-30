@@ -1,0 +1,2 @@
+25.04.2023 10:11:05 [http-listener-1(3)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET10:11:05.5487020:0:0:0:0:0:0:1
+25.04.2023 10:11:10 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /ex6.jspGET10:11:10.2727543000:0:0:0:0:0:0:1
