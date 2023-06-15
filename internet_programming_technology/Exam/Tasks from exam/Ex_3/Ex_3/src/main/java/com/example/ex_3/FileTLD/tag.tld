@@ -1,0 +1,14 @@
+<taglib xmlns ="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation ="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web"
+        version ="2.1">
+    <tlib-version>1.0</tlib-version>
+    <short-name>Submit</short-name>
+    <uri>userTags</uri>
+
+    <tag>
+        <name>MyTag</name>
+        <tag-class>com.example.ex_3.MyTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

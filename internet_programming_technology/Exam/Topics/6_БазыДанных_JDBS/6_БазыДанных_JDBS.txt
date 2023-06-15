@@ -1,0 +1,134 @@
+//Подключение к БД
+ 	
+	public Connection GetConnectionString() {
+        if (connection == null) {
+            String connectionString = "jdbc:mysql://localhost:3306/football_teams?autoReconnect=true&useSSL=false";
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                connection = DriverManager.getConnection(connectionString, "root", "***"); //*** - password
+            } catch (ClassNotFoundException | SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return connection;
+    }
+
+//Выполнение select-запроса
+	ConnectionPool connection = ConnectionPool.getInstance(); 
+        Statement stmt = connection.GetConnectionString().createStatement(); // получили строку подключение, которая выше в примере
+        String sql2 = "select f.id, f.name, f.countOfPlayers, f.city from \n" +
+                "user u inner join footballTeams f \n" +
+                "on u.id = f.userID\n" +
+                "where u.id = "+ Integer.toString(MyData.ThisID) + ";";
+
+        try (ResultSet rs = stmt.executeQuery(sql2)) {
+            while (rs.next()) {
+                infAboutProducts myProduct = new infAboutProducts();
+                myProduct.setId(rs.getInt("id"));
+                myProduct.setName(rs.getString("name"));
+                myProduct.setCity(rs.getString("city"));
+                myProduct.setCount(rs.getInt("countOfPlayers"));
+                products.add(myProduct);
+
+            }
+            rs.close();
+            stmt.close();
+        }
+        catch (ExceptionSQL e) {
+            throw new ExceptionSQL("Ошибка при получении списка команда из БД", e);
+        }
+
+//ИЛИ
+
+String sql2 = "select * from users where login like ?";
+            PreparedStatement pstmt = connection.prepareStatement(sql2);
+            pstmt.setString(1, "%" + GlobalInfo.type + "%");
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    sum = (rs.getInt("sum"));
+                }
+                rs.close();
+                pstmt.close();
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+//Операции insert /*            String sql2 = "INSERT INTO footballTeams (name, countOfPlayers, city, userID) VALUES" +
+                    "(?, ?, ?, ?);";*/
+
+ 	String sql2 = "insert into user(login, password)\n" +
+                "values\n" +
+                "(?, sha2(?, 256));";
+        ConnectionPool connection = ConnectionPool.getInstance();
+        try (PreparedStatement statement = connection.GetConnectionString().prepareStatement(sql2)) {
+            statement.setString(1, login);
+            statement.setString(2, password);
+            int rowsAffected = statement.executeUpdate();
+
+
+            if (rowsAffected > 0) {
+               return true;
+            }
+
+            else if(rowsAffected == 0) {
+                return false;
+            }
+
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+//Операция delete
+	ConnectionPool connection = ConnectionPool.getInstance();
+        String sql2 = "delete from footballTeams where footballTeams.name = ?;";
+        try (PreparedStatement statement = connection.GetConnectionString().prepareStatement(sql2)) {
+            statement.setString(1, name);
+            int rowsAffected = statement.executeUpdate();
+
+
+            if (rowsAffected > 0)
+            {
+               return true;
+            }
+
+            else
+            {
+               return false;
+            }
+
+
+        }
+        catch (ExceptionSQL e) {
+            throw new ExceptionSQL("Ошибка при удалении команды из списка", e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+//Операция update
+	...
+String sql2 = "update people set people.name = 'Petr' where WHERE login = ? AND password = SHA2(?, 256)";
+try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, userLogin);
+                statement.setString(2, userPassword);
+
+ int rowsAffected = statement.executeUpdate();
+
+
+            if (rowsAffected > 0)
+            {
+               return true;
+            }
+
+            else
+            {
+               return false;
+            }
+	...
+}

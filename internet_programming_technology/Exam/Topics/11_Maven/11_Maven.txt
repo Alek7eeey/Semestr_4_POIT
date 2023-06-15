@@ -1,0 +1,91 @@
+//Через cmd 
+1.	mvn -version: Эта команда выводит информацию о версии установленного на вашей машине Maven, включая версию Maven и версию Java, которая используется для выполнения Maven.
+2.	mvn clean: Эта команда удаляет все сгенерированные файлы, такие как скомпилированный код, артефакты сборки, документацию и т.д. Она используется для очистки проекта перед сборкой и обычно выполняется в начале каждой новой сборки.
+3.	mvn compile: Эта команда компилирует исходный код проекта. Она используется для проверки того, что все исходные файлы компилируются без ошибок и готовы для дальнейшей сборки.
+4.	mvn test: Эта команда запускает все тесты в проекте. Она используется для проверки правильности работы приложения и выявления ошибок. Maven автоматически находит и запускает все тестовые классы в проекте, используя определенный вами фреймворк для тестирования.
+5.	mvn install: Эта команда компилирует исходный код, создает артефакты сборки (например, JAR-файлы) и устанавливает их в локальный репозиторий Maven. Это позволяет другим проектам на вашей машине использовать ваш проект как зависимость.
+6.	mvn deploy: Эта команда выполняет те же действия, что и команда mvn install, за исключением того, что артефакты сборки копируются в удаленный репозиторий, который находится на сервере и доступен другим пользователям. Это позволяет другим пользователям использовать ваш проект как зависимость в своих собственных проектах.
+
+//зависимости в pom.xml
+
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+    </dependencies>
+
+//Добавление плагинов (плагины - это инструменты, которые используются в Maven для расширения функциональности сборки проектов):
+//Например, можно использовать следующие цели для плагинов (из лекции Пацей взяты цели):
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+
+            <executions>
+                <execution>
+                    <id>analyze-dependencies</id>
+                    <goals>
+                        <goal>analyze</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>analyze-duplicate-dependencies</id>
+                    <goals>
+                        <goal>analyze-duplicate</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>resolve-dependencies</id>
+                    <goals>
+                        <goal>resolve</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>resolve-plugins</id>
+                    <goals>
+                        <goal>resolve-plugins</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+
+//МОЖНО ВЫВЕСТИ В ФАЙЛ mvn dependency:analyze -DoutputFile=D:/result.txt
+
+//Модули
+
+    <modules>
+        <module>Module1</module>
+        <module>Module2</module>
+    </modules>
+
+//Профили
+
+ <profiles>
+        <profile>
+            <id>prof1</id>
+            <modules>
+                <module>TestModule</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>prof2</id>
+            <modules>
+                <module>TestModule2</module>
+            </modules>
+        </profile>
+    </profiles>
+
+//Затем можно вызывать какой-то конкретный профиль через cmd при запуске
+
+mvn clean compile -Pprof1
+
+или без профилей
+
+mvn clean compile
+

@@ -1,0 +1,57 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: aleks
+  Date: 23.04.2023
+  Time: 17:13
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+  <x:parse var="doc">
+    <c:import url="xml/books.xml"/>
+  </x:parse>
+
+  <x:forEach select="$doc/books/book" var="stud">
+    title:
+    <x:out select="$stud/title"/><br/>
+    author:
+    <x:out select="$stud/author"/><br/>
+  </x:forEach>
+</body>
+</html>
+
+//XML-file
+
+<?xml version="1.0" ?>
+<books>
+    <book>
+        <title>cobol</title>
+        <author>roy</author>
+    </book>
+    <book>
+        <title>java</title>
+        <author>herbert</author>
+    </book>
+    <book>
+        <title>c++</title>
+        <author>robert</author>
+    </book>
+    <book>
+        <title>coldfusion</title>
+        <author>allaire</author>
+    </book>
+    <book>
+        <title>xml unleashed</title>
+        <author>morrison</author>
+    </book>
+    <book>
+        <title>jrun</title>
+        <author>allaire</author>
+    </book>
+</books>

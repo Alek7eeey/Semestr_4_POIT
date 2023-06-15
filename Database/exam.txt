@@ -1,0 +1,492 @@
+//DDL
+//create table
+create table USERS
+(
+	ID IDENTITY(1,1) primary key,
+	Name varchar(50) not null,
+	Date date not null,
+	Pol nchar(1) default 'm' check(Pol in ('m', 'g')),
+	login nvarchar(60) not null unique,
+	CustomerId INT REFERENCES Customers(Id)
+);
+
+//drop table
+drop table users;
+
+//alter
+ALTER table USERS
+add ADRESS nvarchar(150) not null;
+
+ALTER table users
+DROP column Date;
+
+ALTER table users
+ALTER column Date nvarchar(50);
+
+ALTER TABLE USERS !!!WITH NOCHECK!!! --без проверки тех, что уже вставлены
+ADD CHECK (Name in ('Aleksey', 'Dmitry'));
+
+
+//DML
+//insert
+insert into users(Name, Date)
+VALUES
+('Aleksey', '11-10-2024'),
+('Aleksey', '11-10-2024');
+
+//select
+select наименование[дешёвые товары] from Товары
+	where цена < 200;
+
+SELECT c.name, AVG(s.salary) as avg_salary
+FROM company c
+inner JOIN staff s ON c.id = s.company_id
+GROUP BY c.id;
+
+SELECT price, 
+       CASE 
+         WHEN price >= 1000 THEN 'Expensive' 
+         WHEN (price between 500 and 1000) THEN 'Moderate' 
+         ELSE 'Cheap' 
+       END AS price_category
+FROM products;
+
+select isnull(a.наименование_товара, '***')[название]...
+
+//UPDATE
+UPDATE USERS set name = 'Daria' where id like 3;
+
+//DELETE
+delete from users where name like 'Aleksey';
+
+
+//ПОДЗАПРОСЫ
+SELECT название, цена 
+	FROM Заказы a
+	where заказчик = (select top(1) Заказчик from Заказы aa
+			  where aa.название = а.название
+				order by цена desc);
+
+SELECT название, цена 
+	FROM Заказы a
+	where цена =>ALL (select цена from Заказы aa
+			  where aa.название = 'hello'); //ANY -- ALL
+
+
+//ГРУППИРОВКА
+ SELECT Наименование_товара,  
+          max(Цена_продажи)  [Максимальная цена],  
+          count(*)  [Количество заказанных товаров]
+    From  Заказы  Inner Join  Товары 
+              On  Заказы.Наименование_товара = Товары.Наименование  
+               And  Товары.Количество >5   Group by Наименование_товара  
+
+
+SELECT p1.название, p1.цена, (select count(*) from Заказы p2 where
+				p2.название = p1.название and p2.цена = p1.цена)[Количество]
+from Заказы p1
+GROUP BY p1.название, p1.цена
+HAVING цена>50 and цена<500
+
+
+//ПРЕДСТАВЛЕНИЯ
+create view newView
+as select * from users;
+==
+select * from newView
+
+alter view newView
+as select * from peoples;
+
+//drop
+drop view newView
+
+//param
+create view newView(name, cost, count)
+as select name, cost, count from товары where cost> 200;
+
+go 
+select * from newView;
+
+insert newView VALUES('Car', 300, 10);
+
+//with check option
+create view newView(name, cost, count)
+as select name, cost, count from товары where cost> 200 with check option;
+
+go 
+select * from newView;
+
+insert newView VALUES('Car', 300, 10);
+
+//order by только с TOP!
+
+//ПЕРЕМЕННЫЕ
+declare @a int = 5;
+declare @t TABLE
+		(
+		 num int identity(1,1),
+		 name nvarchar(150)
+		);
+
+print 'a = ' + cast (@a as varchar(5));
+
+select @y int = (select count(*) from apps), @y2=...
+set @y int = 5;
+
+//IF-ELSE
+if @y1<1000
+	begin
+	  ...
+	end
+else if ...
+else ...
+
+//СПЕЦИАЛЬНЫЕ ФУНКЦИИ
+print 'Округление          : '+ cast(round(12345.12345, 2) as varchar(12)); 
+ print 'Нижнее целое        : '+ cast(floor(24.5) as varchar(12));
+ print 'Возведение в степень: '+ cast(power(12.0, 2) as varchar(12)); 
+ print 'Логарифм            : '+ cast(log(144.0) as varchar(12));
+ print 'Корень квадратный   : '+ cast(sqrt(144.0) as varchar(12));
+ print 'Экпонента           : '+ cast(exp(4.96981) as varchar(12));
+ print 'Абсолютное значение : '+ cast(abs(-5) as varchar(12));
+print 'Cинус               : '+ cast(sin(pi()) as varchar(12));
+ print 'Подстрока              : '+  substring('1234567890', 3,2);   
+ print 'Удалить пробелы справа : '+  rtrim('12345     ') +'X';
+ print 'Удалить пробелы слева  : '+  'X'+ ltrim('     67890');
+ print 'Нижний регистр         : '+  lower ('ВЕРХНИЙ РЕГИСТР');
+ print 'Верхний регистр        : '+  upper ('нижний регистр');
+ print 'Заменить               : '+  replace('1234512345', '5', 'X');
+ print 'Строка пробелов        : '+  'X'+ space(5) +'X';
+ print 'Повторить строку       : '+  replicate('12', 5);
+ print 'Найти по шаблону       : '+  cast (patindex ('%Y_Y%', '123456YxY7890') as varchar(5));
+ DECLARE @t time(7) = sysdatetime(), @dt datetime = getdate();
+ print 'Текущее время       : '+  convert (varchar(12), @t);
+ print 'Текущая дата        : '+  convert (varchar(12), @dt, 103);
+ print '+1 день               : '+ convert(varchar(12), dateadd(d, 1, @dt), 103);
+
+//ВРЕМЕННЫЕ ТАБЛИЦЫ 
+# - local
+## - global
+
+
+//TRY-CATCH
+begin try
+uodate ...
+end try
+begin CATCH
+	print error_number()
+	print error_message()
+	print error_line
+end CATCH	
+
+
+//ИНДЕКСЫ
+  CREATE index #EX_NONCLU on #EX(TKEY, CC) --TKEY, CC - столбцы
+
+//КУРСОРЫ
+--локальные/глобальные, статические/динамические
+
+DECLARE discpipline CURSOR for select SUBJECT.SUBJECT_NAME from SUBJECT where SUBJECT.PULPIT like 'ИСиТ';
+--deallocate  discpipline;
+
+DECLARE @subject char(35), @subjects char(500) = '';
+OPEN discpipline;
+FETCH discpipline into @subject;
+print 'Дисциплины кафедры ИСиТ';
+while @@FETCH_STATUS = 0
+	begin
+		set @subjects = RTRIM(@subject) +', ' +  @subjects;
+		FETCH  discpipline into @subject;
+	end;
+	print @subjects;
+CLOSE discpipline;
+
+//local/global - в одном и разных пакетах
+DECLARE discpipline CURSOR local/global for select SUBJECT.SUBJECT_NAME from SUBJECT where SUBJECT.PULPIT like 'ИСиТ';
+
+//static/dynamic - выгружает в новую или работает с оригинальной таблицей
+DECLARE discpipline CURSOR local/global static/dynamic for select SUBJECT.SUBJECT_NAME from SUBJECT where SUBJECT.PULPIT like 'ИСиТ';
+
+//scroll
+DECLARE @number varchar(100), @sub varchar(10), @idstudent varchar(6), @pdate varchar (11), @note varchar (2);
+DECLARE PROGRESS_CURSOR_SCROLL CURSOR LOCAL DYNAMIC SCROLL
+	for select ROW_NUMBER() over (order by IDSTUDENT) Номер,
+	* from PROGRESS;
+
+OPEN PROGRESS_CURSOR_SCROLL
+FETCH PROGRESS_CURSOR_SCROLL into @number, @sub ,@idstudent ,@pdate,@note;
+print 'Первая выбранная строка: ' + CHAR(10) +
+'Номер записи: '+ rtrim(@number)  +
+'. Дисциплина: '+ rtrim(@sub) +
+'. ID студента: ' + rtrim(@idstudent) +
+'. Дата экзамена: '  + rtrim(@pdate) + 
+'. Оценка: ' + rtrim(@note);
+
+FETCH LAST from PROGRESS_CURSOR_SCROLL into @number, @sub ,@idstudent ,@pdate,@note;
+print 'Последняя строка: ' + CHAR(10) +
+'Номер записи: '+ rtrim(@number)  +
+'. Дисциплина: '+ rtrim(@sub) +
+'. ID студента: ' + rtrim(@idstudent) +
+'. Дата экзамена: '  + rtrim(@pdate) + 
+'. Оценка: ' + rtrim(@note);
+
+FETCH RELATIVE -1  from PROGRESS_CURSOR_SCROLL into @number, @sub ,@idstudent ,@pdate,@note;
+print 'Первая до предыдущей строка: ' + CHAR(10) +
+'Номер записи: '+ rtrim(@number)  +
+'. Дисциплина: '+ rtrim(@sub) +
+'. ID студента: ' + rtrim(@idstudent) +
+'. Дата экзамена: '  + rtrim(@pdate) + 
+'. Оценка: ' + rtrim(@note);
+
+FETCH ABSOLUTE 2  from PROGRESS_CURSOR_SCROLL into @number, @sub ,@idstudent ,@pdate,@note;
+print 'Вторая с начала строка: ' + CHAR(10) +
+'Номер записи: '+ rtrim(@number)  +
+'. Дисциплина: '+ rtrim(@sub) +
+'. ID студента: ' + rtrim(@idstudent) +
+'. Дата экзамена: '  + rtrim(@pdate) + 
+'. Оценка: ' + rtrim(@note);
+
+FETCH RELATIVE 1  from PROGRESS_CURSOR_SCROLL into @number, @sub ,@idstudent ,@pdate,@note;
+print 'Первая после предыдущей строка: ' + CHAR(10) +
+'Номер записи: '+ rtrim(@number)  +
+'. Дисциплина: '+ rtrim(@sub) +
+'. ID студента: ' + rtrim(@idstudent) +
+'. Дата экзамена: '  + rtrim(@pdate) + 
+'. Оценка: ' + rtrim(@note);
+
+FETCH ABSOLUTE -3  from PROGRESS_CURSOR_SCROLL into @number, @sub ,@idstudent ,@pdate,@note;
+print 'Третья с конца строка: ' + CHAR(10) +
+'Номер записи: '+ rtrim(@number)  +
+'. Дисциплина: '+ rtrim(@sub) +
+'. ID студента: ' + rtrim(@idstudent) +
+'. Дата экзамена: '  + rtrim(@pdate) + 
+'. Оценка: ' + rtrim(@note);
+close PROGRESS_CURSOR_SCROLL
+
+//for update
+DECLARE @id varchar(10), @word varchar(100);
+DECLARE CURRENT_OF_CURSROR CURSOR LOCAL DYNAMIC
+	for SELECT * from #EXAMPLE FOR UPDATE;
+OPEN CURRENT_OF_CURSROR
+fetch CURRENT_OF_CURSROR into @id,@word;
+print @id + '-' + @word;
+DELETE #EXAMPLE where CURRENT OF CURRENT_OF_CURSROR;
+fetch  CURRENT_OF_CURSROR into @id,@word;
+UPDATE #EXAMPLE set WORD += ' - updated' where CURRENT OF CURRENT_OF_CURSROR;
+print @id + '-' + @word;
+close CURRENT_OF_CURSROR;
+
+
+//ТРАНЗАКЦИИ 
+SET IMPLICIT_TRANSACTIONS  ON   -- включ. режим неявной транзакции
+
+begin try
+	begin tran
+		delete AUDITORIUM where AUDITORIUM_NAME = '301-1';
+		insert into AUDITORIUM values('991-1','ЛБ-К','5','204-1');
+		update AUDITORIUM set AUDITORIUM_CAPACITY = '30' where AUDITORIUM_NAME='301-1';
+	commit tran;
+end try
+
+begin catch
+	print 'Ошибка: ' + cast(error_number() as varchar(5)) + ' ' + error_message()
+	if @@TRANCOUNT > 0 rollback tran;
+end catch;
+
+
+//ПРОЦЕДУРЫ
+go
+create PROCEDURE PSUBJECT 
+as
+begin
+	set nocount on;
+	select SUBJECT,SUBJECT_NAME, PULPIT from SUBJECT;
+	declare @q int = (select count(*) from SUBJECT);
+	return @q;
+end;
+
+go
+--DROP PROCEDURE PSUBJECT;
+
+declare @result int = 0;
+EXEC @result = PSUBJECT;
+print 'Количество строк: ' + cast(@result as varchar(10));
+
+....................
+create PROCEDURE Pr3 @sub varchar(20)
+as
+begin
+set nocount on;
+	select SUBJECT,SUBJECT_NAME, PULPIT from SUBJECT where PULPIT = @sub;
+	declare @q int = (select count(*) from SUBJECT);
+	return @q;
+end;
+
+insert #SUBJECTS exec Pr3 @sub = 'ИСиТ';
+....................
+Изменить процедуру:
+go
+alter PROCEDURE INCR
+as
+begin
+	update AUDITORIUM set AUDITORIUM_CAPACITY += 1 where AUDITORIUM_CAPACITY>50;
+	update AUDITORIUM set AUDITORIUM_CAPACITY -= 1 where AUDITORIUM_CAPACITY<=50 and AUDITORIUM_CAPACITY > 1;
+end;
+go
+.....................
+ВЫХОДНОЙ параметр:
+USE productsdb;
+GO
+CREATE PROCEDURE GetPriceStats
+    @minPrice MONEY OUTPUT,
+    @maxPrice MONEY OUTPUT
+AS
+SELECT @minPrice = MIN(Price),  @maxPrice = MAX(Price)
+FROM Products
+
+DECLARE @minPrice MONEY, @maxPrice MONEY
+ 
+EXEC GetPriceStats @minPrice OUTPUT, @maxPrice OUTPUT
+ 
+PRINT 'Минимальная цена ' + CONVERT(VARCHAR, @minPrice)
+PRINT 'Максимальная цена ' + CONVERT(VARCHAR, @maxPrice)
+......................
+вызов с множеством параметров: exec @rc = PAUDITORIUM_INSERT @a = '405-4', @n = '405-4', @c = 65, @t = 'ЛК';
+
+
+//ФУНКЦИИ
+     create FUNCTION FZakazy(@tz char(20)) returns char(300) 
+     as
+     begin  
+     declare @tv char(20);  
+     declare @t varchar(300) = 'Заказанные товары: ';  
+     declare ZkTovar CURSOR LOCAL 
+     for select Наименование_товара from Заказы 
+                                                         where Заказчик = @tz;
+     open ZkTovar;	  
+     fetch  ZkTovar into @tv;   	 
+     while @@fetch_status = 0        
+     begin 
+         set @t = @t + ', ' + rtrim(@tv);         
+         FETCH  ZkTovar into @tv; 
+     end;    
+     return @t;
+     end;  
+   Обращение к функции: 
+   select Наименование_фирмы,  dbo.FZakazy 
+                               (Наименование_фирмы)  from Заказчики;
+
+ВЫЗОВЫ:
+   select * from dbo.FTovCena(NULL, NULL);
+   select * from dbo.FTovCena('Стул', NULL);
+   select * from dbo.FTovCena(NULL, 400);
+   select * from dbo.FTovCena('Шкаф', 340);
+
+.................................
+go
+CREATE FUNCTION countTeacher(@p VARCHAR(20)) 
+RETURNS TABLE 
+AS
+ RETURN SELECT COUNT(TEACHER.TEACHER) AS teacher_count FROM TEACHER WHERE TEACHER.PULPIT = @p;
+GO
+
+select * from countTeacher('ИСиТ');
+.................................
+go 
+create function COUNT_STUDENTS(@faculty varchar(20)) returns int
+as begin 
+declare @ret int = 0;
+set @ret = (select count(IDSTUDENT) from 
+			GROUPS inner join FACULTY 
+			on GROUPS.FACULTY = FACULTY.FACULTY inner join STUDENT
+			on STUDENT.IDGROUP = GROUPS.IDGROUP where GROUPS.FACULTY = @faculty);
+return @ret;
+end;
+
+--DROP FUNCTION COUNT_STUDENTS;
+
+declare @faculty_name char(10) = 'ХТиТ';
+declare @f_result int = dbo.COUNT_STUDENTS(@faculty_name);
+print 'Количество студентов факультета ' + rtrim(@faculty_name) + ': ' + cast(@f_result as varchar);
+
+
+//ТРИГГЕРЫ
+//AFTER
+create trigger TRIG_Tov  on Товары after INSERT, DELETE, UPDATE  
+as declare @a1 varchar(20), @a2 real, @a3 int, @in varchar(300);
+declare @ins int = (select count(*) from inserted),
+              @del int = (select count(*) from deleted); 
+if  @ins > 0 and  @del = 0  
+begin 
+     print 'Событие: INSERT';
+     set @a1 = (select [Наименование] from INSERTED);  
+     set @a2 = (select [Цена] from INSERTED);
+     set @a3 = (select [Количество] from INSERTED);
+     set @in = @a1+' '+cast(@a2 as varchar(20))+' '+cast(@a3 as varchar(20));
+     insert into TR_Tov(ST, TRN, C)  values('INS', 'TRIG_Tov', @in);
+end; 
+else		  	 
+if @ins = 0 and  @del > 0  
+begin 
+    print 'Событие: DELETE';
+    set @a1 = (select [Наименование] from deleted);
+    set @a2 = (select [Цена] from deleted);
+    set @a3 = (select [Количество] from deleted);
+    set @in = @a1+' '+cast(@a2 as varchar(20))+' '+cast(@a3 as varchar(20));
+    insert into TR_Tov(ST, TRN, C)  values('DEL', 'TRIG_Tov', @in);
+end; 
+else	  
+if @ins > 0 and  @del > 0  
+begin 
+    print 'Событие: UPDATE'; 
+    set @a1 = (select [Наименование] from inserted);
+    set @a2 = (select [Цена] from inserted);
+    set @a3 = (select [Количество] from inserted);
+    set @in = @a1+' '+cast(@a2 as varchar(20))+' '+cast(@a3 as varchar(20));
+    set @a1 = (select [Наименование] from deleted);
+    set @a2 = (select [Цена] from deleted);
+    set @a3 = (select [Количество] from deleted);
+    set @in = @a1+' '+cast(@a2 as varchar(20))+' '+cast(@a3 as varchar(20))+' '+@in;
+    insert into TR_Tov(ST, TRN, C)  values('UPD', 'TRIG_Tov', @in); 
+end;  
+return; 
+
+    insert into Товары(Наименование, Цена, Количество)
+                                     values('Стол', 140, 20);                   
+    delete from Товары where Наименование = 'Стол';        
+    update Товары set Количество = 20  where Наименование = 'Стул';                
+   Оператор select * from TR_Tov позволяет проверить содержимое TR_Tov
+
+ГДЕ TR_Tov:
+create table TR_Tov
+(
+	ID ..., 
+	ST varchar(20) check(ST in ('INS','DEL','UPD'))
+)
+
+
+//INSTEAD-OF триггер
+go 
+create trigger FACULTY_INSTEAD_OF on FACULTY instead of DELETE as raiserror('Удаление запрещено',10,1);
+return;
+
+delete from FACULTY where FACULTY ='ИТ';
+select * from FACULTY
+
+...
+
+go 
+create trigger FACULTY_INSTEAD_OF on FACULTY instead of DELETE as 
+...
+raiserror('Удаление запрещено',10,1);
+return;
+
+delete from FACULTY where FACULTY ='ИТ';
+select * from FACULTY
+
+
+//ROLLUP CUBE
+SELECT Год, Месяц, Регион, SUM(Выручка) AS Общая_выручка
+FROM Продажи
+GROUP BY ROLLUP(Год, Месяц, Регион);

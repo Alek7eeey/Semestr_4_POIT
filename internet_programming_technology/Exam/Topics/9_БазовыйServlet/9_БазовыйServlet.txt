@@ -1,0 +1,96 @@
+//Получить в сервлете данные для клиента
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+      response.setContentType("text/html");
+        String protocol = request.getProtocol();
+        String ipAddress = request.getRemoteAddr();
+        String clientName = request.getRemoteHost();
+        String method = request.getMethod();
+        String url = request.getRequestURL().toString();
+        LocalTime currentTime = LocalTime.now();
+        LocalDate currentDate = LocalDate.now();
+
+        String queryString = request.getQueryString();
+
+        PrintWriter out = response.getWriter();
+        out.println("Time now: " + currentTime);
+        out.println("Date now: " + currentDate);
+        out.println("Protocol: " + protocol);
+        out.println("IP Address: " + ipAddress);
+        out.println("Client Name: " + clientName);
+        out.println("Method: " + method);
+        out.println("URL: " + url);
+        out.println("Parametrs: " + queryString);
+    }
+
+//получить параметры с формы
+
+//форма
+
+ <form action="Servlet2">
+    <p><input type="text" name="userLogin" placeholder="Введите логин" size="18" maxlength="30" required/></p>
+    <p><input type="password" name="userPassword" placeholder="Введите пароль" size="18" maxlength="30" required/></p>
+    <p>
+      <button type="submit" name="action" value="login">Отправить</button>
+    </p>
+  </form>
+
+//получение
+
+request.setCharacterEncoding("UTF-8");
+            response.setContentType("text/html; charset=UTF-8");
+            String action = request.getParameter("action");
+
+            String userLogin = request.getParameter("userLogin");
+            String userPassword = request.getParameter("userPassword");
+
+//написать ответ на jsp-страницу
+
+			LocalTime time = LocalTime.now();
+                        LocalDate date = LocalDate.now();
+                        response.setContentType("text/html;charset=UTF-8");
+                        PrintWriter out = response.getWriter();
+                        out.println("<html>");
+                        out.println("<head>");
+                        out.println("<title>Результат отправки формы входа</title>");
+                        out.println("</head>");
+                        out.println("<body>");
+                        out.println("<h1>Добро пожаловать!</h1>");
+                        out.println("<p>Ваш логин: " + userLogin + "</p>");
+                        out.println("<p>Ваш пароль: " + userPassword + "</p>");
+                        out.println("<p>Ваша роль: " + result.getString("typeOfUser") + "</p>");
+                        out.println("<p>Текущее время: " + time + "</p>");
+                        out.println("<p>Текущее дата: " + date + "</p>");
+                        out.println("</body>");
+                        out.println("</html>");
+
+//перенаправление на другую страницу 
+
+
+                // перенаправляем неавторизованных пользователей на страницу ex5.jsp
+                ((HttpServletResponse) response).sendRedirect("ex5.jsp");
+
+//передача данных и переход к другому сервлету
+
+        ServletContext servletContext = getServletContext();
+        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/Servlet3_2");
+        request.setAttribute("param1", "hello");
+        request.setAttribute("param2", "server");
+        requestDispatcher.forward(request, response);
+
+
+	//Servlet4_2:
+ @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String param1 = request.getParameter("param1");
+        String param2 = request.getParameter("param2");
+
+        request.setAttribute("param1", param1);
+        request.setAttribute("param2", param2);
+        String p = getServletContext().getInitParameter("userParam");
+        request.setAttribute("param3", p);
+        // Перенаправляем на JSP-страницу
+        request.getRequestDispatcher("/result.jsp").forward(request, response);
+    }
+
+//

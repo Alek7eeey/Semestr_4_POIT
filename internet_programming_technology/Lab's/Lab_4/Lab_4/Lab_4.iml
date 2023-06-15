@@ -11,88 +11,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="jakarta.xml.bind-api-4.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j:docx4j-JAXB-ReferenceImpl:11.4.8" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j:docx4j-core:11.4.8" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j:docx4j-openxml-objects:11.4.8" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j:docx4j-openxml-objects-pml:11.4.8" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j:docx4j-openxml-objects-sml:11.4.8" level="project" />
-    <orderEntry type="library" name="Maven: org.plutext:jaxb-svg11:11.4.0" level="project" />
-    <orderEntry type="library" name="Maven: net.engio:mbassador:1.3.2" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:2.0.0-alpha5" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.21" level="project" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.12" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:xmlgraphics-commons:2.7" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j.org.apache:xalan-interpretive:11.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.docx4j.org.apache:xalan-serializer:11.0.0" level="project" />
-    <orderEntry type="library" name="Maven: net.arnx:wmf2svg:0.9.8" level="project" />
-    <orderEntry type="library" name="Maven: org.antlr:antlr-runtime:3.5.2" level="project" />
-    <orderEntry type="library" name="Maven: org.antlr:stringtemplate:3.2.1" level="project" />
-    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
-    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.8.1" level="project" />
-    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.3.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.pdfbox:fontbox:2.0.24" level="project" />
-    <orderEntry type="library" name="Maven: com.thoughtworks.qdox:qdox:1.12" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-runtime:3.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-core:3.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jaxb:txw2:3.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.istack:istack-commons-runtime:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha6" level="project" />
-    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.3.04" level="project" />
-    <orderEntry type="library" name="Maven: xerces:xercesImpl:2.9.1" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../gson-2.2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="Lab_4" level="project" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jackson-core-2.0.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/../lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../lib" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="javax.transaction" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jackson-annotations-2.13.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/../jackson-core-2.13.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/../jackson-databind-2.14.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/../jackson-dataformat-xml-2.13.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/../jackson-dataformat-yaml-2.13.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/../woodstox-core-6.2.8.jar!/" />
-          <root url="jar://$MODULE_DIR$/../stax2-api-4.2.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/../snakeyaml-1.30.jar!/" />
-          <root url="file://$MODULE_DIR$" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-        </SOURCES>
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:2.0.1" level="project" />
+    <orderEntry type="library" name="gson-2.2.2" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.14.1" level="project" />
+    <orderEntry type="library" name="jackson-core-2.13.2" level="project" />
     <orderEntry type="library" name="jackson-annotations-2.13.2" level="project" />
   </component>
 </module>

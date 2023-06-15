@@ -1,0 +1,37 @@
+06.06.2023 16:42:23 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET16:42:23.246344600127.0.0.1
+06.06.2023 16:42:25 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /index.jspGET16:42:25.1475392000:0:0:0:0:0:0:1
+06.06.2023 16:42:26 [http-listener-1(3)] INFO  com.example.lab_9.logFilter  - Log: /ex3.jspGET16:42:26.6524588000:0:0:0:0:0:0:1
+06.06.2023 16:42:30 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /ex6.jspGET16:42:30.1526965000:0:0:0:0:0:0:1
+06.06.2023 16:42:32 [http-listener-1(5)] INFO  com.example.lab_9.logFilter  - Log: /Servlet3_1GET16:42:32.3271537000:0:0:0:0:0:0:1
+06.06.2023 16:42:34 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /ex1.jspGET16:42:34.7077418000:0:0:0:0:0:0:1
+06.06.2023 16:42:36 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /Lab_9GET16:42:36.6746919000:0:0:0:0:0:0:1
+06.06.2023 16:43:00 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /Lab_9GET16:43:00.0883937000:0:0:0:0:0:0:1
+06.06.2023 16:43:06 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /Lab_9GET16:43:06.0832301000:0:0:0:0:0:0:1
+06.06.2023 16:43:13 [http-listener-1(3)] INFO  com.example.lab_9.logFilter  - Log: /ex1.jspGET16:43:13.0632480:0:0:0:0:0:0:1
+06.06.2023 16:43:14 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /ex6.jspGET16:43:14.4324764000:0:0:0:0:0:0:1
+06.06.2023 16:43:15 [http-listener-1(5)] INFO  com.example.lab_9.logFilter  - Log: /Servlet3_1GET16:43:15.3917120:0:0:0:0:0:0:1
+06.06.2023 16:43:17 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /ex6-b.jspGET16:43:17.7718618000:0:0:0:0:0:0:1
+06.06.2023 16:43:21 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /Servlet4POST16:43:21.7445749000:0:0:0:0:0:0:1
+06.06.2023 16:43:26 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /Servlet4POST16:43:26.7595274000:0:0:0:0:0:0:1
+06.06.2023 16:43:31 [http-listener-1(5)] INFO  com.example.lab_9.logFilter  - Log: /ex6.jspGET16:43:31.1273683000:0:0:0:0:0:0:1
+06.06.2023 16:43:32 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /Servlet3_1GET16:43:32.1266150:0:0:0:0:0:0:1
+06.06.2023 16:43:34 [http-listener-1(3)] INFO  com.example.lab_9.logFilter  - Log: /ex3.jspGET16:43:34.2436813000:0:0:0:0:0:0:1
+06.06.2023 16:43:36 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /ex1.jspGET16:43:36.3790257000:0:0:0:0:0:0:1
+06.06.2023 16:43:50 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /ex1.jspGET16:43:50.0351493000:0:0:0:0:0:0:1
+06.06.2023 16:43:50 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /Lab_9GET16:43:50.7104832000:0:0:0:0:0:0:1
+06.06.2023 16:43:59 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /ex3.jspGET16:43:59.6281882000:0:0:0:0:0:0:1
+06.06.2023 16:44:03 [http-listener-1(1)] INFO  com.example.lab_9.logFilter  - Log: /Servlet2GET16:44:03.1954062000:0:0:0:0:0:0:1
+06.06.2023 16:44:03 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /ex5.jspGET16:44:03.2114097000:0:0:0:0:0:0:1
+06.06.2023 16:44:33 [http-listener-1(2)] INFO  com.example.lab_9.logFilter  - Log: /Servlet2GET16:44:33.9000512000:0:0:0:0:0:0:1
+06.06.2023 16:44:41 [http-listener-1(5)] INFO  com.example.lab_9.logFilter  - Log: /ex3.jspGET16:44:41.7775006000:0:0:0:0:0:0:1
+06.06.2023 16:44:47 [http-listener-1(4)] INFO  com.example.lab_9.logFilter  - Log: /Servlet2GET16:44:47.3691516000:0:0:0:0:0:0:1
+06.06.2023 16:44:47 [http-listener-1(3)] INFO  com.example.lab_9.logFilter  - Log: /ex5.jspGET16:44:47.3862520:0:0:0:0:0:0:1
+06.06.2023 20:27:35 [http-listener-1(3)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+06.06.2023 20:27:46 [http-listener-1(4)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+06.06.2023 20:30:21 [http-listener-1(1)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+06.06.2023 20:30:25 [http-listener-1(5)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+06.06.2023 20:30:34 [http-listener-1(2)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+06.06.2023 20:30:41 [http-listener-1(4)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+06.06.2023 20:30:42 [http-listener-1(3)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+06.06.2023 20:30:44 [http-listener-1(1)] INFO  com.example.ex1.Servlet2  - Start Servlet 2
+06.06.2023 20:30:47 [http-listener-1(5)] INFO  com.example.ex1.Servlet3  - Start Servlet 3

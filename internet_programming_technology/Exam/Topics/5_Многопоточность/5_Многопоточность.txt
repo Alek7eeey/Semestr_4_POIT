@@ -1,0 +1,45 @@
+//Пример применение семофора
+
+public class CallCenter extends Thread{
+
+	...
+
+ public void run()
+    {
+        Operator operator = null;
+         try {
+                /* for (int i = 0; i < op.size(); i++)
+                 {
+                     sem.acquire();
+                     if (op.get(i).isReady) {
+                         op.get(i).isFree(false);
+                         System.out.println("Оператор " + op.get(i).id + " обслуживает клиента " + clientID);
+                         sleep(500);
+                         System.out.println("Оператор " + op.get(i).id + " завершил обслуживать клиента " + clientID);
+                         op.get(i).isFree(true);
+                         sleep(600);
+                     }
+                     sem.release();
+                 }*/
+             sem.acquire();
+             if (!op.isEmpty()) {
+                 operator = op.get(0);
+                 op.remove(0);
+                 operator.isFree(false);
+                 System.out.println("Оператор " + operator.id + " обслуживает клиента " + clientID);
+                 sleep(500);
+                 System.out.println("Оператор " + operator.id + " завершил обслуживать клиента " + clientID);
+                 operator.isFree(true);
+                 sleep(600);
+                 op.add(operator);
+             }
+             sem.release();
+         }
+         catch(InterruptedException e)
+         {
+             System.out.println ("Что-то пошло не так");
+         }
+
+
+     }
+}

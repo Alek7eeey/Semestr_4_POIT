@@ -1,0 +1,24 @@
+07.06.2023 12:10:35 [http-listener-1(3)] INFO  com.example.ex_5.Servlet  - role: admin
+ID: 51f2c85d07fbbbd84f86ed3b500f
+Time creation: 1686129028229
+URI: /Ex_5-1.0-SNAPSHOT/Servlet
+07.06.2023 12:10:45 [http-listener-1(4)] INFO  com.example.ex_5.Servlet  - role: admin
+ID: 51f71d2b7285c4d117e0c032716d
+Time creation: 1686129045970
+URI: /Ex_5-1.0-SNAPSHOT/Servlet
+07.06.2023 12:15:02 [http-listener-1(2)] INFO  com.example.ex_5.Servlet  - role: admin
+ID: 523344f1cc529dbcb856b5993821
+Time creation: 2023-06-07 12:14:52
+URI: /Ex_5-1.0-SNAPSHOT/Servlet
+07.06.2023 14:44:40 [http-listener-1(4)] INFO  com.example.ex_5.Servlet  - role: user
+ID: 5ac4a07b13b82b9f6851bb7667eb
+Time creation: 2023-06-07 14:44:36
+URI: /Ex_5-1.0-SNAPSHOT/Servlet
+07.06.2023 14:44:50 [http-listener-1(2)] INFO  com.example.ex_5.Servlet  - role: user
+ID: 5ac4a07b13b82b9f6851bb7667eb
+Time creation: 2023-06-07 14:44:36
+URI: /Ex_5-1.0-SNAPSHOT/Servlet
+07.06.2023 14:45:33 [http-listener-1(3)] INFO  com.example.ex_5.Servlet  - role: user
+ID: 5ad27866d663c5a92387e04b577d
+Time creation: 2023-06-07 14:45:33
+URI: /Ex_5-1.0-SNAPSHOT/Servlet

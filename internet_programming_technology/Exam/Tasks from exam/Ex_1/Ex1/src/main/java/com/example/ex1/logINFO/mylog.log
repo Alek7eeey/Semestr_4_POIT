@@ -1,0 +1,30 @@
+07.06.2023 12:06:26 [http-listener-1(3)] INFO  com.example.ex_5.Servlet  - role: admin
+ID: 51b6c981b2a51669c39b849806c1
+Time creation: 1686128782488
+URI: /Ex_5-1.0-SNAPSHOT/Servlet
+07.06.2023 16:05:02 [http-listener-1(4)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:05:10 [http-listener-1(1)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:05:16 [http-listener-1(3)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:11:29 [http-listener-1(1)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:11:35 [http-listener-1(3)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:18:59 [http-listener-1(2)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:19:06 [http-listener-1(4)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:21:54 [http-listener-1(1)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:25:55 [http-listener-1(4)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:25:59 [http-listener-1(5)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:28:51 [http-listener-1(3)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:32:41 [http-listener-1(2)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:32:44 [http-listener-1(5)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+07.06.2023 16:32:48 [http-listener-1(1)] INFO  com.example.ex1.Servlet2  - Start Servlet 2
+07.06.2023 16:34:38 [http-listener-1(4)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:34:47 [http-listener-1(3)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 16:36:14 [http-listener-1(3)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 17:00:05 [http-listener-1(2)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 17:00:13 [http-listener-1(1)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 17:06:47 [http-listener-1(2)] INFO  com.example.ex1.Servlet1  - Start Servlet 1
+07.06.2023 17:06:50 [http-listener-1(3)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+07.06.2023 17:06:53 [http-listener-1(1)] INFO  com.example.ex1.Servlet2  - Start Servlet 2
+07.06.2023 17:06:57 [http-listener-1(3)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+07.06.2023 17:06:59 [http-listener-1(1)] INFO  com.example.ex1.Servlet2  - Start Servlet 2
+07.06.2023 17:07:01 [http-listener-1(2)] INFO  com.example.ex1.Servlet3  - Start Servlet 3
+07.06.2023 17:07:08 [http-listener-1(1)] INFO  com.example.ex1.Servlet1  - Start Servlet 1

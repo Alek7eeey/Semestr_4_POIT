@@ -1,0 +1,75 @@
+// Получаем объект Cookie для последнего сеанса пользователя
+                        Cookie lastVisitCookie = getCookie(request, "lastVisit"+userLogin+userPassword);
+
+                        // Получаем текущую дату и время
+                        LocalTime time2 = LocalTime.now();
+                        String currentDateTime = time2.toString();
+
+                        // Получаем количество посещений из Cookie
+                        int visitCount = 1;
+                        Cookie visitCountCookie = getCookie(request, "visitCount"+userLogin+userPassword);
+                        if (visitCountCookie != null) {
+                            try {
+                                visitCount = Integer.parseInt(visitCountCookie.getValue());
+                                visitCount++;
+                            } catch (NumberFormatException e) {
+
+                            }
+                        }
+
+                        // Получаем тип пользователя
+                        String userType = result.getString("typeOfUser");
+
+                        // Создаем Cookie для даты последнего посещения
+                        Cookie newLastVisitCookie = new Cookie("lastVisit"+userLogin+userPassword, currentDateTime);
+                        newLastVisitCookie.setMaxAge(150 * 60 * 60); // время жизни Cookie - 150 часов
+
+                        // Создаем Cookie для количества посещений
+                        Cookie newVisitCountCookie = new Cookie("visitCount"+userLogin+userPassword, String.valueOf(visitCount));
+                        newVisitCountCookie.setMaxAge(150 * 60 * 60);
+
+                        // Создаем Cookie для типа пользователя
+                        Cookie newTypeOfUserCookie = new Cookie("userType", userType);
+                        newTypeOfUserCookie.setMaxAge(150 * 60 * 60);
+
+                        // Добавляем созданные Cookie в объект HttpServletResponse
+                        response.addCookie(newLastVisitCookie);
+                        response.addCookie(newVisitCountCookie);
+                        response.addCookie(newTypeOfUserCookie);
+
+                        // Выводим результат пользователю
+                        response.setContentType("text/html");
+
+                        out.println("<h1>Привет, пользователь!</h1>");
+                        if (lastVisitCookie != null) {
+                            out.println("<p>Ваш последний визит был " + lastVisitCookie.getValue() + "</p>");
+                        }
+                        out.println("<p>Вы посетили эту страницу " + visitCount + " раз</p>");
+                        out.println("</body></html>");
+
+                    }
+                    /*else {
+                        response.setContentType("text/html;charset=UTF-8");
+                        PrintWriter out = response.getWriter();
+                        out.println("<h1>Ошибка входа! </h1>");
+                        out.println("<a href = 'ex3.jsp'>Вернуться обратно</a>");
+                    }*/
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+// Метод для получения объекта Cookie по имени из запроса
+
+    private Cookie getCookie(HttpServletRequest request, String cookieName) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals(cookieName)) {
+                    return cookie;
+                }
+            }
+            return null;
+        }
+        return null;
+    }

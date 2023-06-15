@@ -1,0 +1,242 @@
+//TCP
+
+//Server
+
+ try(ServerSocket serverSocket = new ServerSocket(8081)) {
+            System.out.println("Server started...");
+            System.out.println("Цифра: " + numberToGuess);
+
+            while (true){
+
+                try{
+                    Socket socket = serverSocket.accept();
+                    clients.add(socket);
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try (BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter((socket.getOutputStream())));
+                            ) {
+                                hasWinner = true;
+                                String request = reader.readLine();
+                                String response = String.format("Client '" + request + "' connected! ");
+                                nameClients.add(request);
+                                System.out.println(response);
+
+                                while (hasWinner)
+                                {
+                                    writer.write("Введите цифру от 1 до 100");
+                                    writer.newLine();
+                                    writer.flush();
+                                    request = reader.readLine();
+
+                                        if (Integer.parseInt(request) == numberToGuess) {
+                                            writer.write("Вы победили!\n");
+                                            writer.newLine();
+                                            writer.flush();
+
+                                            //определение победителя
+                                            int winnerIndex = clients.indexOf(socket);
+                                            String name = nameClients.get(winnerIndex);
+                                            System.out.println("Client '" + name + "' победил!");
+                                            System.out.println("Client '" + name + "' disconnected!");
+
+                                            clients.remove(winnerIndex);
+                                            nameClients.remove(winnerIndex);
+
+                                            if (clients.size() == 0) {
+                                                numberToGuess = random.nextInt(100) + 1;
+                                                System.out.println("\nНовая цифра: " + numberToGuess);
+                                            }
+
+                                            break;
+                                        }
+
+                                    if (Integer.parseInt(request) == -1) {
+                                            //определение победителя
+                                            int winnerIndex = clients.indexOf(socket);
+                                            String name = nameClients.get(winnerIndex);
+                                            System.out.println("Client '" + name + "' сдался!");
+                                            System.out.println("Client '" + name + "' disconnected!");
+
+                                            //определения победителя
+                                            writer.write("Вы сдались!");
+                                            writer.newLine();
+                                            writer.flush();
+
+                                            clients.remove(winnerIndex);
+                                            nameClients.remove(winnerIndex);
+
+                                            if (clients.size() == 0) {
+                                                numberToGuess = random.nextInt(100) + 1;
+                                                System.out.println("\nНовая цифра: " + numberToGuess);
+                                            }
+
+                                            break;
+                                        }
+
+                                        String nameClientThis = nameClients.get(clients.indexOf(socket));
+                                        System.out.println("Клиент '" + nameClientThis + "' : " + request);
+
+                                    /*if (Integer.parseInt(request) < numberToGuess) {
+                                        writer.write("Это слишком мало!");
+                                        writer.newLine();
+                                        writer.flush();
+                                    }
+
+                                    if (Integer.parseInt(request) > numberToGuess) {
+                                        writer.write("Это слишком много!");
+                                        writer.newLine();
+                                        writer.flush();
+                                    }*/
+
+                                    }
+
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+//Client
+public class Client2 {
+    public static void main(String[] args) throws IOException {
+        String host = "localhost";
+        int port = 8081;
+
+        try (Socket socket = new Socket(host, port);
+             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+             BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in))) {
+
+            System.out.print("Введите ваше имя: ");
+            String name = consoleReader.readLine();
+            writer.write(name);
+            writer.newLine();
+            writer.flush();
+
+            while (true) {
+                String serverMessage = reader.readLine();
+                System.out.println(serverMessage);
+
+                if (serverMessage.equals("Введите цифру от 1 до 100") || serverMessage.equals("Это слишком мало!") || serverMessage.equals("Это слишком много!")) {
+                    String clientMessage = consoleReader.readLine();
+                    writer.write(clientMessage);
+                    writer.newLine();
+                    writer.flush();
+                }
+
+                else
+                {
+                    break;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+//UDP
+
+//Server
+ public static void main(String []args) throws SocketException {
+        DatagramSocket socket = null;
+
+        try{
+            socket = new DatagramSocket(1212);
+            byte [] buffer = new byte[1000];
+            while(true){
+                DatagramPacket request = new DatagramPacket(buffer, buffer.length);
+                // принимаем пакет клиента
+                socket.receive(request);
+                byte [] b = "hello".getBytes();
+
+                // создаём ответную дейтаграмму
+                DatagramPacket reply = new DatagramPacket(b,
+                        b.length, request.getAddress(), request.getPort());
+                // отправляем ответ клиенту
+                socket.send(reply);
+            }
+        } catch (SocketException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+//Client
+public class ClientUDP {
+    public static void main(String []args){
+        try {
+            // создаём сокет
+            DatagramSocket aSocket = new DatagramSocket();
+            // задаём строку для передачи
+            String str = "Hello";
+            // и преобразуем её в поток байт
+            byte [] message = str.getBytes();
+            // получаем IP-адрес компьютера в формате Java
+            InetAddress aHost = InetAddress.getByName("localhost");
+            // задаём порт
+            int sPort = 1212;
+            // создаём дейтаграмму, длина которой определяется длиной // сообщения
+            DatagramPacket request = new  DatagramPacket(message, message.length, aHost, sPort);
+            // передаём серверу
+            aSocket.send(request);
+            // определяем буфер под ответ сервера
+            byte [] buffer = new byte[1000];
+            // создаём дейтаграмму под ответ сервера
+            DatagramPacket reply = new DatagramPacket(buffer, buffer.length);
+            // принимаем ответ
+            aSocket.receive(reply);
+            // выводим ответ на консоль
+            System.out.println("Reply: " + new String(reply.getData(), 0, reply.getLength()));
+            // закрываем сокет
+            aSocket.close();
+        }
+        catch (SocketException e) {
+            // если не получилось создать сокет
+            System.out.println("Socket: " + e.getMessage());
+        }
+        catch (IOException e) {
+            // ошибка при приеме
+            System.out.println("IO: " + e.getMessage());
+        }
+    }
+
+//Чтение из ресурса
+
+public class ConnectToInternetSource {
+    public static void main(String [] args) {
+        URL tut = null;
+        String urlName = "https://diskstation.belstu.by:5001/";
+        try{
+            tut = new URL(urlName);
+        } catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+
+        if (tut == null ) {
+            throw new RuntimeException();
+        }
+        try (BufferedReader d = new BufferedReader(new InputStreamReader(tut.openStream()))){
+            String line = "";
+            while ((line = d.readLine()) != null){
+                System.out.println(line);
+            }
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+}

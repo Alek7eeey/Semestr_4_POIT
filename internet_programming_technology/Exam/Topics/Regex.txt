@@ -1,0 +1,10 @@
+ String stroke = request.getParameter("numberDoc");
+        String regex = "^\\w{2}\\d{4,6}/20$";
+        if(stroke.matches(regex))
+        {
+            ((HttpServletResponse) response).sendRedirect("index.jsp");
+        }
+        else
+        {
+            ((HttpServletResponse) response).sendRedirect("Errorpage.jsp");
+        }

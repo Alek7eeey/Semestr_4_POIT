@@ -1,0 +1,26 @@
+ //базовые типы
+	char sym = 'b';
+        int num = 154343;
+        String str = "hello ";
+        short shNum = 1513;
+        byte bNum = 127;
+        long lNum = -1213243;
+        boolean bool = true;
+        double dblNum = 2.343;
+
+//классы-оболочки
+	Boolean b = false;
+        Character c = 'c';
+        Integer i = 23;
+        Long l = 5430L;
+        Short s = 4;
+        Byte b1 = 30;
+        Double d = 36.6;
+
+//приведение типов
+	int testInt = Integer.parseInt("12");
+ 	
+	byte[] bytes = stroke.getBytes();
+        String st = new String(bytes);
+
+ 	Boolean newBool = Boolean.parseBoolean(strAsBool);

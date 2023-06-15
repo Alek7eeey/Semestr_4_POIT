@@ -1,0 +1,7 @@
+ <% if (request.getParameter("error4") != null && request.getParameter("error4").equals("true")) { %>
+        <p style="color: red; margin: 0">Ошибка удаления</p>
+        <% } %>
+
+...
+
+            response.sendRedirect("register.jsp?error4=true");

@@ -2,18 +2,8 @@
   <library name="jackson-annotations-2.13.2">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../jackson-annotations-2.13.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../jackson-core-2.13.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../jackson-databind-2.14.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../jackson-dataformat-xml-2.13.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../jackson-dataformat-yaml-2.13.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../snakeyaml-1.30.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../stax2-api-4.2.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../woodstox-core-6.2.8.jar!/" />
-      <root url="file://$PROJECT_DIR$" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/src/main/java" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
